@@ -204,7 +204,7 @@ export function FutureAspiration({
           const total = row.total;
 
           const totalValue = (
-            <span className="font-mono text-small-medium text-text-secondary">
+            <span className="shrink-0 font-mono text-small-medium whitespace-nowrap text-text-secondary">
               {formatNumber(total)} {unit}
             </span>
           );
@@ -216,7 +216,7 @@ export function FutureAspiration({
             return (
               <div key={row.companyId} className={rowClasses} data-testid="future-aspiration-row">
                 <div className={rankClasses}>{row.rank}</div>
-                <div className="min-w-0 flex-1">
+                <div className="flex-1">
                   <div className="text-small-medium text-text-heading">{row.name}</div>
                 </div>
                 <div className="h-20 w-full max-w-160 rounded-full bg-surface-card">
@@ -235,7 +235,7 @@ export function FutureAspiration({
           return (
             <div key={row.companyId} className={rowClasses} data-testid="future-aspiration-row">
               <div className={rankClasses}>{row.rank}</div>
-              <div className="min-w-0 flex-1">
+              <div className="flex-1">
                 <div className="text-small-medium text-text-heading">{row.name}</div>
               </div>
               <div className="flex h-20 w-full max-w-160 overflow-hidden rounded-full bg-surface-card">

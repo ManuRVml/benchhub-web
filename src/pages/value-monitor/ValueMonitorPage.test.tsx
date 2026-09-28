@@ -90,7 +90,13 @@ const HISTORY_5Y = {
 };
 
 const KVIS = {
-  warnings: [],
+  warnings: [
+    { code: 'results_2025_in_review', text: '⚠ Resultados 2025 en revisión' },
+    {
+      code: 'targets_2026_in_construction',
+      text: '⚠ Metas y seguimiento resultados 2026 en construcción',
+    },
+  ],
   rows: [
     {
       kviId: 'kvi-fcl',
@@ -418,6 +424,21 @@ afterEach(() => {
 });
 
 describe('ValueMonitorPage', () => {
+  it('renders the KVI table in its titled card with both prototype warning messages', async () => {
+    serveValueMonitor();
+    serveKvis();
+    renderPage();
+
+    expect(
+      await screen.findByRole('heading', { name: 'Monitor de Valor Grupo Ecopetrol · KVIs' }),
+    ).toBeInTheDocument();
+    expect(await screen.findByText('⚠ Resultados 2025 en revisión')).toBeInTheDocument();
+    expect(
+      await screen.findByText('⚠ Metas y seguimiento resultados 2026 en construcción'),
+    ).toBeInTheDocument();
+    expect(screen.getByTestId('value-monitor-kvis-warning')).toHaveAttribute('role', 'status');
+  });
+
   it('renders the header fields (analyst, updated, status chip) and the note next to the snapshot select', async () => {
     serveValueMonitor();
     renderPage();

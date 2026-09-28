@@ -75,7 +75,7 @@ export function ReportPanorama({
       subtitle={t('analysis-report.panorama.subtitle')}
       actions={recommendationsSlot}
     >
-      <div className="grid gap-20">
+      <div className="grid grid-cols-[minmax(0,1fr)] gap-20">
         {heatmapSlot}
         {rankingSlot}
         {radarSlot}

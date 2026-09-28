@@ -3,6 +3,8 @@ import { expect, test } from '@playwright/test';
 import { seriousOrCriticalViolations } from '../pages/accessibility';
 import { AnalysisReportPage } from '../pages/AnalysisReportPage';
 
+import type { Locator } from '@playwright/test';
+
 // SCR-09 Visualización: the mock adapter answers the same V-20 fixture for any analysis id.
 const ANALYSIS_ID = 'ana_e2e_smoke';
 
@@ -47,4 +49,37 @@ test('Visualización has no serious or critical accessibility violations', async
   await expect(page.getByTestId('report-panorama-radar-data-table')).toHaveCount(1);
 
   expect(await seriousOrCriticalViolations(page)).toEqual([]);
+});
+
+async function boxOf(locator: Locator) {
+  const box = await locator.boundingBox();
+  if (!box) throw new Error('element has no bounding box');
+  return box;
+}
+
+test('the main column stays inside its grid track and never runs under the comments rail', async ({
+  page,
+}) => {
+  const report = new AnalysisReportPage(page);
+  await report.goto(ANALYSIS_ID);
+  await expect(report.position).toBeVisible();
+  // Every chart/section must have mounted and settled at its final size before measuring.
+  await expect(report.heatmapDataTable).toHaveCount(1);
+  await expect(page.getByTestId('report-panorama-radar-data-table')).toHaveCount(1);
+  await expect(page.locator('[data-testid^="tbg-horizon-composition-row-"]').first()).toBeVisible();
+
+  // Desktop Chrome is 1280px wide: the two-column desktop layout (main column + comments rail) applies.
+  const columns = page.getByTestId('analysis-report-layout').locator('xpath=./*');
+  const main = columns.nth(0);
+  const rail = columns.nth(1);
+  // e2e type-checks without the DOM lib: read only the two properties needed.
+  const mainWidths = await main.evaluate((node) => {
+    const element = node as unknown as { scrollWidth: number; clientWidth: number };
+    return { scrollWidth: element.scrollWidth, clientWidth: element.clientWidth };
+  });
+  expect(mainWidths.scrollWidth).toBeLessThanOrEqual(mainWidths.clientWidth);
+
+  const mainBox = await boxOf(main);
+  const railBox = await boxOf(rail);
+  expect(mainBox.x + mainBox.width).toBeLessThanOrEqual(railBox.x);
 });

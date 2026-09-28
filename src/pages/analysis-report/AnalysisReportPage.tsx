@@ -81,7 +81,7 @@ function ReportFrame({ analysisId }: { analysisId: string }) {
             data-testid="analysis-report-layout"
             className="grid gap-16 desktop:grid-cols-[minmax(0,1fr)_var(--size-layout-right-rail)]"
           >
-            <div className="grid gap-16">
+            <div className="grid min-w-0 grid-cols-[minmax(0,1fr)] gap-16">
               <ReportPosition
                 analysisId={analysisId}
                 position={data.position}

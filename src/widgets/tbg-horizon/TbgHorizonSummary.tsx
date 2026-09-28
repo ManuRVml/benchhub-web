@@ -183,7 +183,7 @@ function CompositionRow({ row, totalLabel }: CompositionRowProps) {
       data-testid={testId(SCOPE, 'composition-row', row.companyId)}
       className="flex items-center gap-10"
     >
-      <span className="w-96 shrink-0 truncate text-12 font-medium text-text-heading">
+      <span className="w-[96px] shrink-0 truncate text-12 font-medium text-text-heading">
         {row.name}
       </span>
       <div className="flex h-24 flex-1 overflow-hidden rounded-sm">
@@ -207,7 +207,7 @@ function CompositionRow({ row, totalLabel }: CompositionRowProps) {
       <span
         data-testid={testId(SCOPE, 'total', row.companyId)}
         className={cn(
-          'w-90 shrink-0 text-right text-12 font-semibold',
+          'w-[90px] shrink-0 text-right text-12 font-semibold',
           TOTAL_TONE_CLASS[row.sumStatus],
         )}
       >

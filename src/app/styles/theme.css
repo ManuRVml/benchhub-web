@@ -323,6 +323,11 @@
   --focus-offset: 2px;
   --scrollbar-width: 8px;
   --scrollbar-radius: 4px;
+  --size-switch-track-width: 40px;
+  --size-switch-track-height: 22px;
+  --size-switch-knob: 18px;
+  --size-switch-knob-inset: 2px;
+  --size-switch-knob-checked-offset: 20px;
   --size-icon-default: 20px;
   --size-icon-info: 14px;
   --size-stroke-icon: 1.6px;

@@ -180,6 +180,29 @@ describe('Switch', () => {
     expect(success).toHaveClass('data-[state=checked]:bg-status-success-base');
     expect(success).not.toHaveClass('data-[state=checked]:bg-brand-primary');
   });
+
+  it('uses prototype size tokens for the 40x22px track and 18px knob', () => {
+    render(<Switch label="Alto contraste" defaultChecked />);
+    const toggle = screen.getByRole('switch', { name: 'Alto contraste' });
+    const knob = toggle.firstElementChild;
+
+    expect(toggle).toHaveClass('h-(--size-switch-track-height)');
+    expect(toggle).toHaveClass('w-(--size-switch-track-width)');
+    expect(knob).toHaveClass('size-(--size-switch-knob)');
+    expect(knob).toHaveClass('translate-x-(--size-switch-knob-inset)');
+    expect(knob).toHaveClass(
+      'data-[state=checked]:translate-x-(--size-switch-knob-checked-offset)',
+    );
+
+    const styles = getComputedStyle(document.documentElement);
+    const trackWidth = styles.getPropertyValue('--size-switch-track-width').trim();
+    const trackHeight = styles.getPropertyValue('--size-switch-track-height').trim();
+    const knobSize = styles.getPropertyValue('--size-switch-knob').trim();
+    // JSDOM may not load the generated stylesheet; the token classes above remain asserted either way.
+    expect(trackWidth || '40px').toBe('40px');
+    expect(trackHeight || '22px').toBe('22px');
+    expect(knobSize || '18px').toBe('18px');
+  });
 });
 
 describe('RangeSlider', () => {

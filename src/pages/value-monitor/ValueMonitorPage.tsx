@@ -24,6 +24,8 @@ import { useT } from '@/shared/i18n';
 import { cn } from '@/shared/lib';
 import { useTypedSearchParams } from '@/shared/lib/url';
 import { ProgressBar } from '@/shared/ui/charts/primitives';
+import { Alert } from '@/shared/ui/composites/alert/Alert';
+import { SectionCard } from '@/shared/ui/composites/section-card/SectionCard';
 import { Skeleton } from '@/shared/ui/composites/skeleton';
 import { ToastProvider } from '@/shared/ui/composites/toast';
 import { SectionBoundary } from '@/shared/ui/layout/section-boundary';
@@ -516,19 +518,49 @@ function ValueMonitorFrame() {
               skeleton={<Skeleton shape="block" size={320} />}
             >
               {(kvis) => (
-                <KviTable
-                  rows={toKviTableRows(kvis, currentSnapshotId)}
-                  year={yearOfSnapshot(currentSnapshotId)}
-                  onTargetsChange={handleTargetsChange}
-                  categoryFilter={search.categoria}
-                  onCategoryFilterChange={(ids) => {
-                    setSearch({ categoria: ids });
-                  }}
-                  complianceFilter={search.cumplimiento}
-                  onComplianceFilterChange={(ids) => {
-                    setSearch({ cumplimiento: ids });
-                  }}
-                />
+                <SectionCard
+                  title={t('value-monitor.kviTable.title')}
+                  data-testid="value-monitor-kvis-card"
+                  surface="card"
+                >
+                  {kvis.warnings.some(
+                    (warning) =>
+                      warning.code === 'results_2025_in_review' ||
+                      warning.code === 'targets_2026_in_construction',
+                  ) ? (
+                    <Alert
+                      variant="info"
+                      className="border-status-warning-base bg-status-warning-bg text-status-warning-text"
+                      data-testid="value-monitor-kvis-warning"
+                    >
+                      <div className="flex flex-wrap gap-4">
+                        {kvis.warnings.some(
+                          (warning) => warning.code === 'results_2025_in_review',
+                        ) ? (
+                          <span>{t('value-monitor.kviTable.warningCurrentReview')}</span>
+                        ) : null}
+                        {kvis.warnings.some(
+                          (warning) => warning.code === 'targets_2026_in_construction',
+                        ) ? (
+                          <span>{t('value-monitor.kviTable.warningMetasConstruction')}</span>
+                        ) : null}
+                      </div>
+                    </Alert>
+                  ) : null}
+                  <KviTable
+                    rows={toKviTableRows(kvis, currentSnapshotId)}
+                    year={yearOfSnapshot(currentSnapshotId)}
+                    onTargetsChange={handleTargetsChange}
+                    categoryFilter={search.categoria}
+                    onCategoryFilterChange={(ids) => {
+                      setSearch({ categoria: ids });
+                    }}
+                    complianceFilter={search.cumplimiento}
+                    onComplianceFilterChange={(ids) => {
+                      setSearch({ cumplimiento: ids });
+                    }}
+                  />
+                </SectionCard>
               )}
             </SectionBoundary>
 

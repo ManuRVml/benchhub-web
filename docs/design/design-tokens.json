@@ -3033,6 +3033,67 @@
     }
   },
   "size": {
+    "switch": {
+      "track-width": {
+        "$type": "dimension",
+        "$value": "40px",
+        "$description": "Switch track width (prototype: 40px).",
+        "$extensions": {
+          "eco": {
+            "source": "BencHUD.dc.html:3006,3010",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:631"
+            ]
+          }
+        }
+      },
+      "track-height": {
+        "$type": "dimension",
+        "$value": "22px",
+        "$description": "Switch track height (prototype: 22px).",
+        "$extensions": {
+          "eco": {
+            "source": "BencHUD.dc.html:3006,3010",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:631"
+            ]
+          }
+        }
+      },
+      "knob": {
+        "$type": "dimension",
+        "$value": "18px",
+        "$description": "Switch knob size (prototype: 18px).",
+        "$extensions": {
+          "eco": {
+            "source": "BencHUD.dc.html:3006,3010",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:631"
+            ]
+          }
+        }
+      },
+      "knob-inset": {
+        "$type": "dimension",
+        "$value": "2px",
+        "$description": "Switch knob inset in the off state (prototype: 2px).",
+        "$extensions": {
+          "eco": {
+            "source": "BencHUD.dc.html:3006,3010"
+          }
+        }
+      },
+      "knob-checked-offset": {
+        "$type": "dimension",
+        "$value": "20px",
+        "$description": "Switch knob left offset in the on state (40px track, 18px knob, 2px inset).",
+        "$extensions": {
+          "eco": {
+            "source": "BencHUD.dc.html:3006,3010"
+          }
+        }
+      }
+    },
     "font": {
       "10": {
         "$type": "dimension",

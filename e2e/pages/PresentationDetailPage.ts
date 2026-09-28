@@ -1,4 +1,4 @@
-import { gotoAndWaitReady } from './navigation';
+import { gotoAndWaitReady, READY_TIMEOUT_MS } from './navigation';
 
 import type { Locator, Page } from '@playwright/test';
 
@@ -41,6 +41,12 @@ export class PresentationDetailPage {
       `/presentaciones/${presentationId}${query}`,
       'presentation-detail-page',
     );
+    // Wait for comments list items to be visible to ensure full render
+    await this.commentItems.first().waitFor({ state: 'visible', timeout: READY_TIMEOUT_MS });
+    // Only slide 1 (the default when no index is given) is the cover; other slides never paint it.
+    if (slide === undefined || slide === 1) {
+      await this.coverBackground.waitFor({ state: 'visible', timeout: READY_TIMEOUT_MS });
+    }
   }
 
   dot(index: number): Locator {

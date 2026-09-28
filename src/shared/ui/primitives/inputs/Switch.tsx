@@ -30,7 +30,7 @@ const CHECKED_TONE: Record<SwitchTone, string> = {
 };
 
 /**
- * On / off preference toggle (component catalog "Switch", SCR-16): label on the left, 36×20 track on the right,
+ * On / off preference toggle (component catalog "Switch", SCR-16): label on the left, 40×22 track on the right,
  * `brand.primary` (or `status.success.base` with `tone="success"`) when on. Radix Switch: `role="switch"` with
  * `aria-checked`, toggled by click, Space or Enter.
  */
@@ -71,7 +71,7 @@ export const Switch = forwardRef<HTMLButtonElement, SwitchProps>(function Switch
           data-tone={tone}
           disabled={disabled}
           className={cn(
-            'relative inline-flex h-20 w-9 shrink-0 cursor-pointer items-center rounded-pill bg-border-default transition-colors',
+            'relative inline-flex h-(--size-switch-track-height) w-(--size-switch-track-width) shrink-0 cursor-pointer items-center rounded-pill bg-border-default transition-colors',
             'disabled:cursor-not-allowed disabled:opacity-50',
             CHECKED_TONE[tone],
           )}
@@ -81,7 +81,7 @@ export const Switch = forwardRef<HTMLButtonElement, SwitchProps>(function Switch
           {...(name === undefined ? {} : { name })}
           {...describedBy(ids, { description, error })}
         >
-          <RadixSwitch.Thumb className="block size-16 translate-x-2 rounded-pill bg-surface-card shadow-toast transition-transform data-[state=checked]:translate-x-18" />
+          <RadixSwitch.Thumb className="block size-(--size-switch-knob) translate-x-(--size-switch-knob-inset) rounded-pill bg-surface-card shadow-toast transition-transform data-[state=checked]:translate-x-(--size-switch-knob-checked-offset)" />
         </RadixSwitch.Root>
       </div>
       {description === undefined ? null : (
