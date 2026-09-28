@@ -1,0 +1,26 @@
+{
+  "description": "Prototype UMD scripts served offline by render.mjs in place of the unpkg URLs pinned in the prototype support.js (L1143-1148). sha384 must equal the SRI pinned there; render.mjs re-hashes each file on every run. Files are byte copies of the npm packages below (MIT licensed, license headers kept).",
+  "scripts": [
+    {
+      "url": "https://unpkg.com/react@18.3.1/umd/react.production.min.js",
+      "file": "react.production.min.js",
+      "package": "react",
+      "version": "18.3.1",
+      "sha384": "sha384-DGyLxAyjq0f9SPpVevD6IgztCFlnMF6oW/XQGmfe+IsZ8TqEiDrcHkMLKI6fiB/Z"
+    },
+    {
+      "url": "https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js",
+      "file": "react-dom.production.min.js",
+      "package": "react-dom",
+      "version": "18.3.1",
+      "sha384": "sha384-gTGxhz21lVGYNMcdJOyq01Edg0jhn/c22nsx0kyqP0TxaV5WVdsSH1fSDUf5YJj1"
+    },
+    {
+      "url": "https://unpkg.com/@babel/standalone@7.29.0/babel.min.js",
+      "file": "babel.min.js",
+      "package": "@babel/standalone",
+      "version": "7.29.0",
+      "sha384": "sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y"
+    }
+  ]
+}

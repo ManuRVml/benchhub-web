@@ -1,0 +1,195 @@
+{
+  "brand": {
+    "name": "BencHUD",
+    "logoAlt": "BencHUD"
+  },
+  "nav": {
+    "home": "Inicio",
+    "refTbgIlp": "Ref. TBG I ILP",
+    "refCompetitive": "Ref. Competitivo",
+    "valueMonitor": "Monitor de Valor",
+    "presentations": "Presentaciones",
+    "notifications": "Notificaciones",
+    "logout": "Salir",
+    "collapse": "‹ Colapsar"
+  },
+  "headerTitle": {
+    "home": "Dashboard",
+    "analyses": "Análisis",
+    "analysisDefinition": "Definición del análisis",
+    "analysisResults": "Resultados · {{analysisName}}",
+    "analysisReport": "Visualización · Dashboard",
+    "indicatorDetail": "Detalle de indicador",
+    "sensitivities": "Sensibilidades",
+    "valueMonitor": "Monitor de Valor",
+    "presentations": "Presentaciones",
+    "notifications": "Notificaciones",
+    "settings": "Configuración",
+    "fallback": "BencHUD"
+  },
+  "analysisTabs": {
+    "definition": "Configuración",
+    "results": "Resultados",
+    "presentation": "Presentación"
+  },
+  "assistant": {
+    "panelTitle": "✦ Yarbis · {{screenTitle}}",
+    "inputPlaceholder": "Pregunta sobre este análisis..."
+  },
+  "assistantChat": {
+    "thinking": "Yarbis está escribiendo…",
+    "error": "Yarbis no pudo responder. Intenta de nuevo.",
+    "retry": "Reintentar",
+    "contextLoading": "Cargando sugerencias…",
+    "contextError": "Yarbis no pudo cargar las sugerencias de esta pantalla."
+  },
+  "section": {
+    "loading": "Cargando…",
+    "empty": "No hay datos para mostrar.",
+    "error": {
+      "title": "No se pudo cargar esta sección.",
+      "retry": "Reintentar"
+    },
+    "forbidden": {
+      "title": "No tienes permiso para ver esta sección."
+    }
+  },
+  "ariaLabel": {
+    "notifications": "Notificaciones",
+    "help": "Ayuda y documentación"
+  },
+  "a11y": {
+    "closeDialog": "Cerrar",
+    "dismissToast": "Cerrar aviso",
+    "toastRegion": "Avisos",
+    "steps": "Pasos",
+    "stepDone": "completado",
+    "stepInvalid": "requiere revisión",
+    "analysisTabs": "Pestañas del análisis",
+    "clearSearch": "Borrar búsqueda",
+    "moreInfo": "Más información",
+    "rowDetails": "Detalle de {{label}}",
+    "rowDetailsColumn": "Detalle",
+    "rowActions": "Acciones",
+    "trend": {
+      "up": "sube",
+      "down": "baja",
+      "flat": "sin cambio"
+    },
+    "replyLabel": "Respuesta",
+    "commentStatus": "Estado del comentario",
+    "replies": "Respuestas",
+    "openAssistant": "Abrir Yarbis",
+    "closeAssistant": "Cerrar Yarbis",
+    "assistantConversation": "Conversación con Yarbis",
+    "assistantSuggestions": "Preguntas sugeridas",
+    "assistantMessage": "Mensaje para Yarbis",
+    "sendMessage": "Enviar mensaje",
+    "helpful": "Respuesta útil",
+    "notHelpful": "Respuesta no útil",
+    "citations": "Fuentes",
+    "skipToContent": "Saltar al contenido principal",
+    "mainNav": "Navegación principal",
+    "expandSidebar": "Expandir menú",
+    "locked": "No disponible",
+    "notificationsUnread": "Notificaciones ({{count}} sin leer)",
+    "slides": "Diapositivas",
+    "previousSlide": "Diapositiva anterior",
+    "indicatorPills": "Selector de indicador",
+    "nextSlide": "Diapositiva siguiente",
+    "aiSuggestionContent": "Contenido sugerido por IA para revisar antes de usarlo.",
+    "helpDescription": "Preguntas frecuentes y contacto con soporte."
+  },
+  "draftWizard": {
+    "quarter": "Trimestre",
+    "year": "Año",
+    "cadenceAnnual": "Anual",
+    "fieldErrors": {
+      "required": "Este campo es obligatorio.",
+      "tooShort": "El texto es demasiado corto.",
+      "tooLong": "El texto es demasiado largo.",
+      "invalid": "Revisa este valor.",
+      "periodOrder": "El periodo comparado debe ser anterior al periodo actual.",
+      "atLeastOne": "Selecciona al menos una opción.",
+      "futureDate": "La fecha no puede ser posterior a hoy."
+    },
+    "autosaveError": "No se pudieron guardar los cambios del borrador.",
+    "generating": "Generando análisis…",
+    "generateError": "No se pudo generar el análisis. Intenta de nuevo.",
+    "blocked": "Completa {{steps}} para generar el análisis.",
+    "exclusionAlert": "{{companies}} no alcanza el umbral de homologación del {{threshold}} % y queda fuera del análisis.",
+    "selectAllGroup": "Seleccionar todo · {{group}}"
+  },
+  "toast": {
+    "undo": "Deshacer"
+  },
+  "chart": {
+    "noValue": "Sin dato",
+    "editValue": "Editar {{label}}",
+    "winRatio": "{{wins}} de {{total}}",
+    "value": "Valor",
+    "total": "Total",
+    "axis": "Eje",
+    "quadrant": "Cuadrante"
+  },
+  "comments": {
+    "composerLabel": "Comentario",
+    "placeholder": "Escribe un comentario...",
+    "replyPlaceholder": "Escribe una respuesta...",
+    "send": "Enviar",
+    "reply": "Responder"
+  },
+  "commentThread": {
+    "status": {
+      "pending": "Pendiente",
+      "inAnalysis": "En análisis",
+      "resolved": "Resuelto"
+    },
+    "changeRequest": "Solicitud de cambio",
+    "requestChange": "Solicitar ajuste",
+    "accept": "Aceptar",
+    "reject": "Rechazar",
+    "decision": {
+      "accepted": "Aceptada",
+      "rejected": "Rechazada"
+    }
+  },
+  "companyProfile": {
+    "country": "PAÍS",
+    "category": "CATEGORÍA",
+    "business": "NEGOCIO",
+    "segments": "SEGMENTOS",
+    "news": "Noticias recientes",
+    "noNews": "Sin noticias recientes."
+  },
+  "authError": {
+    "accessDenied": "Tu cuenta no tiene acceso al Comparador. Solicita acceso a tu administrador.",
+    "sessionExpired": "Tu sesión expiró. Ingresa de nuevo para continuar.",
+    "idpError": "No se pudo completar el ingreso con el Directorio Activo. Intenta de nuevo.",
+    "unknown": "No se pudo iniciar sesión. Intenta de nuevo.",
+    "invalidCredentials": "Usuario o contraseña incorrectos."
+  },
+  "help": {
+    "title": "Ayuda y documentación",
+    "questions": {
+      "newAnalysis": {
+        "question": "¿Cómo creo un nuevo análisis?",
+        "answer": "Desde Análisis, usa \"+ Crear nuevo análisis\" y completa los 5 pasos de Definición (información general, competidores, indicadores, fuentes y validación)."
+      },
+      "tiers": {
+        "question": "¿Qué significan los Tiers (1-4)?",
+        "answer": "Resumen la posición de Ecopetrol frente a pares en cada categoría: Tier 1 es la mejor posición relativa y Tier 4 el mayor rezago."
+      },
+      "excluded": {
+        "question": "¿Por qué una compañía queda fuera de la muestra?",
+        "answer": "Yarbis excluye compañías cuya homologación de datos cae por debajo del umbral mínimo, para no distorsionar los promedios."
+      },
+      "presentations": {
+        "question": "¿Dónde veo mis presentaciones publicadas?",
+        "answer": "En Presentaciones Inteligentes, en la tabla \"Presentaciones creadas\" — puedes editar, ver detalle, descargar y compartir cada una."
+      }
+    },
+    "support": "¿No encontraste tu respuesta? Pregúntale a Yarbis o escribe a soporte.",
+    "contactSupport": "Contactar soporte"
+  }
+}

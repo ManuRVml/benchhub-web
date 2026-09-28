@@ -1,0 +1,985 @@
+[
+  {
+    "name": "trend-up",
+    "context": "login feature \"Desempeño comparativo\"",
+    "viewBox": "0 0 20 20",
+    "width": 18,
+    "height": 18,
+    "strokeWidth": 1.7,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "elements": [
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M3 15 L8 9 L12 12 L17 5"
+        }
+      },
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M13 5 h4 v4"
+        }
+      }
+    ],
+    "htmlLines": [54]
+  },
+  {
+    "name": "bar-chart",
+    "context": "login feature \"Referentes estratégicos\"",
+    "viewBox": "0 0 20 20",
+    "width": 18,
+    "height": 18,
+    "strokeWidth": 1.7,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "elements": [
+      {
+        "tag": "line",
+        "attrs": {
+          "x1": "4",
+          "y1": "16",
+          "x2": "4",
+          "y2": "10"
+        }
+      },
+      {
+        "tag": "line",
+        "attrs": {
+          "x1": "10",
+          "y1": "16",
+          "x2": "10",
+          "y2": "5"
+        }
+      },
+      {
+        "tag": "line",
+        "attrs": {
+          "x1": "16",
+          "y1": "16",
+          "x2": "16",
+          "y2": "8"
+        }
+      }
+    ],
+    "htmlLines": [60]
+  },
+  {
+    "name": "clock",
+    "context": "login feature \"Generación de valor\"",
+    "viewBox": "0 0 20 20",
+    "width": 18,
+    "height": 18,
+    "strokeWidth": 1.7,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "elements": [
+      {
+        "tag": "circle",
+        "attrs": {
+          "cx": "10",
+          "cy": "10",
+          "r": "7"
+        }
+      },
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M10 3 v7 l5 3"
+        }
+      }
+    ],
+    "htmlLines": [66]
+  },
+  {
+    "name": "user",
+    "context": "login card \"Iniciar sesión\"",
+    "viewBox": "0 0 20 20",
+    "width": 24,
+    "height": 24,
+    "strokeWidth": 1.7,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "elements": [
+      {
+        "tag": "circle",
+        "attrs": {
+          "cx": "10",
+          "cy": "7",
+          "r": "3.2"
+        }
+      },
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M3.5 17 c0 -3.6 2.9 -6 6.5 -6 s6.5 2.4 6.5 6"
+        }
+      }
+    ],
+    "htmlLines": [76]
+  },
+  {
+    "name": "info",
+    "context": "login note \"Directorio Activo\"",
+    "viewBox": "0 0 20 20",
+    "width": 16,
+    "height": 16,
+    "strokeWidth": 1.6,
+    "strokeLinecap": null,
+    "strokeLinejoin": null,
+    "elements": [
+      {
+        "tag": "circle",
+        "attrs": {
+          "cx": "10",
+          "cy": "10",
+          "r": "7.5"
+        }
+      },
+      {
+        "tag": "line",
+        "attrs": {
+          "x1": "10",
+          "y1": "9",
+          "x2": "10",
+          "y2": "14"
+        }
+      },
+      {
+        "tag": "circle",
+        "attrs": {
+          "cx": "10",
+          "cy": "6.3",
+          "r": "0.9",
+          "fill": "currentColor",
+          "stroke": "none"
+        }
+      }
+    ],
+    "htmlLines": [86]
+  },
+  {
+    "name": "app-window",
+    "context": "gate card \"Ingresar a la herramienta\"",
+    "viewBox": "0 0 20 20",
+    "width": 22,
+    "height": 22,
+    "strokeWidth": 1.7,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "elements": [
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M4 5 h12 v10 h-12 Z"
+        }
+      },
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M4 8.5 h12"
+        }
+      },
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M7 8.5 v6.5"
+        }
+      }
+    ],
+    "htmlLines": [108]
+  },
+  {
+    "name": "settings",
+    "context": "gate card \"Administración\"",
+    "viewBox": "0 0 20 20",
+    "width": 22,
+    "height": 22,
+    "strokeWidth": 1.7,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "elements": [
+      {
+        "tag": "circle",
+        "attrs": {
+          "cx": "10",
+          "cy": "10",
+          "r": "2.3"
+        }
+      },
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M10 3.5 v1.6 M10 14.9 v1.6 M16.5 10 h-1.6 M5.1 10 h-1.6 M14.6 5.4 l-1.1 1.1 M6.5 13.5 l-1.1 1.1 M14.6 14.6 l-1.1 -1.1 M6.5 6.5 l-1.1 -1.1"
+        }
+      }
+    ],
+    "htmlLines": [115]
+  },
+  {
+    "name": "home",
+    "context": "sidebar \"Inicio\"",
+    "viewBox": "0 0 20 20",
+    "width": 20,
+    "height": 20,
+    "strokeWidth": 1.6,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "elements": [
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M3 10 L10 4 L17 10"
+        }
+      },
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M5 9 V16 H9 V12 H11 V16 H15 V9"
+        }
+      }
+    ],
+    "htmlLines": [170]
+  },
+  {
+    "name": "report",
+    "context": "sidebar \"Ref. TBG I ILP\" / \"Ref. Competitivo\"",
+    "viewBox": "0 0 20 20",
+    "width": 20,
+    "height": 20,
+    "strokeWidth": 1.6,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "elements": [
+      {
+        "tag": "rect",
+        "attrs": {
+          "rx": "1.5",
+          "x": "3.5",
+          "y": "3.5",
+          "width": "13",
+          "height": "13"
+        }
+      },
+      {
+        "tag": "line",
+        "attrs": {
+          "x1": "6.5",
+          "y1": "7.5",
+          "x2": "13.5",
+          "y2": "7.5"
+        }
+      },
+      {
+        "tag": "line",
+        "attrs": {
+          "x1": "6.5",
+          "y1": "10.5",
+          "x2": "13.5",
+          "y2": "10.5"
+        }
+      },
+      {
+        "tag": "line",
+        "attrs": {
+          "x1": "6.5",
+          "y1": "13.5",
+          "x2": "10.5",
+          "y2": "13.5"
+        }
+      }
+    ],
+    "htmlLines": [175, 178]
+  },
+  {
+    "name": "value-tree",
+    "context": "sidebar \"Monitor de Valor\"",
+    "viewBox": "0 0 20 20",
+    "width": 20,
+    "height": 20,
+    "strokeWidth": 1.6,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "elements": [
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M10 3 v6"
+        }
+      },
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M10 9 l-4 4"
+        }
+      },
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M10 9 l4 4"
+        }
+      },
+      {
+        "tag": "circle",
+        "attrs": {
+          "cx": "10",
+          "cy": "3",
+          "r": "1.6"
+        }
+      },
+      {
+        "tag": "circle",
+        "attrs": {
+          "cx": "6",
+          "cy": "15",
+          "r": "1.6"
+        }
+      },
+      {
+        "tag": "circle",
+        "attrs": {
+          "cx": "14",
+          "cy": "15",
+          "r": "1.6"
+        }
+      }
+    ],
+    "htmlLines": [185]
+  },
+  {
+    "name": "presentation",
+    "context": "sidebar \"Presentaciones\"",
+    "viewBox": "0 0 20 20",
+    "width": 20,
+    "height": 20,
+    "strokeWidth": 1.6,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "elements": [
+      {
+        "tag": "rect",
+        "attrs": {
+          "rx": "1",
+          "x": "3",
+          "y": "4",
+          "width": "14",
+          "height": "10"
+        }
+      },
+      {
+        "tag": "line",
+        "attrs": {
+          "x1": "7",
+          "y1": "17",
+          "x2": "13",
+          "y2": "17"
+        }
+      },
+      {
+        "tag": "line",
+        "attrs": {
+          "x1": "10",
+          "y1": "14",
+          "x2": "10",
+          "y2": "17"
+        }
+      }
+    ],
+    "htmlLines": [190]
+  },
+  {
+    "name": "bell",
+    "context": "sidebar \"Notificaciones\" / header bell",
+    "viewBox": "0 0 20 20",
+    "width": 20,
+    "height": 20,
+    "strokeWidth": 1.6,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "elements": [
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M10 3.5 a3.5 3.5 0 0 1 3.5 3.5 v2.5 l1.5 3 h-10 l1.5 -3 v-2.5 a3.5 3.5 0 0 1 3.5 -3.5 Z"
+        }
+      },
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M8.7 15.5 a1.3 1.3 0 0 0 2.6 0"
+        }
+      }
+    ],
+    "htmlLines": [195, 223]
+  },
+  {
+    "name": "logout",
+    "context": "sidebar \"Salir\"",
+    "viewBox": "0 0 20 20",
+    "width": 20,
+    "height": 20,
+    "strokeWidth": 1.6,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "elements": [
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M8 17 H4.5 a1 1 0 0 1 -1 -1 V4 a1 1 0 0 1 1 -1 H8"
+        }
+      },
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M13 14 l4 -4 l-4 -4"
+        }
+      },
+      {
+        "tag": "line",
+        "attrs": {
+          "x1": "17",
+          "y1": "10",
+          "x2": "7.5",
+          "y2": "10"
+        }
+      }
+    ],
+    "htmlLines": [208]
+  },
+  {
+    "name": "help",
+    "context": "header help \"?\"",
+    "viewBox": "0 0 20 20",
+    "width": 18,
+    "height": 18,
+    "strokeWidth": 1.6,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "elements": [
+      {
+        "tag": "circle",
+        "attrs": {
+          "cx": "10",
+          "cy": "10",
+          "r": "7.5"
+        }
+      },
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M7.8 8 a2.2 2.2 0 1 1 3.4 1.8 c-.7.5-1.2 1-1.2 2"
+        }
+      },
+      {
+        "tag": "circle",
+        "attrs": {
+          "cx": "10",
+          "cy": "14",
+          "r": ".4",
+          "fill": "currentColor"
+        }
+      }
+    ],
+    "htmlLines": [227]
+  },
+  {
+    "name": "arrow-up",
+    "context": "peer news impact up",
+    "viewBox": "0 0 20 20",
+    "width": 14,
+    "height": 14,
+    "strokeWidth": 2.2,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "elements": [
+      {
+        "tag": "line",
+        "attrs": {
+          "x1": "10",
+          "y1": "16",
+          "x2": "10",
+          "y2": "4"
+        }
+      },
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M5 9 l5 -5 l5 5"
+        }
+      }
+    ],
+    "htmlLines": [348]
+  },
+  {
+    "name": "arrow-down",
+    "context": "peer news impact down",
+    "viewBox": "0 0 20 20",
+    "width": 14,
+    "height": 14,
+    "strokeWidth": 2.2,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "elements": [
+      {
+        "tag": "line",
+        "attrs": {
+          "x1": "10",
+          "y1": "4",
+          "x2": "10",
+          "y2": "16"
+        }
+      },
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M5 11 l5 5 l5 -5"
+        }
+      }
+    ],
+    "htmlLines": [351]
+  },
+  {
+    "name": "spreadsheet",
+    "context": "Resumen del informe \"Excel\" button",
+    "viewBox": "0 0 20 20",
+    "width": 14,
+    "height": 14,
+    "strokeWidth": 1.7,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "elements": [
+      {
+        "tag": "rect",
+        "attrs": {
+          "rx": "1.5",
+          "x": "3",
+          "y": "3",
+          "width": "14",
+          "height": "14"
+        }
+      },
+      {
+        "tag": "line",
+        "attrs": {
+          "x1": "3",
+          "y1": "9",
+          "x2": "17",
+          "y2": "9"
+        }
+      },
+      {
+        "tag": "line",
+        "attrs": {
+          "x1": "8.5",
+          "y1": "3",
+          "x2": "8.5",
+          "y2": "17"
+        }
+      }
+    ],
+    "htmlLines": [1021]
+  },
+  {
+    "name": "monitor",
+    "context": "Visualización \"Crear presentación\" / notification type \"Publicación\"",
+    "viewBox": "0 0 20 20",
+    "width": 16,
+    "height": 16,
+    "strokeWidth": 1.6,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "elements": [
+      {
+        "tag": "rect",
+        "attrs": {
+          "rx": "1.5",
+          "x": "2.5",
+          "y": "4",
+          "width": "15",
+          "height": "10"
+        }
+      },
+      {
+        "tag": "line",
+        "attrs": {
+          "x1": "7",
+          "y1": "17",
+          "x2": "13",
+          "y2": "17"
+        }
+      },
+      {
+        "tag": "line",
+        "attrs": {
+          "x1": "10",
+          "y1": "14",
+          "x2": "10",
+          "y2": "17"
+        }
+      }
+    ],
+    "htmlLines": [1095, 2970]
+  },
+  {
+    "name": "data",
+    "context": "notification type \"Dato\"",
+    "viewBox": "0 0 20 20",
+    "width": 17,
+    "height": 17,
+    "strokeWidth": 1.6,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "elements": [
+      {
+        "tag": "line",
+        "attrs": {
+          "x1": "5",
+          "y1": "16",
+          "x2": "5",
+          "y2": "11"
+        }
+      },
+      {
+        "tag": "line",
+        "attrs": {
+          "x1": "10",
+          "y1": "16",
+          "x2": "10",
+          "y2": "6"
+        }
+      },
+      {
+        "tag": "line",
+        "attrs": {
+          "x1": "15",
+          "y1": "16",
+          "x2": "15",
+          "y2": "9"
+        }
+      }
+    ],
+    "htmlLines": [2964]
+  },
+  {
+    "name": "comment",
+    "context": "notification type \"Comentario\"",
+    "viewBox": "0 0 20 20",
+    "width": 17,
+    "height": 17,
+    "strokeWidth": 1.6,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "elements": [
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M3 4.5 h14 a1 1 0 0 1 1 1 v7 a1 1 0 0 1 -1 1 H8 l-3.5 3 v-3 H3 a1 1 0 0 1 -1 -1 v-7 a1 1 0 0 1 1 -1 Z"
+        }
+      }
+    ],
+    "htmlLines": [2967]
+  },
+  {
+    "name": "bot",
+    "context": "notification type \"Yarbis\"",
+    "viewBox": "0 0 24 24",
+    "width": 17,
+    "height": 17,
+    "strokeWidth": 1.6,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "elements": [
+      {
+        "tag": "rect",
+        "attrs": {
+          "rx": "4",
+          "x": "5",
+          "y": "9",
+          "width": "14",
+          "height": "11"
+        }
+      },
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M12 9 V5.5"
+        }
+      },
+      {
+        "tag": "circle",
+        "attrs": {
+          "cx": "12",
+          "cy": "4",
+          "r": "1.3",
+          "fill": "currentColor",
+          "stroke": "none"
+        }
+      },
+      {
+        "tag": "circle",
+        "attrs": {
+          "cx": "9",
+          "cy": "14.2",
+          "r": "1.3",
+          "fill": "currentColor",
+          "stroke": "none"
+        }
+      },
+      {
+        "tag": "circle",
+        "attrs": {
+          "cx": "15",
+          "cy": "14.2",
+          "r": "1.3",
+          "fill": "currentColor",
+          "stroke": "none"
+        }
+      }
+    ],
+    "htmlLines": [2973]
+  },
+  {
+    "name": "news",
+    "context": "notification type \"Noticia\"",
+    "viewBox": "0 0 20 20",
+    "width": 17,
+    "height": 17,
+    "strokeWidth": 1.6,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "elements": [
+      {
+        "tag": "rect",
+        "attrs": {
+          "rx": "1.5",
+          "x": "3",
+          "y": "4",
+          "width": "14",
+          "height": "12"
+        }
+      },
+      {
+        "tag": "line",
+        "attrs": {
+          "x1": "6",
+          "y1": "7.5",
+          "x2": "11",
+          "y2": "7.5"
+        }
+      },
+      {
+        "tag": "line",
+        "attrs": {
+          "x1": "6",
+          "y1": "10",
+          "x2": "14",
+          "y2": "10"
+        }
+      },
+      {
+        "tag": "line",
+        "attrs": {
+          "x1": "6",
+          "y1": "12.5",
+          "x2": "14",
+          "y2": "12.5"
+        }
+      }
+    ],
+    "htmlLines": [2976]
+  },
+  {
+    "name": "users",
+    "context": "notification type \"Colaboración\"",
+    "viewBox": "0 0 20 20",
+    "width": 17,
+    "height": 17,
+    "strokeWidth": 1.6,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "elements": [
+      {
+        "tag": "circle",
+        "attrs": {
+          "cx": "7",
+          "cy": "7",
+          "r": "2.6"
+        }
+      },
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M2.5 16 c0 -2.8 2 -4.6 4.5 -4.6 s4.5 1.8 4.5 4.6"
+        }
+      },
+      {
+        "tag": "circle",
+        "attrs": {
+          "cx": "14.5",
+          "cy": "7.5",
+          "r": "2.1"
+        }
+      },
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M12.5 11.8 c1 -.5 2.2 -.6 3.2 -.2 c1.5 .6 2.3 2 2.3 3.9"
+        }
+      }
+    ],
+    "htmlLines": [2979]
+  },
+  {
+    "name": "system",
+    "context": "notification type \"Sistema\"",
+    "viewBox": "0 0 20 20",
+    "width": 17,
+    "height": 17,
+    "strokeWidth": 1.6,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "elements": [
+      {
+        "tag": "circle",
+        "attrs": {
+          "cx": "10",
+          "cy": "10",
+          "r": "2.6"
+        }
+      },
+      {
+        "tag": "circle",
+        "attrs": {
+          "cx": "10",
+          "cy": "10",
+          "r": "6.4",
+          "stroke-dasharray": "1.6 2.2"
+        }
+      }
+    ],
+    "htmlLines": [2982]
+  },
+  {
+    "name": "check-circle",
+    "context": "modal \"Análisis publicado\"",
+    "viewBox": "0 0 20 20",
+    "width": 26,
+    "height": 26,
+    "strokeWidth": 1.8,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "elements": [
+      {
+        "tag": "circle",
+        "attrs": {
+          "cx": "10",
+          "cy": "10",
+          "r": "7.5"
+        }
+      },
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M6.5 10 l2.3 2.3 l4.7 -5"
+        }
+      }
+    ],
+    "htmlLines": [3023]
+  },
+  {
+    "name": "check",
+    "context": "toast \"Cambios guardados automáticamente\"",
+    "viewBox": "0 0 20 20",
+    "width": 10,
+    "height": 10,
+    "strokeWidth": 2.2,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "elements": [
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M5 10.5 l3.5 3.5 l7 -8"
+        }
+      }
+    ],
+    "htmlLines": [3034]
+  },
+  {
+    "name": "assistant",
+    "context": "Yarbis floating button",
+    "viewBox": "0 0 24 24",
+    "width": 28,
+    "height": 28,
+    "strokeWidth": 1.6,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "elements": [
+      {
+        "tag": "rect",
+        "attrs": {
+          "rx": "4",
+          "x": "5",
+          "y": "9",
+          "width": "14",
+          "height": "11"
+        }
+      },
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M12 9 V5.5"
+        }
+      },
+      {
+        "tag": "circle",
+        "attrs": {
+          "cx": "12",
+          "cy": "4",
+          "r": "1.3",
+          "fill": "currentColor",
+          "stroke": "none"
+        }
+      },
+      {
+        "tag": "circle",
+        "attrs": {
+          "cx": "9",
+          "cy": "14.2",
+          "r": "1.3",
+          "fill": "currentColor",
+          "stroke": "none"
+        }
+      },
+      {
+        "tag": "circle",
+        "attrs": {
+          "cx": "15",
+          "cy": "14.2",
+          "r": "1.3",
+          "fill": "currentColor",
+          "stroke": "none"
+        }
+      },
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M9.5 17.3 q2.5 1.6 5 0"
+        }
+      },
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M3.5 12.5 h1.5"
+        }
+      },
+      {
+        "tag": "path",
+        "attrs": {
+          "d": "M19 12.5 h1.5"
+        }
+      }
+    ],
+    "htmlLines": [3177]
+  }
+]

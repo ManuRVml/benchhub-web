@@ -1,0 +1,22 @@
+/* AI pill pulse: the prototype's `aiPulse` ring (BencHUD.dc.html L30), from tokens only: a `ai.pulseRing` box-shadow that
+ * grows to `motion.distance.aiPulseRing` and fades, every `motion.duration.aiPulse`. Only a shadow moves, so the label
+ * keeps its contrast; it never runs under prefers-reduced-motion (AiPill also drops the class). */
+@keyframes ai-pill-pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--color-ai-pulse-ring);
+  }
+
+  70% {
+    box-shadow: 0 0 0 var(--motion-distance-ai-pulse-ring) transparent;
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ai-pill-pulse {
+    animation: ai-pill-pulse var(--motion-duration-ai-pulse) infinite;
+  }
+}

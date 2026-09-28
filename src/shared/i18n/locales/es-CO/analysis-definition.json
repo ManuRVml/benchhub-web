@@ -1,0 +1,118 @@
+{
+  "placeholder": {
+    "title": "SCR-07 · Definición del análisis"
+  },
+  "stepper": {
+    "step1": "Información general",
+    "step2": "Competidores",
+    "step3": "Indicadores",
+    "step4": "Fuentes",
+    "step5": "Validación"
+  },
+  "stepCards": {
+    "step1": "Paso 1 · Información general",
+    "step2": "Paso 2 · Competidores",
+    "step3": "Paso 3 · Selección de indicadores",
+    "step4": "Paso 4 · Fuentes",
+    "step5": "Paso 5 · Validación"
+  },
+  "step1": {
+    "info": "Define el alcance base del análisis: qué se va a comparar, para quién, y con qué corte de tiempo. Estos datos aparecen luego en el título y en la validación final (Paso 5).",
+    "typeLabel": "Tipo de análisis",
+    "nameLabel": "Nombre del análisis",
+    "namePlaceholder": "Desempeño comparativo — 4T 2025",
+    "objectiveLabel": "Objetivo",
+    "objectivePlaceholder": "Evaluar la posición competitiva de Ecopetrol al cierre del cuarto trimestre de 2025 frente a pares del sector energético.",
+    "questionLabel": "Pregunta del análisis",
+    "questionPlaceholder": "¿Cómo se posiciona Ecopetrol frente a comparables en EBITDA, márgenes y producción en el 4T 2025?",
+    "currentPeriodLabel": "Periodo actual",
+    "comparedPeriodLabel": "Periodo comparado",
+    "comparedPeriodInfo": "Elige contra qué periodo comparas el actual: el trimestre inmediatamente anterior (QoQ) o el mismo trimestre del año anterior (YoY). El resultado se muestra como variación entre ambos.",
+    "cutOffDateLabel": "Fecha de corte",
+    "scopeLabel": "Alcance",
+    "typeOptions": {
+      "estrategicoTBG": "Estratégico TBG",
+      "estrategicoILP": "Estratégico ILP",
+      "desempenoPares": "Desempeño de Pares"
+    },
+    "quarters": {
+      "q1": "Q1",
+      "q2": "Q2",
+      "q3": "Q3",
+      "q4": "Q4"
+    },
+    "scopes": {
+      "grupoEcopetrol": "Grupo Ecopetrol",
+      "isa": "ISA"
+    }
+  },
+  "step2": {
+    "subTitle": "Catálogo por categoría estratégica · clic para incluir/excluir · clic en el nombre en otras pantallas abre su perfil",
+    "businessLineFilterLabel": "Línea de negocio",
+    "businessLineOptions": {
+      "all": "Todas",
+      "oilAndGas": "Oil & Gas",
+      "energeticos": "Energéticos"
+    },
+    "yarbisBox": {
+      "prefix": "Yarbis:"
+    },
+    "unknownProfile": "— · Par sectorial"
+  },
+  "step3": {
+    "subTitle": "{{categories}} categorías · {{indicators}} indicadores",
+    "info": "Elige la fuente de indicadores: Referenciamiento de pares (indicadores comparados contra el sector) o TBG e ILP (métricas de los esquemas de compensación variable). Cada indicador lleva un código para homologación técnica.",
+    "sourceTabs": {
+      "pares": "Referenciamiento de pares",
+      "tbgIlp": "TBG e ILP"
+    },
+    "conceptFilterLabel": "Concepto de planeación",
+    "horizonFilterLabel": "Horizonte",
+    "conceptOptions": {
+      "profitability": "Rentabilidad",
+      "liquidity": "Liquidez",
+      "operational": "Operacional",
+      "solvency": "Solvencia",
+      "opex": "Opex"
+    },
+    "horizonOptions": {
+      "tbg": "TBG",
+      "ilp": "ILP"
+    },
+    "indicatorGroups": {
+      "financiero": "Financiero",
+      "operativo": "Operativo",
+      "transversal": "Transversal"
+    }
+  },
+  "step4": {
+    "subTitle": "Fuentes asociadas al cálculo de cada indicador",
+    "info": "Capital IQ es la fuente principal; las demás se usan para validar o completar datos faltantes. La métrica derivada permite crear un indicador propio a partir de una fórmula.",
+    "sources": {
+      "capitalIq": "Capital IQ · principal",
+      "bloomberg": "Bloomberg",
+      "platts": "Platts",
+      "internaEcp": "Fuentes internas Ecopetrol"
+    }
+  },
+  "step5": {
+    "info": "Revisa el resumen antes de generar el análisis. \"Generar análisis\" te lleva a Resultados con estos parámetros aplicados; aún podrás ajustar competidores e indicadores después.",
+    "summaryLabels": {
+      "scope": "Alcance",
+      "competitors": "Competidores seleccionados",
+      "indicators": "Indicadores a analizar"
+    },
+    "cadence": {
+      "quarterly": "Trimestral"
+    }
+  },
+  "autosave": {
+    "saving": "Guardando…",
+    "saved": "Guardado"
+  },
+  "navigation": {
+    "previous": "‹ Anterior",
+    "next": "Siguiente ›",
+    "generateAnalysis": "Generar análisis"
+  }
+}

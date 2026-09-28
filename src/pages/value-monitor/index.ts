@@ -1,0 +1,1 @@
+export { ValueMonitorPage } from './ValueMonitorPage';

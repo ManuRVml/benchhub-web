@@ -1,0 +1,1 @@
+export { PresentationDetailPage } from './PresentationDetailPage';

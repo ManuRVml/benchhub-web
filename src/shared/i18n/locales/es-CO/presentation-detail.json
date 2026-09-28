@@ -1,0 +1,88 @@
+{
+  "header": {
+    "backLink": "‹ Volver a Presentaciones",
+    "actions": {
+      "edit": "Editar",
+      "download": "Descargar",
+      "share": "Compartir"
+    }
+  },
+  "pager": {
+    "previous": "‹",
+    "next": "›"
+  },
+  "comments": {
+    "title": "Comentarios de otros usuarios",
+    "placeholder": "Escribe un comentario...",
+    "send": "Enviar",
+    "authorSeparator": "·",
+    "roles": {
+      "analystCreator": "Analista creador",
+      "executiveViewer": "Ejecutivo visualizador",
+      "executiveIntegral": "Ejecutivo integral",
+      "explorerViewer": "Explorador visualizador",
+      "explorerIntegral": "Explorador integral"
+    }
+  },
+  "emptyState": {
+    "message": "Selecciona al menos un módulo para generar diapositivas."
+  },
+  "status": {
+    "published": "Publicado",
+    "draft": "Borrador"
+  },
+  "slides": {
+    "brand": "ECOPETROL · COMPARADOR FINANCIERO",
+    "footer": "ECOPETROL · COMPARADOR FINANCIERO · {{templateName}}",
+    "comment": "Comentario",
+    "legend": {
+      "ecopetrol": "Grupo Ecopetrol",
+      "peers": "Promedio pares"
+    },
+    "table": {
+      "category": "Categoría",
+      "kpi": "KPI",
+      "ecopetrol": "Valor GE",
+      "peers": "Prom. pares"
+    },
+    "hom": {
+      "title": "Cobertura de datos por compañía",
+      "missing": "{{count}} faltante(s)"
+    },
+    "homMissing": {
+      "title": "Indicadores faltantes por compañía",
+      "missing": "{{count}} indicador(es) faltante(s)"
+    },
+    "radar": {
+      "title": "Ecopetrol vs. promedio sectorial"
+    },
+    "hallazgos": {
+      "title": "Hallazgos de Yarbis"
+    },
+    "summary": {
+      "title": "KPIs destacados",
+      "caption": "peso Ecopetrol"
+    },
+    "dimensions": {
+      "financiera": "Financiera",
+      "operativa": "Operativa",
+      "transversal": "Transversal"
+    },
+    "ranking": {
+      "title": "Ranking por peso total",
+      "footnote": "Peso total = Financiera + Operativa + Transversal · Capital IQ"
+    },
+    "categories": {
+      "title": "Heatmap comparativo por compañía",
+      "footnote": "Entre más oscura la celda, mayor el peso asignado a esa línea de indicador."
+    },
+    "findings": {
+      "title": "Composición de peso por línea de indicador"
+    },
+    "closing": {
+      "title": "Gracias",
+      "line": "Comparador financiero de Ecopetrol frente al sector energético · {{templateName}}",
+      "contact": "¿Preguntas? Escríbenos a {{email}}"
+    }
+  }
+}

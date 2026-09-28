@@ -1,0 +1,29 @@
+{
+  "topBar": {
+    "backLink": "‹ Volver",
+    "title": "Administración · Back office",
+    "logout": "Cerrar sesión"
+  },
+  "tiles": {
+    "usersRoles": {
+      "title": "Usuarios y roles",
+      "description": "Gestiona analistas, ejecutivos y permisos de acceso por rol."
+    },
+    "dataSources": {
+      "title": "Fuentes de datos",
+      "description": "Capital IQ, Bloomberg, Platts y fuentes internas — conexión y cobertura."
+    },
+    "companiesPeers": {
+      "title": "Compañías y pares",
+      "description": "Catálogo de competidores disponibles por línea de negocio."
+    },
+    "systemParameters": {
+      "title": "Parámetros del sistema",
+      "description": "Plantillas de presentación, umbrales de homologación y alertas."
+    },
+    "audit": {
+      "title": "Auditoría",
+      "description": "Historial de cambios, publicaciones y accesos a la herramienta."
+    }
+  }
+}

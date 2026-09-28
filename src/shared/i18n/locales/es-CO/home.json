@@ -1,0 +1,45 @@
+{
+  "yarbisInsightBanner": {
+    "prefix": "Yarbis:"
+  },
+  "sectionTitles": {
+    "executiveSummary": "Resumen ejecutivo",
+    "enabledAnalyses": "Análisis habilitados",
+    "peerNews": "Noticias de los pares",
+    "marketIndicators": "Indicadores de mercado"
+  },
+  "sectionInfo": {
+    "executiveSummary": "KPIs clave del último análisis publicado: posición general, cobertura de datos y hallazgos más relevantes frente a pares.",
+    "enabledAnalyses": "Análisis a los que tienes acceso según tu rol. Clic en una tarjeta abre su resultado.",
+    "peerNews": "Noticias recientes solo de las compañías configuradas como pares en el análisis.",
+    "marketIndicators": "Variables macro y de mercado relevantes para el sector, con su variación reciente."
+  },
+  "enabledAnalyses": {
+    "verTodos": "Ver todos ›"
+  },
+  "news": {
+    "empty": "Sin noticias recientes para los pares configurados."
+  },
+  "carousel": {
+    "prev": "Anterior",
+    "next": "Siguiente"
+  },
+  "status": {
+    "draft": "Borrador",
+    "inProgress": "En construcción",
+    "inReview": "En revisión",
+    "published": "Publicado"
+  },
+  "executiveSummary": {
+    "kpis": {
+      "total": "Total análisis",
+      "active": "Activos",
+      "published": "Publicados",
+      "inProgress": "En construcción",
+      "avgCoverage": "Cobertura prom."
+    }
+  },
+  "meta": {
+    "updated": "Actualizado {{updated}} · {{owner}}"
+  }
+}

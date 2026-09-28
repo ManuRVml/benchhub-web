@@ -1,0 +1,1 @@
+export { AccessGatePage } from './AccessGatePage';

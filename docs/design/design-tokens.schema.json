@@ -1,0 +1,189 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eco-comparator.local/schemas/design-tokens.schema.json",
+  "title": "Eco-Comparador design tokens",
+  "description": "Structure of docs/design/design-tokens.json: W3C Design Tokens (DTCG draft) groups and tokens. Every leaf token requires $value and $type, plus $extensions.eco.source (file:line of the spec input).",
+  "type": "object",
+  "properties": {
+    "$description": { "type": "string" },
+    "$extensions": { "type": "object" }
+  },
+  "required": [
+    "brand", "ai", "surface", "text", "border", "status", "severity", "dimension", "chart", "company", "variation",
+    "font", "size", "space", "radius", "shadow", "z", "breakpoint", "motion"
+  ],
+  "propertyNames": { "$ref": "#/$defs/name" },
+  "additionalProperties": { "$ref": "#/$defs/node" },
+  "allOf": [
+    {
+      "properties": {
+        "chart": {
+          "type": "object",
+          "required": ["highlight", "peer", "series"],
+          "properties": {
+            "series": {
+              "type": "object",
+              "propertyNames": { "pattern": "^[1-9][0-9]*$" },
+              "required": ["1"]
+            }
+          }
+        },
+        "variation": { "type": "object", "required": ["positive", "negative", "neutral"] }
+      }
+    }
+  ],
+  "$defs": {
+    "name": {
+      "description": "Group or token name: no '{', '}' or '.'; names starting with '$' are reserved for DTCG properties.",
+      "type": "string",
+      "pattern": "^(\\$(value|type|description|extensions|deprecated)|[^${}.][^{}.]*)$"
+    },
+    "reference": {
+      "type": "string",
+      "pattern": "^\\{[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*\\}$"
+    },
+    "node": {
+      "description": "A token (has $value) or a group (has no $value).",
+      "if": { "type": "object", "required": ["$value"] },
+      "then": { "$ref": "#/$defs/token" },
+      "else": { "$ref": "#/$defs/group" }
+    },
+    "group": {
+      "type": "object",
+      "minProperties": 1,
+      "properties": {
+        "$description": { "type": "string" },
+        "$extensions": { "type": "object" },
+        "$type": false
+      },
+      "propertyNames": { "$ref": "#/$defs/name" },
+      "additionalProperties": { "$ref": "#/$defs/node" }
+    },
+    "token": {
+      "type": "object",
+      "required": ["$value", "$type", "$extensions"],
+      "properties": {
+        "$value": true,
+        "$type": {
+          "enum": ["color", "dimension", "number", "duration", "cubicBezier", "fontFamily", "fontWeight", "shadow", "gradient", "typography", "transition"]
+        },
+        "$description": { "type": "string" },
+        "$deprecated": { "oneOf": [{ "type": "boolean" }, { "type": "string" }] },
+        "$extensions": {
+          "type": "object",
+          "required": ["eco"],
+          "properties": {
+            "eco": {
+              "type": "object",
+              "required": ["source"],
+              "properties": {
+                "source": { "$ref": "#/$defs/sourceRef" },
+                "crossCheck": { "type": "array", "items": { "$ref": "#/$defs/sourceRef" } },
+                "css": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "additionalProperties": false,
+      "allOf": [
+        { "if": { "properties": { "$type": { "const": "color" } } }, "then": { "properties": { "$value": { "$ref": "#/$defs/colorValue" } } } },
+        { "if": { "properties": { "$type": { "const": "dimension" } } }, "then": { "properties": { "$value": { "$ref": "#/$defs/dimensionValue" } } } },
+        { "if": { "properties": { "$type": { "const": "number" } } }, "then": { "properties": { "$value": { "oneOf": [{ "type": "number" }, { "$ref": "#/$defs/reference" }] } } } },
+        { "if": { "properties": { "$type": { "const": "duration" } } }, "then": { "properties": { "$value": { "$ref": "#/$defs/durationValue" } } } },
+        {
+          "if": { "properties": { "$type": { "const": "cubicBezier" } } },
+          "then": { "properties": { "$value": { "type": "array", "items": { "type": "number" }, "minItems": 4, "maxItems": 4 } } }
+        },
+        {
+          "if": { "properties": { "$type": { "const": "fontFamily" } } },
+          "then": { "properties": { "$value": { "oneOf": [{ "type": "string" }, { "type": "array", "items": { "type": "string" }, "minItems": 1 }] } } }
+        },
+        {
+          "if": { "properties": { "$type": { "const": "fontWeight" } } },
+          "then": { "properties": { "$value": { "oneOf": [{ "type": "integer", "minimum": 1, "maximum": 1000 }, { "$ref": "#/$defs/reference" }] } } }
+        },
+        { "if": { "properties": { "$type": { "const": "shadow" } } }, "then": { "properties": { "$value": { "$ref": "#/$defs/shadowValue" } } } },
+        { "if": { "properties": { "$type": { "const": "gradient" } } }, "then": { "properties": { "$value": { "$ref": "#/$defs/gradientValue" } } } },
+        { "if": { "properties": { "$type": { "const": "typography" } } }, "then": { "properties": { "$value": { "$ref": "#/$defs/typographyValue" } } } },
+        { "if": { "properties": { "$type": { "const": "transition" } } }, "then": { "properties": { "$value": { "$ref": "#/$defs/transitionValue" } } } }
+      ]
+    },
+    "sourceRef": {
+      "description": "Workspace-relative path plus 1-based line number, e.g. .plan/source-map/10-synthesis.md:568",
+      "type": "string",
+      "pattern": "^[^:]+\\.md:[1-9][0-9]*$"
+    },
+    "colorValue": {
+      "oneOf": [
+        { "type": "string", "pattern": "^#([0-9A-F]{6}|[0-9A-F]{8})$" },
+        { "$ref": "#/$defs/reference" }
+      ]
+    },
+    "dimensionValue": {
+      "oneOf": [
+        { "type": "string", "pattern": "^-?[0-9]+(\\.[0-9]+)?(px|rem|em)$" },
+        { "$ref": "#/$defs/reference" }
+      ]
+    },
+    "durationValue": {
+      "oneOf": [
+        { "type": "string", "pattern": "^[0-9]+(\\.[0-9]+)?ms$" },
+        { "$ref": "#/$defs/reference" }
+      ]
+    },
+    "shadowValue": {
+      "type": "object",
+      "required": ["color", "offsetX", "offsetY", "blur", "spread"],
+      "properties": {
+        "color": { "$ref": "#/$defs/colorValue" },
+        "offsetX": { "$ref": "#/$defs/dimensionValue" },
+        "offsetY": { "$ref": "#/$defs/dimensionValue" },
+        "blur": { "$ref": "#/$defs/dimensionValue" },
+        "spread": { "$ref": "#/$defs/dimensionValue" },
+        "inset": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "gradientValue": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["color", "position"],
+        "properties": {
+          "color": { "$ref": "#/$defs/colorValue" },
+          "position": { "type": "number", "minimum": 0, "maximum": 1 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "typographyValue": {
+      "type": "object",
+      "required": ["fontFamily", "fontWeight", "fontSize"],
+      "properties": {
+        "fontFamily": { "$ref": "#/$defs/reference" },
+        "fontWeight": { "$ref": "#/$defs/reference" },
+        "fontSize": { "$ref": "#/$defs/dimensionValue" },
+        "lineHeight": { "oneOf": [{ "type": "number" }, { "$ref": "#/$defs/reference" }] },
+        "letterSpacing": { "$ref": "#/$defs/dimensionValue" }
+      },
+      "additionalProperties": false
+    },
+    "transitionValue": {
+      "type": "object",
+      "required": ["duration", "delay", "timingFunction"],
+      "properties": {
+        "duration": { "$ref": "#/$defs/durationValue" },
+        "delay": { "$ref": "#/$defs/durationValue" },
+        "timingFunction": {
+          "oneOf": [
+            { "$ref": "#/$defs/reference" },
+            { "type": "array", "items": { "type": "number" }, "minItems": 4, "maxItems": 4 }
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

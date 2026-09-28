@@ -1,0 +1,38 @@
+{
+  "brand": {
+    "eyebrow": "Comparador financiero",
+    "title": "Inteligencia financiera para decisiones estratégicas",
+    "body": "Plataforma corporativa de análisis y comparación financiera. Evalúa el desempeño de Ecopetrol frente a referentes del sector, construye reportes ejecutivos y consolida hallazgos estratégicos en un solo entorno.",
+    "logoAlt": "BencHUD",
+    "partnerLogoAlt": "Ecopetrol"
+  },
+  "features": {
+    "performance": {
+      "title": "Desempeño comparativo",
+      "subtitle": "Benchmarking frente a pares del sector energético"
+    },
+    "strategic": {
+      "title": "Referentes estratégicos",
+      "subtitle": "Indicadores financieros y de sostenibilidad"
+    },
+    "value": {
+      "title": "Generación de valor",
+      "subtitle": "Análisis de creación de valor y retorno al accionista"
+    }
+  },
+  "form": {
+    "usernameLabel": "Usuario o correo corporativo",
+    "usernamePlaceholder": "usuario@ecopetrol.com.co",
+    "passwordLabel": "Contraseña",
+    "passwordPlaceholder": "••••••••",
+    "submit": "Ingresar"
+  },
+  "info": {
+    "access": "El acceso se autentica mediante el **Directorio Activo** de Ecopetrol. El perfil y los permisos se asignan automáticamente según tu identidad corporativa."
+  },
+  "footer": "Acceso corporativo · Ecopetrol S.A. · Uso interno",
+  "card": {
+    "title": "Iniciar sesión",
+    "subtitle": "Acceso mediante Directorio Activo corporativo"
+  }
+}

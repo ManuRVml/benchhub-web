@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.woff2 binary
+# Byte-exact vendored prototype scripts: their sha384 must match the SRI pinned in support.js.
+tools/prototype-render/vendor/*.js -text
+*.tgz binary

@@ -1,0 +1,46 @@
+{
+  "page": {
+    "title": "Todos los análisis creados"
+  },
+  "actions": {
+    "create": "+ Crear nuevo análisis",
+    "viewDetails": "Ver detalle",
+    "viewDetailsOf": "Ver detalle de {{name}}"
+  },
+  "search": {
+    "label": "Buscar análisis",
+    "placeholder": "Buscar por nombre o descripción..."
+  },
+  "filters": {
+    "date": {
+      "label": "Fecha",
+      "all": "Fecha: todas"
+    },
+    "creator": {
+      "label": "Creador",
+      "all": "Creador: todos"
+    },
+    "status": {
+      "label": "Estado",
+      "all": "Estado: todos"
+    },
+    "clear": "Limpiar filtros"
+  },
+  "table": {
+    "columns": {
+      "name": "Nombre del análisis",
+      "createdAt": "Fecha de creación",
+      "createdBy": "Creado por",
+      "status": "Estado"
+    }
+  },
+  "status": {
+    "draft": "Borrador",
+    "inProgress": "En construcción",
+    "inReview": "En revisión",
+    "published": "Publicado"
+  },
+  "empty": {
+    "noResults": "No se encontraron análisis con los filtros aplicados."
+  }
+}

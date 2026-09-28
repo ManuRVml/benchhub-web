@@ -1,0 +1,14 @@
+allowBuilds:
+  # esbuild (Storybook builder dependency) verifies its platform binary in postinstall; same as the BFF.
+  esbuild: true
+  # msw postinstall only copies the browser worker script; the tests use the node server (msw/node).
+  msw: false
+  unrs-resolver: false
+minimumReleaseAgeExclude:
+  - vite@8.3.1
+peerDependencyRules:
+  # eslint-plugin-react 7.37.5 and eslint-plugin-jsx-a11y 6.10.2 (latest) declare eslint <= 9 but run on eslint 10;
+  # see docs/architecture/tech-stack.md.
+  allowedVersions:
+    eslint-plugin-react>eslint: '10'
+    eslint-plugin-jsx-a11y>eslint: '10'

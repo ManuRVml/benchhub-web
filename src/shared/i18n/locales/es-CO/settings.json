@@ -1,0 +1,24 @@
+{
+  "header": {
+    "title": "Configuración"
+  },
+  "profile": {
+    "roleLabel": "Analista creador",
+    "departmentLabel": "VP Tecnología e Innovación"
+  },
+  "accessibility": {
+    "title": "Accesibilidad",
+    "fontSize": {
+      "label": "Tamaño de fuente",
+      "decrease": "A-",
+      "normal": "A",
+      "increase": "A+"
+    },
+    "highContrast": {
+      "label": "Alto contraste"
+    },
+    "emailNotifications": {
+      "label": "Notificaciones por correo"
+    }
+  }
+}

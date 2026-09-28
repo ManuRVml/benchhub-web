@@ -1,0 +1,93 @@
+{
+  "pageTitle": "Sensibilidades",
+  "sections": {
+    "indicatorSensitivity": {
+      "title": "Sensibilidad por indicador · palancas reales de Ecopetrol",
+      "statusChip": "En construcción",
+      "infoText": "Elige un indicador y verás su fórmula descompuesta hasta las variables que realmente puedes mover. Cada indicador tiene un set predefinido de palancas (con topes mínimos y máximos) — no todas las variables posibles, para mantener la simulación manejable. Al mover una palanca, las variables relacionadas (\"tríadas\") se recalculan automáticamente. Todo se sensibiliza sobre los datos propios de Ecopetrol; los pares solo definen la meta o referente contra la cual comparas.",
+      "formulaTitle": "ROACE = NOPAT / Capital empleado",
+      "formulaTerms": {
+        "nopat": "NOPAT = Ingresos operacionales − Costos y gastos operativos − Depreciación y amortización − Impuesto de renta",
+        "capitalEmployed": "Capital empleado = Activos totales − Pasivos corrientes"
+      },
+      "leversTitle": "Palancas disponibles",
+      "resultStrip": {
+        "baseLabel": "Base",
+        "simulatedLabel": "Simulado",
+        "gapLabel": "Brecha vs. meta ({{metaValue}})"
+      },
+      "yarbisSuggestion": {
+        "title": "✦ Sugerencia de combinación de Yarbis",
+        "toggleShow": "Ver sugerencia ›",
+        "toggleHide": "Ocultar ‹",
+        "bodyText": "Basado en reportes históricos: bajar costo de energía −5% y servicios contratados −5.000 MMCOP, subir producción +3%. Resultado estimado: {{result}}.",
+        "statusRequiresValidation": "Requiere validación humana",
+        "statusValidated": "✓ Validada por analista",
+        "loadButton": "Cargar en controles",
+        "validateButton": "Marcar como validada",
+        "disclaimer": "Yarbis calcula el impacto de cada combinación, pero la decisión de qué palanca mover para llegar a la meta requiere criterio humano — ninguna combinación es accionable sin validación de un analista."
+      }
+    },
+    "scenarios": {
+      "eyebrow": "Escenarios",
+      "infoText": "Elige un escenario predefinido (Base, Optimista, Conservador) para cargar valores de Productividad y Costos operativos, o ajusta los sliders abajo para crear uno personalizado."
+    },
+    "simulationVariables": {
+      "title": "Variables de simulación",
+      "infoText": "Simula cómo cambios en productividad y costos operativos moverían el ROACE de Ecopetrol, sin afectar los datos reales del análisis.",
+      "productivityLabel": "Productividad",
+      "operatingCostsLabel": "Costos operativos"
+    },
+    "roaceBeforeAfter": {
+      "title": "ROACE · Before / After",
+      "infoText": "\"Base\" es el ROACE actual de Ecopetrol; \"Simulado\" aplica los ajustes de productividad y costos elegidos arriba. La barra de la derecha muestra cuánto de la brecha frente al promedio de pares se cerraría.",
+      "baseLabel": "Base",
+      "simulatedLabel": "Simulado",
+      "gapClosedLabel": "Brecha cerrada vs. pares ({{peerValue}})"
+    },
+    "yarbisTip": {
+      "gapOpen": "Aún queda una brecha importante — prueba subir productividad o bajar costos para acercarte más al promedio de pares.",
+      "gapClosed": "Con estos ajustes cierras el {{pct}}% de la brecha frente al promedio de pares en ROACE."
+    },
+    "weightSimulator": {
+      "title": "Simulador de pesos por indicador · Ecopetrol",
+      "subtitle": "Ajusta el peso (%) de cada indicador y observa el impacto en el puntaje ponderado frente a la meta, con base en datos reales e históricos.",
+      "resetButton": "Restablecer pesos",
+      "categoryHeader": "{{total}} / {{target}} meta · {{status}}",
+      "scoreStrip": {
+        "baseLabel": "Puntaje base",
+        "simulatedLabel": "Puntaje simulado",
+        "variationLabel": "Variación"
+      },
+      "status": {
+        "onTarget": "En línea",
+        "above": "Excede la meta de categoría",
+        "below": "Por debajo de la meta de categoría"
+      }
+    },
+    "yarbisRecommendations": {
+      "title": "Recomendaciones de Yarbis para el plan estratégico",
+      "infoText": "Yarbis ordena los indicadores por brecha frente a la meta y por su peso simulado — a mayor peso y brecha, mayor prioridad de acción.",
+      "subtitle": "Priorizadas por brecha frente a la meta y peso relativo del indicador",
+      "generateButton": "Generar plan estratégico",
+      "watchVariant": "A {{pts}} pts de la meta. Un ajuste moderado cerraría gran parte de la brecha dado su peso ({{weight}}%).",
+      "criticalVariant": "Brecha crítica de {{pts}} pts frente a la meta. Con su peso actual ({{weight}}%) prioriza un plan de acción inmediato."
+    },
+    "strategicPlanModal": {
+      "title": "Plan estratégico sugerido",
+      "subtitle": "Basado en los indicadores con mayor brecha y peso en la simulación actual — listo para usar en seguimiento del análisis.",
+      "downloadButton": "Descargar",
+      "saveButton": "Guardar en el análisis",
+      "urgencyLabel": "Urgencia {{urgency}}",
+      "gapLabel": "Brecha:",
+      "weightLabel": "Peso:",
+      "termLabel": "Plazo sugerido:",
+      "rowSummary": "Brecha: {{gap}} pts · Peso: {{weight}}% · Plazo sugerido: {{term}} días",
+      "urgencyHigh": "Alta",
+      "urgencyMedium": "Media",
+      "urgencyLow": "Baja",
+      "savedToast": "✓ Plan guardado en el análisis.",
+      "saveError": "No se pudo guardar el plan. Intenta de nuevo."
+    }
+  }
+}

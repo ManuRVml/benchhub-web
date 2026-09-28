@@ -1,0 +1,4507 @@
+{
+  "$description": "BencHUD / Eco-Comparador design tokens (W3C DTCG draft format: $value/$type/$description, string colour and dimension values, {path} aliases). Canonical values are the prototype hex values (synthesis §2). Colours with alpha are 8-digit hex (#RRGGBBAA); the original CSS is kept in $extensions.eco.css. Typography composites omit lineHeight/letterSpacing where the prototype sets none (inherit browser \"normal\"). $extensions.eco.source paths are relative to the Eco-Comparador planning workspace root (D:\\Personal\\Eco-Comparador).",
+  "$extensions": {
+    "eco": {
+      "source": ".plan/source-map/10-synthesis.md:559",
+      "spec": "prompt_Start_Eco.md:166 (brief §4 Fase 1 item 1.2)",
+      "decisions": {
+        "CF-11": "Ecopetrol highlight normalised to {chart.highlight} in PQ-only modules.",
+        "CF-28": "Active sidebar item uses {brand.navActive} (#7C35EA, HTML), not {brand.primary}.",
+        "CF-42": "Two coexisting dimension palettes: {dimension.share.*} and {dimension.accent.*}.",
+        "CF-43": "Danger text is a single token {status.danger.text} = #9A1616; #991B1B kept only as deprecated alias.",
+        "CF-44": "README dark card #24124A is conceptual and unused ({dark.card} deprecated).",
+        "CF-47": "Company colour map is the PVC-based map (§2.7); served by the BFF as colorKey.",
+        "CF-61": "Ecopetrol DS type scale, Tema 3 palette and Material Symbols are not adopted.",
+        "CF-71": "Variation colour follows the sign of the value.",
+        "OQ-13": "Colours for peers beyond the map, PTTEP magenta and the Shell chip deviation are open.",
+        "OQ-16": "Breakpoints are a proposal (prototype has none)."
+      },
+      "nonCssRules": {
+        "kviMethodology": {
+          "source": ".plan/source-map/10-synthesis.md:671",
+          "rule": "Per-row resultPct = real/meta (inverted if lowerIsBetter), uncapped for display; aggregates use min(resultPct,100) weighted within category, then category weights 60/15/20/5 (reproduces 96% and 78,56%). Owned by the BFF, not CSS."
+        },
+        "dsTypeScale": {
+          "source": ".plan/source-map/10-synthesis.md:656",
+          "rule": "Ecopetrol DS web scale (H1 48/50 … Overline 12/16) and mobile scale recorded as reference only, not adopted (CF-61)."
+        }
+      },
+      "assets": {
+        "source": ".plan/source-map/10-synthesis.md:677",
+        "items": {
+          "benchud-logo.png": {
+            "size": "1131x177",
+            "note": "reads \"BenchHub\", white + {brand.logoYellow}, dark backgrounds only"
+          },
+          "benchud-logo-compact.png": {
+            "size": "421x177",
+            "note": "\"BH\" compact mark"
+          },
+          "login-bg.png": {
+            "size": "2720x1518",
+            "weight": "3.4 MB",
+            "optimise": "AVIF/WebP, <=2560w"
+          },
+          "logo-ecopetrol.png": {
+            "size": "870x278",
+            "note": "dark-background variant"
+          },
+          "ppt-cover-bg.png": {
+            "size": "2400x1792",
+            "weight": "5.9 MB",
+            "optimise": "AVIF/WebP, <=1600w"
+          },
+          "user-avatar.png": {
+            "size": "1104x1104",
+            "weight": "2.3 MB",
+            "optimise": "72x72 @2x"
+          }
+        },
+        "unusedCandidates": [
+          "UP/fondo pagina.png",
+          "UP/image (11).png",
+          "UP/image (12).png"
+        ],
+        "sourceLine": ".plan/source-map/10-synthesis.md:680"
+      },
+      "icons": {
+        "source": ".plan/source-map/10-synthesis.md:684",
+        "style": "Custom inline 20x20 outline SVGs, stroke 1.6-1.8 ({size.stroke.icon*}), round caps and joins; no icon font, no filled icons except status dots/badges.",
+        "glyphs": [
+          "✦",
+          "🔒",
+          "👤",
+          "👍",
+          "👎",
+          "⚠",
+          "✓",
+          "★",
+          "●",
+          "▲",
+          "▼",
+          "↑",
+          "↓",
+          "‹",
+          "›",
+          "⌄",
+          "✕"
+        ],
+        "a11y": "Emoji/glyph markers get aria-hidden plus a text alternative.",
+        "notAdopted": "Material Symbols (Ecopetrol DS), CF-61",
+        "crossCheck": [
+          ".plan/source-map/01-handoff-docs.md:130",
+          ".plan/source-map/02-prototype-html.md:632"
+        ]
+      }
+    }
+  },
+  "brand": {
+    "primary": {
+      "$type": "color",
+      "$value": "#672DBD",
+      "$description": "Primary / CTA: buttons, links, active tabs and chips, average line, \"Ver más ›\". Most used colour (138).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:568",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:605",
+            ".plan/source-map/01-handoff-docs.md:50"
+          ]
+        }
+      }
+    },
+    "primaryDark": {
+      "$type": "color",
+      "$value": "#7002B0",
+      "$description": "Primary dark: \"★ Grupo Ecopetrol · referencia\" header, emphasis and hover text.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:569",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:605",
+            ".plan/source-map/01-handoff-docs.md:51"
+          ]
+        }
+      }
+    },
+    "navActive": {
+      "$type": "color",
+      "$value": "#7C35EA",
+      "$description": "Active sidebar item background (CF-28: HTML value adopted over README #672DBD); also Estratégico donut and Chevron.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:570",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:605"
+          ]
+        }
+      }
+    },
+    "indigo": {
+      "$type": "color",
+      "$value": "#5B5CC8",
+      "$description": "Secondary / indigo accent: login user tile, login CTA gradient start, gate link and gate card hover border.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:571",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:605",
+            ".plan/source-map/02-prototype-html.md:629",
+            ".plan/source-map/01-handoff-docs.md:52"
+          ]
+        }
+      }
+    },
+    "primarySubtle": {
+      "$type": "color",
+      "$value": "#EDE9FE",
+      "$description": "Primary subtle background: selected chips, selected module card, segment tips.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:572",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:605"
+          ]
+        }
+      }
+    },
+    "primaryBorder": {
+      "$type": "color",
+      "$value": "#C4B5FD",
+      "$description": "Primary subtle border for selected chips / module cards.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:572",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:605"
+          ]
+        }
+      }
+    },
+    "primaryFaint": {
+      "$type": "color",
+      "$value": "#FAF8FF",
+      "$description": "Primary faint background: user chat bubble.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:572",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:605"
+          ]
+        }
+      }
+    },
+    "primaryDivider": {
+      "$type": "color",
+      "$value": "#E4DDF7",
+      "$description": "Dashed divider inside presentation detail (1 use). Cross-check addition: present in the HTML palette (02 §12.1) but not listed in synthesis §2.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/02-prototype-html.md:605",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:619"
+          ]
+        }
+      }
+    },
+    "logoYellow": {
+      "$type": "color",
+      "$value": "#FFDD00",
+      "$description": "Logo artwork yellow. Logos only, never UI.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:578",
+          "crossCheck": [
+            ".plan/source-map/01-handoff-docs.md:105"
+          ]
+        }
+      }
+    }
+  },
+  "ai": {
+    "accent": {
+      "$type": "color",
+      "$value": "#49BCD8",
+      "$description": "AI / Yarbis accent: FAB, Yarbis header, \"Generar análisis\", \"Publicar presentación\", KPI 82%.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:573",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:606",
+            ".plan/source-map/01-handoff-docs.md:55"
+          ]
+        }
+      }
+    },
+    "text": {
+      "$type": "color",
+      "$value": "#0E7490",
+      "$description": "AI text on light backgrounds: AI pills, Hallazgos, Yarbis boxes; also global link hover.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:574",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:606",
+            ".plan/source-map/01-handoff-docs.md:56"
+          ]
+        }
+      }
+    },
+    "bg": {
+      "$type": "color",
+      "$value": "#E3F6FA",
+      "$description": "AI light background.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:574",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:606",
+            ".plan/source-map/01-handoff-docs.md:57"
+          ]
+        }
+      }
+    },
+    "border": {
+      "$type": "color",
+      "$value": "#A8E6EC",
+      "$description": "AI border.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:574",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:606",
+            ".plan/source-map/01-handoff-docs.md:58"
+          ]
+        }
+      }
+    },
+    "pulseRing": {
+      "$type": "color",
+      "$value": "#49BCD866",
+      "$description": "aiPulse keyframe ring start colour (fades to transparent at 10px spread).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:664",
+          "css": "rgba(73,188,216,.4)"
+        }
+      }
+    }
+  },
+  "info": {
+    "icon": {
+      "$type": "color",
+      "$value": "#518CD1",
+      "$description": "\"i\" info circles, Eco detail highlight border.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:575",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:607",
+            ".plan/source-map/01-handoff-docs.md:53"
+          ]
+        }
+      }
+    },
+    "mid": {
+      "$type": "color",
+      "$value": "#47A4D5",
+      "$description": "Focus ring, info severity, \"Activos\" KPI, TBG badge, header strip start.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:576",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:607",
+            ".plan/source-map/01-handoff-docs.md:54"
+          ]
+        }
+      }
+    },
+    "bg": {
+      "$type": "color",
+      "$value": "#E9F1FD",
+      "$description": "Info background.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:576",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:607"
+          ]
+        }
+      }
+    }
+  },
+  "legacy": {
+    "magenta": {
+      "$type": "color",
+      "$value": "#EC4899",
+      "$description": "Legacy magenta. Forbidden for AI accents (README \"do not reintroduce\"); only allowed as the PTTEP company chip (see {company.pttep}, OQ-13).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:579",
+          "crossCheck": [
+            ".plan/source-map/01-handoff-docs.md:67"
+          ]
+        }
+      }
+    }
+  },
+  "text": {
+    "heading": {
+      "$type": "color",
+      "$value": "#1C2535",
+      "$description": "Headings (101 uses). Same value as Ecopetrol DS \"Transversales · Neutros\".",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:583",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:608",
+            ".plan/source-map/01-handoff-docs.md:73"
+          ]
+        }
+      }
+    },
+    "body": {
+      "$type": "color",
+      "$value": "#424E63",
+      "$description": "Body text (121).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:583",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:608",
+            ".plan/source-map/01-handoff-docs.md:72"
+          ]
+        }
+      }
+    },
+    "secondary": {
+      "$type": "color",
+      "$value": "#59667C",
+      "$description": "Secondary text (147); also {company.fallback}.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:583",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:608",
+            ".plan/source-map/01-handoff-docs.md:71"
+          ]
+        }
+      }
+    },
+    "eyebrow": {
+      "$type": "color",
+      "$value": "#59667C",
+      "$description": "Table headers and uppercase eyebrows; AA contrast per CF-138 (was the prototype #808A9B, 3.4:1).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:583",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:608"
+          ],
+          "prototypeValue": "#808A9B"
+        }
+      }
+    },
+    "muted": {
+      "$type": "color",
+      "$value": "#667285",
+      "$description": "Muted text (186). AA contrast per CF-143 (was the prototype #98A1B0, 2.6:1 on surface.card / 2.4:1 on surface.page).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:584",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:608",
+            ".plan/source-map/01-handoff-docs.md:70"
+          ],
+          "prototypeValue": "#98A1B0"
+        }
+      }
+    },
+    "inverse": {
+      "$type": "color",
+      "$value": "{surface.card}",
+      "$description": "White text on filled accents (tier badges, active nav, strong text on dark).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:585",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:608"
+          ]
+        }
+      }
+    },
+    "link": {
+      "$type": "color",
+      "$value": "{brand.primary}",
+      "$description": "Global link colour.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:568",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:629"
+          ]
+        }
+      }
+    },
+    "linkHover": {
+      "$type": "color",
+      "$value": "{ai.text}",
+      "$description": "Global link hover colour.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:574",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:629"
+          ]
+        }
+      }
+    },
+    "onDark": {
+      "heading": {
+        "$type": "color",
+        "$value": "#F8FAFC",
+        "$description": "Headings on dark gate/login surfaces (\"¿A dónde quieres ir?\"). Cross-check addition: in the HTML dark-surface list (02 §12.1), not named in synthesis §2.3.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/02-prototype-html.md:609"
+          }
+        }
+      },
+      "lead": {
+        "$type": "color",
+        "$value": "#C7BEDE",
+        "$description": "Login hero paragraph and login card subtitle.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:590",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:609"
+            ]
+          }
+        }
+      },
+      "caption": {
+        "$type": "color",
+        "$value": "#B3A6CE",
+        "$description": "Login feature captions under white titles.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:591",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:609"
+            ]
+          }
+        }
+      },
+      "note": {
+        "$type": "color",
+        "$value": "#DDD1EE",
+        "$description": "Login Directorio Activo note text and its icon stroke.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:591",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:609"
+            ]
+          }
+        }
+      },
+      "banner": {
+        "$type": "color",
+        "$value": "#EFE2F5",
+        "$description": "Yarbis insight banner text on {dark.surface}.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:591",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:609"
+            ]
+          }
+        }
+      },
+      "navIcon": {
+        "$type": "color",
+        "$value": "#C9B3DE",
+        "$description": "Sidebar icon, allowed and not active.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:591",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:609"
+            ]
+          }
+        }
+      },
+      "navText": {
+        "$type": "color",
+        "$value": "#E4D8F0",
+        "$description": "Sidebar label, allowed and not active.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:591",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:609"
+            ]
+          }
+        }
+      },
+      "navToggle": {
+        "$type": "color",
+        "$value": "#B394CE",
+        "$description": "Sidebar collapse/expand toggle label.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:591",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:609"
+            ]
+          }
+        }
+      },
+      "locked": {
+        "$type": "color",
+        "$value": "#5C3E78",
+        "$description": "Sidebar icon and label for items the role cannot open.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:591",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:609"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "border": {
+    "default": {
+      "$type": "color",
+      "$value": "#DFE2E6",
+      "$description": "Default border (171): cards (1px solid, flat), header bottom border, inputs.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:584",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:608",
+            ".plan/source-map/01-handoff-docs.md:69"
+          ]
+        }
+      }
+    },
+    "subtle": {
+      "$type": "color",
+      "$value": "#EEF0F2",
+      "$description": "Subtle divider: slide footer line.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:584",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:608"
+          ]
+        }
+      }
+    },
+    "focus": {
+      "$type": "color",
+      "$value": "{info.mid}",
+      "$description": "Focus ring colour (:focus-visible outline).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:665",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:630"
+          ]
+        }
+      }
+    }
+  },
+  "surface": {
+    "page": {
+      "$type": "color",
+      "$value": "#F5F6F7",
+      "$description": "App page background, chart tracks, neutral chips, \"Anterior\" hover (183).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:585",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:608",
+            ".plan/source-map/01-handoff-docs.md:68"
+          ]
+        }
+      }
+    },
+    "card": {
+      "$type": "color",
+      "$value": "#FFFFFF",
+      "$description": "Cards, header, modals (303 uses of #fff).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:585",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:608",
+            ".plan/source-map/01-handoff-docs.md:74"
+          ]
+        }
+      }
+    },
+    "header": {
+      "$type": "color",
+      "$value": "{surface.card}",
+      "$description": "App header background (64px, border-bottom {border.default}).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:666",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:101"
+          ]
+        }
+      }
+    }
+  },
+  "neutral": {
+    "dsExtra": {
+      "$type": "color",
+      "$value": "#687489",
+      "$description": "Ecopetrol DS neutral step not used by the prototype. Recorded for completeness only.",
+      "$deprecated": "Not used by the prototype; do not use in UI.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:585"
+        }
+      }
+    }
+  },
+  "dark": {
+    "bg": {
+      "$type": "color",
+      "$value": "#120823",
+      "$description": "Dark background: login, gate, thumbnails.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:589",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:609",
+            ".plan/source-map/01-handoff-docs.md:75"
+          ]
+        }
+      }
+    },
+    "surface": {
+      "$type": "color",
+      "$value": "#1A1033",
+      "$description": "Dark surface: sidebar, Yarbis banner, slide appendix/cover.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:589",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:609",
+            ".plan/source-map/01-handoff-docs.md:76"
+          ]
+        }
+      }
+    },
+    "card": {
+      "$type": "color",
+      "$value": "#24124A",
+      "$description": "README \"conceptual\" dark card, unused by the prototype (CF-44).",
+      "$deprecated": "Unused (CF-44); use {dark.surface}.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:589",
+          "crossCheck": [
+            ".plan/source-map/01-handoff-docs.md:77"
+          ]
+        }
+      }
+    },
+    "dotBorder": {
+      "$type": "color",
+      "$value": "#240F40",
+      "$description": "Border of the unread dot on the sidebar.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:590",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:609"
+          ]
+        }
+      }
+    },
+    "gateBorder": {
+      "$type": "color",
+      "$value": "#3D2A63",
+      "$description": "Access gate card border.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:590",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:609"
+          ]
+        }
+      }
+    },
+    "adminTile": {
+      "$type": "color",
+      "$value": "#334155",
+      "$description": "Admin back office icon tile.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:590",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:609"
+          ]
+        }
+      }
+    },
+    "divider": {
+      "$type": "color",
+      "$value": "#FFFFFF14",
+      "$description": "Divider on dark surfaces.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:591",
+          "css": "rgba(255,255,255,.08)"
+        }
+      }
+    },
+    "glassCard": {
+      "$type": "color",
+      "$value": "#FFFFFF08",
+      "$description": "Glass card fill on dark surfaces.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:592",
+          "css": "rgba(255,255,255,.03)"
+        }
+      }
+    },
+    "glassBorder": {
+      "$type": "color",
+      "$value": "#FFFFFF1F",
+      "$description": "Glass card border on dark surfaces.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:592",
+          "css": "rgba(255,255,255,.12)"
+        }
+      }
+    },
+    "inputBg": {
+      "$type": "color",
+      "$value": "#FFFFFF14",
+      "$description": "Input fill on dark surfaces.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:592",
+          "css": "rgba(255,255,255,.08)"
+        }
+      }
+    },
+    "inputBorder": {
+      "$type": "color",
+      "$value": "#FFFFFF2E",
+      "$description": "Input border on dark surfaces.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:592",
+          "css": "rgba(255,255,255,.18)"
+        }
+      }
+    },
+    "hover": {
+      "$type": "color",
+      "$value": "#FFFFFF0F",
+      "$description": "\"Salir\" hover background on the sidebar. Cross-check addition from HTML hover states.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/02-prototype-html.md:629",
+          "css": "rgba(255,255,255,.06)"
+        }
+      }
+    }
+  },
+  "status": {
+    "success": {
+      "base": {
+        "$type": "color",
+        "$value": "#10B981",
+        "$description": "Success base.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:598",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:610",
+              ".plan/source-map/01-handoff-docs.md:64"
+            ]
+          }
+        }
+      },
+      "text": {
+        "$type": "color",
+        "$value": "#047857",
+        "$description": "Success text.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:598",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:610"
+            ]
+          }
+        }
+      },
+      "bg": {
+        "$type": "color",
+        "$value": "#D1FAE5",
+        "$description": "Success background.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:598",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:610"
+            ]
+          }
+        }
+      },
+      "pillBorder": {
+        "$type": "color",
+        "$value": "#A7E8CB",
+        "$description": "Success pill border.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:598",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:610"
+            ]
+          }
+        }
+      },
+      "uploadedBg": {
+        "$type": "color",
+        "$value": "#F0FDF7",
+        "$description": "Uploaded-file box background.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:598",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:610"
+            ]
+          }
+        }
+      },
+      "uploadedBorder": {
+        "$type": "color",
+        "$value": "#A7F3D0",
+        "$description": "Uploaded-file box border.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:598",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:610"
+            ]
+          }
+        }
+      }
+    },
+    "warning": {
+      "base": {
+        "$type": "color",
+        "$value": "#FBBF24",
+        "$description": "Warning base; also Transversal accent, ranking leader and Repsol.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:599",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:611",
+              ".plan/source-map/01-handoff-docs.md:65"
+            ]
+          }
+        }
+      },
+      "text": {
+        "$type": "color",
+        "$value": "#92400E",
+        "$description": "Warning text.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:599",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:611"
+            ]
+          }
+        }
+      },
+      "bg": {
+        "$type": "color",
+        "$value": "#FEF3C7",
+        "$description": "Warning background.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:599",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:611"
+            ]
+          }
+        }
+      },
+      "estimateInputBg": {
+        "$type": "color",
+        "$value": "#FEF9E7",
+        "$description": "Estimated-value input background.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:599",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:611"
+            ]
+          }
+        }
+      },
+      "noteBg": {
+        "$type": "color",
+        "$value": "#FFFBEB",
+        "$description": "Slide comment note background.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:599",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:611"
+            ]
+          }
+        }
+      },
+      "noteBorder": {
+        "$type": "color",
+        "$value": "#FDE68A",
+        "$description": "Slide comment note border.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:599",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:611"
+            ]
+          }
+        }
+      },
+      "noteText": {
+        "$type": "color",
+        "$value": "#78350F",
+        "$description": "Slide comment note text.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:599",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:611"
+            ]
+          }
+        }
+      }
+    },
+    "danger": {
+      "base": {
+        "$type": "color",
+        "$value": "#EF4444",
+        "$description": "Danger base; card/row ✕ hover.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:600",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:612",
+              ".plan/source-map/01-handoff-docs.md:66"
+            ]
+          }
+        }
+      },
+      "text": {
+        "$type": "color",
+        "$value": "#9A1616",
+        "$description": "Danger text. CF-43: single token #9A1616 (13 uses) wins over #991B1B (9 uses).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:600",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:612",
+              ".plan/source-map/01-handoff-docs.md:66"
+            ]
+          }
+        }
+      },
+      "textLegacy": {
+        "$type": "color",
+        "$value": "#991B1B",
+        "$description": "Second danger text value found in the HTML; aliased to {status.danger.text} (CF-43).",
+        "$deprecated": "CF-43: use {status.danger.text}.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:600",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:612"
+            ]
+          }
+        }
+      },
+      "bg": {
+        "$type": "color",
+        "$value": "#FEE2E2",
+        "$description": "Danger background.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:600",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:612"
+            ]
+          }
+        }
+      },
+      "pillBorder": {
+        "$type": "color",
+        "$value": "#F9BDBD",
+        "$description": "Danger pill border.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:600",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:612"
+            ]
+          }
+        }
+      },
+      "missingRowBg": {
+        "$type": "color",
+        "$value": "#FEF2F2",
+        "$description": "Slide \"missing\" row background.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:600",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:612"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "severity": {
+    "info": {
+      "base": {
+        "$type": "color",
+        "$value": "{info.mid}",
+        "$description": "Severity \"INFO\" accent.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:601"
+          }
+        }
+      },
+      "bg": {
+        "$type": "color",
+        "$value": "{info.bg}",
+        "$description": "Severity \"INFO\" background.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:601"
+          }
+        }
+      }
+    },
+    "success": {
+      "base": {
+        "$type": "color",
+        "$value": "{status.success.base}",
+        "$description": "Severity \"OK\" accent.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:601"
+          }
+        }
+      },
+      "bg": {
+        "$type": "color",
+        "$value": "{status.success.bg}",
+        "$description": "Severity \"OK\" background.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:601"
+          }
+        }
+      }
+    },
+    "warn": {
+      "base": {
+        "$type": "color",
+        "$value": "{status.warning.base}",
+        "$description": "Severity \"ATENCIÓN\" accent.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:601"
+          }
+        }
+      },
+      "bg": {
+        "$type": "color",
+        "$value": "{status.warning.bg}",
+        "$description": "Severity \"ATENCIÓN\" background.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:601"
+          }
+        }
+      }
+    },
+    "error": {
+      "base": {
+        "$type": "color",
+        "$value": "{status.danger.base}",
+        "$description": "Severity \"CRÍTICO\" accent.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:601"
+          }
+        }
+      },
+      "bg": {
+        "$type": "color",
+        "$value": "{status.danger.bg}",
+        "$description": "Severity \"CRÍTICO\" background.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:601"
+          }
+        }
+      }
+    }
+  },
+  "tier": {
+    "1": {
+      "base": {
+        "$type": "color",
+        "$value": "{status.success.base}",
+        "$description": "Tier 1 \"Líder\" badge.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:602"
+          }
+        }
+      },
+      "text": {
+        "$type": "color",
+        "$value": "{text.inverse}",
+        "$description": "Tier 1 badge text.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:602"
+          }
+        }
+      },
+      "card": {
+        "$type": "color",
+        "$value": "{status.success.bg}",
+        "$description": "Tier 1 card background.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:602"
+          }
+        }
+      }
+    },
+    "2": {
+      "base": {
+        "$type": "color",
+        "$value": "#34D399",
+        "$description": "Tier 2 \"Estratégico\" badge.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:602",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:610"
+            ]
+          }
+        }
+      },
+      "text": {
+        "$type": "color",
+        "$value": "{status.success.text}",
+        "$description": "Tier 2 badge text.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:602"
+          }
+        }
+      },
+      "card": {
+        "$type": "color",
+        "$value": "{status.success.bg}",
+        "$description": "Tier 2 card background.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:602"
+          }
+        }
+      }
+    },
+    "3": {
+      "base": {
+        "$type": "color",
+        "$value": "{status.warning.base}",
+        "$description": "Tier 3 \"Seguimiento\" badge.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:602"
+          }
+        }
+      },
+      "text": {
+        "$type": "color",
+        "$value": "{status.warning.text}",
+        "$description": "Tier 3 badge text.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:602"
+          }
+        }
+      },
+      "card": {
+        "$type": "color",
+        "$value": "{status.warning.bg}",
+        "$description": "Tier 3 card background.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:602"
+          }
+        }
+      }
+    },
+    "4": {
+      "base": {
+        "$type": "color",
+        "$value": "{status.danger.base}",
+        "$description": "Tier 4 \"Prioritario\" badge.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:602"
+          }
+        }
+      },
+      "text": {
+        "$type": "color",
+        "$value": "{text.inverse}",
+        "$description": "Tier 4 badge text.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:602"
+          }
+        }
+      },
+      "card": {
+        "$type": "color",
+        "$value": "{status.danger.bg}",
+        "$description": "Tier 4 card background.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:602"
+          }
+        }
+      }
+    }
+  },
+  "urgency": {
+    "high": {
+      "bg": {
+        "$type": "color",
+        "$value": "{status.danger.bg}",
+        "$description": "\"Urgencia Alta\" background (plan modal).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:603"
+          }
+        }
+      },
+      "text": {
+        "$type": "color",
+        "$value": "{status.danger.text}",
+        "$description": "\"Urgencia Alta\" text.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:603"
+          }
+        }
+      }
+    },
+    "medium": {
+      "bg": {
+        "$type": "color",
+        "$value": "{status.warning.bg}",
+        "$description": "\"Urgencia Media\" background.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:603"
+          }
+        }
+      },
+      "text": {
+        "$type": "color",
+        "$value": "{status.warning.text}",
+        "$description": "\"Urgencia Media\" text.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:603"
+          }
+        }
+      }
+    }
+  },
+  "variation": {
+    "positive": {
+      "$type": "color",
+      "$value": "{status.success.base}",
+      "$description": "Positive variation / trend up (synthesis trend.up). Colour follows the sign (CF-71).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:620"
+        }
+      }
+    },
+    "negative": {
+      "$type": "color",
+      "$value": "{status.danger.base}",
+      "$description": "Negative variation / trend down (synthesis trend.down). CF-71.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:620"
+        }
+      }
+    },
+    "neutral": {
+      "$type": "color",
+      "$value": "{text.muted}",
+      "$description": "Flat / zero variation (synthesis trend.flat) [inference in synthesis].",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:620"
+        }
+      }
+    }
+  },
+  "chart": {
+    "highlight": {
+      "$type": "color",
+      "$value": "#83E377",
+      "$description": "Ecopetrol highlight: always Ecopetrol, never a peer; excluded from chart.series. Normalised in PQ-only modules (CF-11).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:609",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:613",
+            ".plan/source-map/01-handoff-docs.md:62"
+          ]
+        }
+      }
+    },
+    "ecopetrol": {
+      "$type": "color",
+      "$value": "{chart.highlight}",
+      "$description": "Synthesis name for the Ecopetrol series colour.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:609"
+        }
+      }
+    },
+    "peer": {
+      "$type": "color",
+      "$value": "#B3B9C4",
+      "$description": "Peer series (neutral grey); also scrollbar thumb.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:610",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:608",
+            ".plan/source-map/01-handoff-docs.md:63",
+            ".plan/source-map/10-synthesis.md:584"
+          ]
+        }
+      }
+    },
+    "track": {
+      "$type": "color",
+      "$value": "{surface.page}",
+      "$description": "Bar track background.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:610"
+        }
+      }
+    },
+    "ecoChip": {
+      "bg": {
+        "$type": "color",
+        "$value": "#EAFBE4",
+        "$description": "Ecopetrol chip background (Visualización / Monitor).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:611",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:610"
+            ]
+          }
+        }
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{chart.highlight}",
+        "$description": "Ecopetrol chip border.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:611"
+          }
+        }
+      },
+      "text": {
+        "$type": "color",
+        "$value": "#2E7D1E",
+        "$description": "Ecopetrol chip text.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:611",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:610"
+            ]
+          }
+        }
+      },
+      "rowBg": {
+        "$type": "color",
+        "$value": "#E9FBF8",
+        "$description": "Ecopetrol row background.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:611",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:610"
+            ]
+          }
+        }
+      }
+    },
+    "leader": {
+      "avatar": {
+        "$type": "color",
+        "$value": "{status.warning.base}",
+        "$description": "Ranking #1 avatar.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:612"
+          }
+        }
+      },
+      "rowBg": {
+        "$type": "color",
+        "$value": "{status.warning.bg}",
+        "$description": "Ranking #1 row background.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:612"
+          }
+        }
+      },
+      "text": {
+        "$type": "color",
+        "$value": "{status.warning.text}",
+        "$description": "Ranking #1 text.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:612"
+          }
+        }
+      }
+    },
+    "detail": {
+      "2024": {
+        "$type": "color",
+        "$value": "{border.default}",
+        "$description": "Detail grouped bars, 2024 series.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:613"
+          }
+        }
+      },
+      "2025": {
+        "$type": "color",
+        "$value": "{chart.series.1}",
+        "$description": "Detail grouped bars, 2025 series.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:613",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:613"
+            ]
+          }
+        }
+      },
+      "ecoColumnBg": {
+        "$type": "color",
+        "$value": "#F0F7FC",
+        "$description": "Ecopetrol column background in the detail chart (synthesis name highlight.ecoDetailBg).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:577",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:607"
+            ]
+          }
+        }
+      }
+    },
+    "average": {
+      "$type": "color",
+      "$value": "{brand.primary}",
+      "$description": "\"Promedio pares: {x}\" line, dashed, width {size.stroke.average}.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:614"
+        }
+      }
+    },
+    "monitor": {
+      "$type": "color",
+      "$value": "{brand.primary}",
+      "$description": "Monitor ranking and history series.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:615"
+        }
+      }
+    },
+    "tbgGroup": {
+      "$type": "color",
+      "$value": "{chart.series.4}",
+      "$description": "TBG members in Ranking TBG (others {chart.peer}).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:616"
+        }
+      }
+    },
+    "aspiration": {
+      "crudo": {
+        "$type": "color",
+        "$value": "#3E1573",
+        "$description": "Aspiration stacked bars (kbpe/d): crudo.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:617"
+          }
+        }
+      },
+      "gas": {
+        "$type": "color",
+        "$value": "{brand.navActive}",
+        "$description": "Aspiration stacked bars: gas.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:617"
+          }
+        }
+      },
+      "noConvencional": {
+        "$type": "color",
+        "$value": "#47797A",
+        "$description": "Aspiration stacked bars: no convencional.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:617"
+          }
+        }
+      },
+      "bajasEmisiones": {
+        "$type": "color",
+        "$value": "{chart.series.4}",
+        "$description": "Aspiration stacked bars: bajas emisiones.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:617"
+          }
+        }
+      }
+    },
+    "series": {
+      "1": {
+        "$type": "color",
+        "$value": "#2C699A",
+        "$description": "Categorical series 1. Order of the adopted Coolors palette [inference in synthesis]; #83E377 excluded (reserved).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:618"
+          }
+        }
+      },
+      "2": {
+        "$type": "color",
+        "$value": "#048BA8",
+        "$description": "Categorical series 2.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:618",
+            "crossCheck": [
+              ".plan/source-map/01-handoff-docs.md:82"
+            ]
+          }
+        }
+      },
+      "3": {
+        "$type": "color",
+        "$value": "#0DB39E",
+        "$description": "Categorical series 3.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:618"
+          }
+        }
+      },
+      "4": {
+        "$type": "color",
+        "$value": "#16DB93",
+        "$description": "Categorical series 4.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:618",
+            "crossCheck": [
+              ".plan/source-map/01-handoff-docs.md:82"
+            ]
+          }
+        }
+      },
+      "5": {
+        "$type": "color",
+        "$value": "#B9E769",
+        "$description": "Categorical series 5.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:618",
+            "crossCheck": [
+              ".plan/source-map/01-handoff-docs.md:82"
+            ]
+          }
+        }
+      },
+      "6": {
+        "$type": "color",
+        "$value": "#EFEA5A",
+        "$description": "Categorical series 6.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:618",
+            "crossCheck": [
+              ".plan/source-map/01-handoff-docs.md:82"
+            ]
+          }
+        }
+      },
+      "7": {
+        "$type": "color",
+        "$value": "#F1C453",
+        "$description": "Categorical series 7.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:618",
+            "crossCheck": [
+              ".plan/source-map/01-handoff-docs.md:82"
+            ]
+          }
+        }
+      },
+      "8": {
+        "$type": "color",
+        "$value": "#F29E4C",
+        "$description": "Categorical series 8.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:618",
+            "crossCheck": [
+              ".plan/source-map/01-handoff-docs.md:82"
+            ]
+          }
+        }
+      },
+      "9": {
+        "$type": "color",
+        "$value": "{brand.navActive}",
+        "$description": "Categorical series 9 (#7C35EA, same value as the active nav).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:618",
+            "crossCheck": [
+              ".plan/source-map/01-handoff-docs.md:82"
+            ]
+          }
+        }
+      }
+    },
+    "category": {
+      "financiero": {
+        "$type": "color",
+        "$value": "{info.icon}",
+        "$description": "Monitor composition donut: Financiero.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:619",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:616"
+            ]
+          }
+        }
+      },
+      "mercado": {
+        "$type": "color",
+        "$value": "{ai.accent}",
+        "$description": "Donut: Mercado.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:619"
+          }
+        }
+      },
+      "estrategico": {
+        "$type": "color",
+        "$value": "{brand.navActive}",
+        "$description": "Donut: Estratégico.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:619"
+          }
+        }
+      },
+      "gruposInteres": {
+        "$type": "color",
+        "$value": "#0F9B8E",
+        "$description": "Donut: Grupos de Interés.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:619",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:616"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "dimension": {
+    "share": {
+      "financiera": {
+        "$type": "color",
+        "$value": "{chart.series.1}",
+        "$description": "Dimension share palette (Visualización composition, Monitor \"Peso por dimensión\"): Financiera. CF-42: first of two coexisting palettes.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:626",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:614",
+              ".plan/source-map/01-handoff-docs.md:821"
+            ]
+          }
+        }
+      },
+      "operativa": {
+        "$type": "color",
+        "$value": "{chart.series.3}",
+        "$description": "Dimension share palette: Operativa (CF-42).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:626"
+          }
+        }
+      },
+      "transversal": {
+        "$type": "color",
+        "$value": "{chart.series.7}",
+        "$description": "Dimension share palette: Transversal (CF-42).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:626"
+          }
+        }
+      }
+    },
+    "accent": {
+      "financiera": {
+        "$type": "color",
+        "$value": "{brand.primary}",
+        "$description": "Dimension accent palette (DIM_COLORS: Resultados edit squares, Horizonte TBG bars, slides, weight editor): Financiera. CF-42.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:627",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:614",
+              ".plan/source-map/01-handoff-docs.md:59"
+            ]
+          }
+        }
+      },
+      "operativa": {
+        "$type": "color",
+        "$value": "{ai.accent}",
+        "$description": "Dimension accent palette: Operativa (CF-42).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:627",
+            "crossCheck": [
+              ".plan/source-map/01-handoff-docs.md:60"
+            ]
+          }
+        }
+      },
+      "transversal": {
+        "$type": "color",
+        "$value": "{status.warning.base}",
+        "$description": "Dimension accent palette: Transversal (CF-42).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:627",
+            "crossCheck": [
+              ".plan/source-map/01-handoff-docs.md:61"
+            ]
+          }
+        }
+      },
+      "finOp": {
+        "$type": "color",
+        "$value": "#94A3B8",
+        "$description": "Dimension accent palette: Fin/Op (CF-42).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:627",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:614"
+            ]
+          }
+        }
+      }
+    },
+    "text": {
+      "financiera": {
+        "$type": "color",
+        "$value": "{brand.primary}",
+        "$description": "Horizonte KPI numbers and dimension cards: Financiera.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:628"
+          }
+        }
+      },
+      "operativa": {
+        "$type": "color",
+        "$value": "{ai.text}",
+        "$description": "Horizonte KPI numbers: Operativa.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:628"
+          }
+        }
+      },
+      "transversal": {
+        "$type": "color",
+        "$value": "{status.warning.text}",
+        "$description": "Horizonte KPI numbers: Transversal.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:628"
+          }
+        }
+      }
+    },
+    "tip": {
+      "financiera": {
+        "bg": {
+          "$type": "color",
+          "$value": "{brand.primarySubtle}",
+          "$description": "Composition segment tip background: Financiera.",
+          "$extensions": {
+            "eco": {
+              "source": ".plan/source-map/10-synthesis.md:629"
+            }
+          }
+        },
+        "fg": {
+          "$type": "color",
+          "$value": "{brand.primary}",
+          "$description": "Segment tip accent: Financiera.",
+          "$extensions": {
+            "eco": {
+              "source": ".plan/source-map/10-synthesis.md:629"
+            }
+          }
+        }
+      },
+      "operativa": {
+        "bg": {
+          "$type": "color",
+          "$value": "{ai.bg}",
+          "$description": "Segment tip background: Operativa.",
+          "$extensions": {
+            "eco": {
+              "source": ".plan/source-map/10-synthesis.md:629"
+            }
+          }
+        },
+        "fg": {
+          "$type": "color",
+          "$value": "{ai.accent}",
+          "$description": "Segment tip accent: Operativa.",
+          "$extensions": {
+            "eco": {
+              "source": ".plan/source-map/10-synthesis.md:629"
+            }
+          }
+        }
+      },
+      "transversal": {
+        "bg": {
+          "$type": "color",
+          "$value": "{status.warning.bg}",
+          "$description": "Segment tip background: Transversal.",
+          "$extensions": {
+            "eco": {
+              "source": ".plan/source-map/10-synthesis.md:629"
+            }
+          }
+        },
+        "fg": {
+          "$type": "color",
+          "$value": "{status.warning.base}",
+          "$description": "Segment tip accent: Transversal.",
+          "$extensions": {
+            "eco": {
+              "source": ".plan/source-map/10-synthesis.md:629"
+            }
+          }
+        }
+      }
+    }
+  },
+  "company": {
+    "ecopetrol": {
+      "$type": "color",
+      "$value": "{chart.highlight}",
+      "$description": "Ecopetrol, exclusive colour (CF-47).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:635",
+          "crossCheck": [
+            ".plan/source-map/01-handoff-docs.md:85"
+          ]
+        }
+      }
+    },
+    "bp": {
+      "$type": "color",
+      "$value": "{chart.series.2}",
+      "$description": "BP (PVC map, CF-47).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:633",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:615"
+          ]
+        }
+      }
+    },
+    "equinor": {
+      "$type": "color",
+      "$value": "{chart.series.4}",
+      "$description": "Equinor (CF-47).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:633",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:615"
+          ]
+        }
+      }
+    },
+    "shell": {
+      "$type": "color",
+      "$value": "{chart.series.8}",
+      "$description": "Shell (PVC map, CF-47). Deviation logged: Shell chip is #83E377 in PQ 3/4 and UP 5.24.46 and in the HTML HOM/NEWS map; not adopted because #83E377 is Ecopetrol-only (OQ-13).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:634",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:615",
+            ".plan/source-map/10-synthesis.md:636"
+          ]
+        }
+      }
+    },
+    "totalEnergies": {
+      "$type": "color",
+      "$value": "{chart.series.5}",
+      "$description": "TotalEnergies / Total (CF-47).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:634"
+        }
+      }
+    },
+    "oxy": {
+      "$type": "color",
+      "$value": "{chart.series.6}",
+      "$description": "Oxy (CF-47).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:634"
+        }
+      }
+    },
+    "petrobras": {
+      "$type": "color",
+      "$value": "{chart.series.1}",
+      "$description": "Petrobras (PVC map; HOM map had #F29E4C, CF-47).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:634",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:615"
+          ]
+        }
+      }
+    },
+    "chevron": {
+      "$type": "color",
+      "$value": "{brand.navActive}",
+      "$description": "Chevron (CF-47).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:634"
+        }
+      }
+    },
+    "isa": {
+      "$type": "color",
+      "$value": "{chart.series.7}",
+      "$description": "ISA (CF-47).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:634"
+        }
+      }
+    },
+    "exxon": {
+      "$type": "color",
+      "$value": "{chart.series.3}",
+      "$description": "Exxon (PVC map; HOM map had #3B82F6, not adopted, CF-47).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:635",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:615"
+          ]
+        }
+      }
+    },
+    "pttep": {
+      "$type": "color",
+      "$value": "{legacy.magenta}",
+      "$description": "PTTEP, extension from the HOM map; legacy magenta pending PO confirmation (OQ-13).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:635"
+        }
+      }
+    },
+    "repsol": {
+      "$type": "color",
+      "$value": "{status.warning.base}",
+      "$description": "Repsol, extension from the HOM map (CF-47).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:635"
+        }
+      }
+    },
+    "fallback": {
+      "$type": "color",
+      "$value": "{text.secondary}",
+      "$description": "Fallback for unmapped peers (ConocoPhillips, Pemex, ENI, Geopark, Parex, Gran Tierra, YPF, utilities → OQ-13).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:636"
+        }
+      }
+    }
+  },
+  "deprecated": {
+    "quadrant": {
+      "chevron": {
+        "$type": "color",
+        "$value": "#1E3A8A",
+        "$description": "Quadrant chart colour in dead code (Chevron).",
+        "$deprecated": "Dead code, not adopted (CF-47); use {company.chevron}.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:637"
+          }
+        }
+      },
+      "exxon": {
+        "$type": "color",
+        "$value": "#B91C1C",
+        "$description": "Quadrant chart colour in dead code (Exxon).",
+        "$deprecated": "Dead code, not adopted (CF-47); use {company.exxon}.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:637"
+          }
+        }
+      },
+      "repsol": {
+        "$type": "color",
+        "$value": "#DB2777",
+        "$description": "Quadrant chart colour in dead code (Repsol).",
+        "$deprecated": "Dead code, not adopted (CF-47); use {company.repsol}.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:638"
+          }
+        }
+      },
+      "ypf": {
+        "$type": "color",
+        "$value": "#2563EB",
+        "$description": "Quadrant chart colour in dead code (YPF).",
+        "$deprecated": "Dead code, not adopted; YPF is unmapped (OQ-13), use {company.fallback}.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:638"
+          }
+        }
+      }
+    }
+  },
+  "gradient": {
+    "loginCta": {
+      "$type": "gradient",
+      "$value": [
+        {
+          "color": "{brand.indigo}",
+          "position": 0
+        },
+        {
+          "color": "{ai.accent}",
+          "position": 1
+        }
+      ],
+      "$description": "Login \"Ingresar\" button, 90deg indigo → cyan.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:642",
+          "css": "linear-gradient(90deg,#5B5CC8,#49BCD8)",
+          "angle": "90deg"
+        }
+      }
+    },
+    "headerStrip": {
+      "$type": "gradient",
+      "$value": [
+        {
+          "color": "{info.mid}",
+          "position": 0
+        },
+        {
+          "color": "{brand.primary}",
+          "position": 0.5
+        },
+        {
+          "color": "{ai.accent}",
+          "position": 1
+        }
+      ],
+      "$description": "4px strip above the header on every app screen (CF-09); height {size.layout.headerStrip}.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:642",
+          "css": "linear-gradient(90deg,#47A4D5,#672DBD,#49BCD8)",
+          "angle": "90deg"
+        }
+      }
+    },
+    "loginOverlay": {
+      "$type": "gradient",
+      "$value": [
+        {
+          "color": "#140A30B8",
+          "position": 0.4
+        },
+        {
+          "color": "#1C0F4080",
+          "position": 1
+        }
+      ],
+      "$description": "Login background image overlay.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:642",
+          "css": "linear-gradient(100deg,rgba(20,10,48,.72) 40%,rgba(28,15,64,.5))",
+          "angle": "100deg"
+        }
+      }
+    },
+    "gateOverlay": {
+      "$type": "gradient",
+      "$value": [
+        {
+          "color": "#140A30D1",
+          "position": 0.4
+        },
+        {
+          "color": "#1C0F40B3",
+          "position": 1
+        }
+      ],
+      "$description": "Access gate background overlay.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:642",
+          "css": "linear-gradient(160deg,rgba(20,10,48,.82) 40%,rgba(28,15,64,.7))",
+          "angle": "160deg"
+        }
+      }
+    },
+    "slideCover": {
+      "$type": "gradient",
+      "$value": [
+        {
+          "color": "#12082300",
+          "position": 0.35
+        },
+        {
+          "color": "#120823EB",
+          "position": 1
+        }
+      ],
+      "$description": "Slide cover image fade to {dark.bg}.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:642",
+          "css": "linear-gradient(180deg,rgba(18,8,35,0) 35%,rgba(18,8,35,.92) 100%)",
+          "angle": "180deg"
+        }
+      }
+    },
+    "slideGlow": {
+      "$type": "gradient",
+      "$value": [
+        {
+          "color": "{template.directorio}",
+          "position": 0
+        },
+        {
+          "color": "#FFFFFF00",
+          "position": 0.7
+        }
+      ],
+      "$description": "Slide corner glow. The first stop is the template accent ({template.*}) at alpha 0x22; the value shows the Directorio accent.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:642",
+          "css": "radial-gradient(circle at 100% 0%, {accent}22 0%, rgba(255,255,255,0) 70%)",
+          "shape": "radial circle at 100% 0%",
+          "accentAlpha": "22"
+        }
+      }
+    }
+  },
+  "overlay": {
+    "scrim": {
+      "$type": "color",
+      "$value": "#1C253580",
+      "$description": "Modal scrim ({text.heading} at 50%).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:643",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:618",
+            ".plan/source-map/01-handoff-docs.md:78"
+          ],
+          "css": "rgba(28,37,53,.5)"
+        }
+      }
+    },
+    "previewScrim": {
+      "$type": "color",
+      "$value": "#120823B8",
+      "$description": "PPT preview scrim ({dark.bg} at 72%).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:643",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:618"
+          ],
+          "css": "rgba(18,8,35,.72)"
+        }
+      }
+    }
+  },
+  "file": {
+    "pptTile": {
+      "$type": "color",
+      "$value": "#D24726",
+      "$description": "PPT file tile.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:644",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:617"
+          ]
+        }
+      }
+    },
+    "excelIcon": {
+      "$type": "color",
+      "$value": "#2D6D06",
+      "$description": "Excel icon.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:644",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:617"
+          ]
+        }
+      }
+    }
+  },
+  "template": {
+    "directorio": {
+      "$type": "color",
+      "$value": "{brand.primary}",
+      "$description": "Presentation template accent: Directorio.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:644"
+        }
+      }
+    },
+    "storytelling": {
+      "$type": "color",
+      "$value": "{ai.accent}",
+      "$description": "Presentation template accent: Storytelling.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:644"
+        }
+      }
+    },
+    "detalleAnalitico": {
+      "$type": "color",
+      "$value": "{info.mid}",
+      "$description": "Presentation template accent: Detalle Analítico.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:644",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:607"
+          ]
+        }
+      }
+    }
+  },
+  "focus": {
+    "color": {
+      "$type": "color",
+      "$value": "{border.focus}",
+      "$description": ":focus-visible outline colour.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:665",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:630"
+          ]
+        }
+      }
+    },
+    "width": {
+      "$type": "dimension",
+      "$value": "2px",
+      "$description": ":focus-visible outline width (2px solid).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:665"
+        }
+      }
+    },
+    "offset": {
+      "$type": "dimension",
+      "$value": "2px",
+      "$description": ":focus-visible outline offset.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:665"
+        }
+      }
+    }
+  },
+  "scrollbar": {
+    "thumb": {
+      "$type": "color",
+      "$value": "{chart.peer}",
+      "$description": "Scrollbar thumb.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:665",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:630"
+          ]
+        }
+      }
+    },
+    "width": {
+      "$type": "dimension",
+      "$value": "8px",
+      "$description": "Scrollbar width.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:665"
+        }
+      }
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "4px",
+      "$description": "Scrollbar thumb radius.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:665"
+        }
+      }
+    }
+  },
+  "font": {
+    "family": {
+      "sans": {
+        "$type": "fontFamily",
+        "$value": [
+          "Roboto",
+          "system-ui",
+          "sans-serif"
+        ],
+        "$description": "Roboto 400/500/600/700, self-hosted (no Google Fonts CDN) [inference: CSP]. Fallback stack from the HTML body rule.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:648",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622",
+              ".plan/source-map/01-handoff-docs.md:109"
+            ]
+          }
+        }
+      },
+      "mono": {
+        "$type": "fontFamily",
+        "$value": [
+          "Roboto Mono",
+          "ui-monospace",
+          "monospace"
+        ],
+        "$description": "Roboto Mono for numbers and codes; load 400/500/600/700 (HTML loads only 500/600 and synthesises 400/700). Fallback stack is a decision (not in the sources).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:648",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      }
+    },
+    "weight": {
+      "regular": {
+        "$type": "fontWeight",
+        "$value": 400,
+        "$description": "Regular.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:648"
+          }
+        }
+      },
+      "medium": {
+        "$type": "fontWeight",
+        "$value": 500,
+        "$description": "Medium.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:648"
+          }
+        }
+      },
+      "semibold": {
+        "$type": "fontWeight",
+        "$value": 600,
+        "$description": "Semibold.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:648"
+          }
+        }
+      },
+      "bold": {
+        "$type": "fontWeight",
+        "$value": 700,
+        "$description": "Bold.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:648"
+          }
+        }
+      }
+    },
+    "lineHeight": {
+      "display": {
+        "$type": "number",
+        "$value": 1.18,
+        "$description": "Explicit line-height of the login display heading.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:650"
+          }
+        }
+      },
+      "snug": {
+        "$type": "number",
+        "$value": 1.45,
+        "$description": "Explicit line-height found in the HTML.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:655",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "normal": {
+        "$type": "number",
+        "$value": 1.5,
+        "$description": "Explicit line-height found in the HTML.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:655",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "relaxed": {
+        "$type": "number",
+        "$value": 1.6,
+        "$description": "Explicit line-height found in the HTML (login hero paragraph).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:655",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "loose": {
+        "$type": "number",
+        "$value": 1.65,
+        "$description": "Explicit line-height found in the HTML.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:655",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      }
+    },
+    "letterSpacing": {
+      "eyebrow": {
+        "$type": "dimension",
+        "$value": "0.04em",
+        "$description": "Uppercase eyebrow tracking.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:653",
+            "crossCheck": [
+              ".plan/source-map/01-handoff-docs.md:114"
+            ]
+          }
+        }
+      }
+    },
+    "role": {
+      "displayLogin": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontWeight": "{font.weight.bold}",
+          "fontSize": "{size.font.44}",
+          "lineHeight": "{font.lineHeight.display}"
+        },
+        "$description": "Login H1 (700 44px/1.18).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:650",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "displayCover": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontWeight": "{font.weight.bold}",
+          "fontSize": "{size.font.34}"
+        },
+        "$description": "Slide cover title.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:650",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "displayTier": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontWeight": "{font.weight.bold}",
+          "fontSize": "{size.font.30}"
+        },
+        "$description": "Tier / \"Gracias\" display.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:650",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "kpiXl": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontWeight": "{font.weight.bold}",
+          "fontSize": "{size.font.26}"
+        },
+        "$description": "Big numbers (26px).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:651",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "kpiLg": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontWeight": "{font.weight.bold}",
+          "fontSize": "{size.font.24}"
+        },
+        "$description": "Big numbers (24px).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:651",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "kpi": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontWeight": "{font.weight.bold}",
+          "fontSize": "{size.font.22}"
+        },
+        "$description": "KPI values; also login card title.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:651",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "titleSlide": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontWeight": "{font.weight.bold}",
+          "fontSize": "{size.font.22}"
+        },
+        "$description": "Slide title.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:651",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "titleDetail": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontWeight": "{font.weight.bold}",
+          "fontSize": "{size.font.20}"
+        },
+        "$description": "Detail title, homologation %.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:651",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "titleModal": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontWeight": "{font.weight.bold}",
+          "fontSize": "{size.font.17}"
+        },
+        "$description": "Modal titles.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:652",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "titleHeader": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontWeight": "{font.weight.semibold}",
+          "fontSize": "{size.font.16}"
+        },
+        "$description": "App header title.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:652",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "titleCard": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontWeight": "{font.weight.semibold}",
+          "fontSize": "{size.font.15}"
+        },
+        "$description": "Card title (15px).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:652",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "titleCardSm": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontWeight": "{font.weight.semibold}",
+          "fontSize": "{size.font.14}"
+        },
+        "$description": "Card title (14px, most used).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:652",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "body": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontWeight": "{font.weight.regular}",
+          "fontSize": "{size.font.13}"
+        },
+        "$description": "Body text.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:652",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "bodyStrong": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontWeight": "{font.weight.medium}",
+          "fontSize": "{size.font.13}"
+        },
+        "$description": "Body text, medium.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:652",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "small": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontWeight": "{font.weight.regular}",
+          "fontSize": "{size.font.12}"
+        },
+        "$description": "Small text (most used shorthand, 118).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:653",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "smallMedium": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontWeight": "{font.weight.medium}",
+          "fontSize": "{size.font.12}"
+        },
+        "$description": "Small text, medium (107).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:653",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "smallStrong": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontWeight": "{font.weight.semibold}",
+          "fontSize": "{size.font.12}"
+        },
+        "$description": "Small text, semibold.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:653",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "label": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontWeight": "{font.weight.regular}",
+          "fontSize": "{size.font.11}"
+        },
+        "$description": "Labels and meta.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:653",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "eyebrow": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontWeight": "{font.weight.semibold}",
+          "fontSize": "{size.font.11}",
+          "letterSpacing": "{font.letterSpacing.eyebrow}"
+        },
+        "$description": "Uppercase eyebrow, tracking .04em, colour {text.eyebrow}.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:653",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ],
+            "textTransform": "uppercase",
+            "color": "{text.eyebrow}"
+          }
+        }
+      },
+      "microStrong": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontWeight": "{font.weight.bold}",
+          "fontSize": "{size.font.10}"
+        },
+        "$description": "Micro text, bold.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:654",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "micro": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontWeight": "{font.weight.regular}",
+          "fontSize": "{size.font.10}"
+        },
+        "$description": "Micro text.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:654",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "monoMarket": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{font.family.mono}",
+          "fontWeight": "{font.weight.bold}",
+          "fontSize": "{size.font.15}"
+        },
+        "$description": "Market values (Roboto Mono 700 15px).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:654",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "monoInput": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{font.family.mono}",
+          "fontWeight": "{font.weight.semibold}",
+          "fontSize": "{size.font.12}"
+        },
+        "$description": "Numeric inputs (Roboto Mono 600 12px).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:654",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "size": {
+    "font": {
+      "10": {
+        "$type": "dimension",
+        "$value": "10px",
+        "$description": "Font size 10px (prototype role scale).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:654",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "11": {
+        "$type": "dimension",
+        "$value": "11px",
+        "$description": "Font size 11px (prototype role scale).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:653",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "12": {
+        "$type": "dimension",
+        "$value": "12px",
+        "$description": "Font size 12px (prototype role scale).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:653",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "13": {
+        "$type": "dimension",
+        "$value": "13px",
+        "$description": "Font size 13px (prototype role scale).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:652",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "14": {
+        "$type": "dimension",
+        "$value": "14px",
+        "$description": "Font size 14px (prototype role scale).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:652",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "15": {
+        "$type": "dimension",
+        "$value": "15px",
+        "$description": "Font size 15px (prototype role scale).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:652",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "16": {
+        "$type": "dimension",
+        "$value": "16px",
+        "$description": "Font size 16px (prototype role scale).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:652",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "17": {
+        "$type": "dimension",
+        "$value": "17px",
+        "$description": "Font size 17px (prototype role scale).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:652",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "20": {
+        "$type": "dimension",
+        "$value": "20px",
+        "$description": "Font size 20px (prototype role scale).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:652",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "22": {
+        "$type": "dimension",
+        "$value": "22px",
+        "$description": "Font size 22px (prototype role scale).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:651",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "24": {
+        "$type": "dimension",
+        "$value": "24px",
+        "$description": "Font size 24px (prototype role scale).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:651",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "26": {
+        "$type": "dimension",
+        "$value": "26px",
+        "$description": "Font size 26px (prototype role scale).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:651",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "30": {
+        "$type": "dimension",
+        "$value": "30px",
+        "$description": "Font size 30px (prototype role scale).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:651",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "34": {
+        "$type": "dimension",
+        "$value": "34px",
+        "$description": "Font size 34px (prototype role scale).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:650",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      },
+      "44": {
+        "$type": "dimension",
+        "$value": "44px",
+        "$description": "Font size 44px (prototype role scale).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:650",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:622"
+            ]
+          }
+        }
+      }
+    },
+    "icon": {
+      "default": {
+        "$type": "dimension",
+        "$value": "20px",
+        "$description": "Inline outline SVG icon box (20x20).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:684",
+            "crossCheck": [
+              ".plan/source-map/01-handoff-docs.md:130"
+            ]
+          }
+        }
+      },
+      "info": {
+        "$type": "dimension",
+        "$value": "14px",
+        "$description": "Info \"i\" tooltip circle, 14-16px; 14px chosen as default [decision within README range].",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/01-handoff-docs.md:125"
+          }
+        }
+      }
+    },
+    "stroke": {
+      "icon": {
+        "$type": "dimension",
+        "$value": "1.6px",
+        "$description": "Icon stroke width, lower bound of 1.6-1.8.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:684"
+          }
+        }
+      },
+      "iconStrong": {
+        "$type": "dimension",
+        "$value": "1.8px",
+        "$description": "Icon stroke width, upper bound of 1.6-1.8.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:684"
+          }
+        }
+      },
+      "average": {
+        "$type": "dimension",
+        "$value": "1.5px",
+        "$description": "Dashed \"Promedio pares\" line width.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:614"
+          }
+        }
+      }
+    },
+    "layout": {
+      "sidebarExpanded": {
+        "$type": "dimension",
+        "$value": "220px",
+        "$description": "Sidebar width, expanded.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:666",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:631"
+            ]
+          }
+        }
+      },
+      "sidebarCollapsed": {
+        "$type": "dimension",
+        "$value": "68px",
+        "$description": "Sidebar width, collapsed.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:666",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:631"
+            ]
+          }
+        }
+      },
+      "header": {
+        "$type": "dimension",
+        "$value": "64px",
+        "$description": "Header height.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:666",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:631"
+            ]
+          }
+        }
+      },
+      "headerStrip": {
+        "$type": "dimension",
+        "$value": "4px",
+        "$description": "Gradient strip height above the header (CF-09).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:666",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:631"
+            ]
+          }
+        }
+      },
+      "rightRail": {
+        "$type": "dimension",
+        "$value": "300px",
+        "$description": "Right rail width (Resultados, Visualización).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:666",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:631"
+            ]
+          }
+        }
+      },
+      "canvas": {
+        "$type": "dimension",
+        "$value": "1440px",
+        "$description": "Design canvas width (1440x900).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:668"
+          }
+        }
+      },
+      "maxWidth": {
+        "wizard": {
+          "$type": "dimension",
+          "$value": "960px",
+          "$description": "Max width: Definición wizard.",
+          "$extensions": {
+            "eco": {
+              "source": ".plan/source-map/10-synthesis.md:666"
+            }
+          }
+        },
+        "detalle": {
+          "$type": "dimension",
+          "$value": "980px",
+          "$description": "Max width: Detalle de indicador.",
+          "$extensions": {
+            "eco": {
+              "source": ".plan/source-map/10-synthesis.md:667"
+            }
+          }
+        },
+        "monitor": {
+          "$type": "dimension",
+          "$value": "840px",
+          "$description": "Max width: Monitor de Valor and Sensibilidades.",
+          "$extensions": {
+            "eco": {
+              "source": ".plan/source-map/10-synthesis.md:667"
+            }
+          }
+        },
+        "presentationDetail": {
+          "$type": "dimension",
+          "$value": "900px",
+          "$description": "Max width: presentation detail.",
+          "$extensions": {
+            "eco": {
+              "source": ".plan/source-map/10-synthesis.md:667"
+            }
+          }
+        },
+        "notificaciones": {
+          "$type": "dimension",
+          "$value": "760px",
+          "$description": "Max width: Notificaciones.",
+          "$extensions": {
+            "eco": {
+              "source": ".plan/source-map/10-synthesis.md:667"
+            }
+          }
+        },
+        "config": {
+          "$type": "dimension",
+          "$value": "560px",
+          "$description": "Max width: Configuración.",
+          "$extensions": {
+            "eco": {
+              "source": ".plan/source-map/10-synthesis.md:667"
+            }
+          }
+        },
+        "preview": {
+          "$type": "dimension",
+          "$value": "1180px",
+          "$description": "Max width: PPT preview.",
+          "$extensions": {
+            "eco": {
+              "source": ".plan/source-map/10-synthesis.md:667"
+            }
+          }
+        }
+      }
+    },
+    "control": {
+      "iconButton": {
+        "sm": {
+          "$type": "dimension",
+          "$value": "26px",
+          "$description": "IconButton small, 26px round (carousel prev / next); src/shared/ui/primitives/icon-button/IconButton.tsx (P5-11).",
+          "$extensions": {
+            "eco": {
+              "source": "docs/design/component-catalog.md:524",
+              "crossCheck": [
+                ".plan/source-map/02-prototype-html.md:156"
+              ]
+            }
+          }
+        },
+        "md": {
+          "$type": "dimension",
+          "$value": "36px",
+          "$description": "IconButton default, 36px round (header bell / help); src/shared/ui/primitives/icon-button/IconButton.tsx (P5-11).",
+          "$extensions": {
+            "eco": {
+              "source": "docs/design/component-catalog.md:27",
+              "crossCheck": [
+                ".plan/source-map/02-prototype-html.md:103"
+              ]
+            }
+          }
+        }
+      },
+      "square": {
+        "$type": "dimension",
+        "$value": "28px",
+        "$description": "Square control, 28x28 radius 6: the A- / A / A+ font-size buttons (SCR-16).",
+        "$extensions": {
+          "eco": {
+            "source": "V2 _CUAN_ECO_Comparador 2/BencHUD.dc.html:3002"
+          }
+        }
+      },
+      "dateField": {
+        "$type": "dimension",
+        "$value": "290px",
+        "$description": "Narrow date field: one column of the 3-column wizard row (SCR-07 \"Fecha de corte\", ~290px).",
+        "$extensions": {
+          "eco": {
+            "source": "V2 _CUAN_ECO_Comparador 2/BencHUD.dc.html:523"
+          }
+        }
+      }
+    },
+    "chart": {
+      "winBar": {
+        "$type": "dimension",
+        "$value": "80px",
+        "$description": "WinMiniBar track width (win ratio mini-bar 80×6); src/shared/ui/charts/primitives (P5-18).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/02-prototype-html.md:409"
+          }
+        }
+      },
+      "stackedBar": {
+        "sm": {
+          "$type": "dimension",
+          "$value": "26px",
+          "$description": "StackedShareBar compact height (per-company stacked bars 26px); src/shared/ui/charts/primitives (P5-18).",
+          "$extensions": {
+            "eco": {
+              "source": ".plan/source-map/02-prototype-html.md:414"
+            }
+          }
+        },
+        "md": {
+          "$type": "dimension",
+          "$value": "30px",
+          "$description": "StackedShareBar default height (Ecopetrol 100 % stacked bar 30px); src/shared/ui/charts/primitives (P5-18).",
+          "$extensions": {
+            "eco": {
+              "source": ".plan/source-map/02-prototype-html.md:414"
+            }
+          }
+        }
+      },
+      "donut": {
+        "$type": "dimension",
+        "$value": "180px",
+        "$description": "Composition donut box, 180x180 (SCR-11 Composicion del Monitor por categoria).",
+        "$extensions": {
+          "eco": {
+            "source": "V2 _CUAN_ECO_Comparador 2/BencHUD.dc.html:2018"
+          }
+        }
+      },
+      "donutTable": {
+        "$type": "dimension",
+        "$value": "280px",
+        "$description": "Minimum width of the table next to the composition donut (SCR-11).",
+        "$extensions": {
+          "eco": {
+            "source": "V2 _CUAN_ECO_Comparador 2/BencHUD.dc.html:2030"
+          }
+        }
+      }
+    },
+    "notification": {
+      "typeIcon": {
+        "$type": "dimension",
+        "$value": "34px",
+        "$description": "Notification type-icon circle, 34x34 (SCR-15 card).",
+        "$extensions": {
+          "eco": {
+            "source": "V2 _CUAN_ECO_Comparador 2/BencHUD.dc.html:2962"
+          }
+        }
+      }
+    },
+    "avatar": {
+      "xl": {
+        "$type": "dimension",
+        "$value": "52px",
+        "$description": "Profile avatar, 52px brand-filled circle (SCR-16 Configuracion).",
+        "$extensions": {
+          "eco": {
+            "source": "V2 _CUAN_ECO_Comparador 2/BencHUD.dc.html:2995"
+          }
+        }
+      }
+    }
+  },
+  "space": {
+    "2": {
+      "$type": "dimension",
+      "$value": "2px",
+      "$description": "Spacing 2px (2 \"gap:2px\" uses in the HTML). Synthesis: gaps 10-28, Inicio 28.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:666",
+          "crossCheck": [
+            ".plan/source-map/01-handoff-docs.md:124"
+          ]
+        }
+      }
+    },
+    "3": {
+      "$type": "dimension",
+      "$value": "3px",
+      "$description": "Spacing 3px (5 \"gap:3px\" uses in the HTML). Synthesis: gaps 10-28, Inicio 28.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:666",
+          "crossCheck": [
+            ".plan/source-map/01-handoff-docs.md:124"
+          ]
+        }
+      }
+    },
+    "4": {
+      "$type": "dimension",
+      "$value": "4px",
+      "$description": "Spacing 4px (4 \"gap:4px\" uses in the HTML). Synthesis: gaps 10-28, Inicio 28.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:666",
+          "crossCheck": [
+            ".plan/source-map/01-handoff-docs.md:124"
+          ]
+        }
+      }
+    },
+    "5": {
+      "$type": "dimension",
+      "$value": "5px",
+      "$description": "Spacing 5px (23 \"gap:5px\" uses in the HTML). Synthesis: gaps 10-28, Inicio 28.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:666",
+          "crossCheck": [
+            ".plan/source-map/01-handoff-docs.md:124"
+          ]
+        }
+      }
+    },
+    "6": {
+      "$type": "dimension",
+      "$value": "6px",
+      "$description": "Spacing 6px (101 \"gap:6px\" uses in the HTML). Synthesis: gaps 10-28, Inicio 28.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:666",
+          "crossCheck": [
+            ".plan/source-map/01-handoff-docs.md:124"
+          ]
+        }
+      }
+    },
+    "8": {
+      "$type": "dimension",
+      "$value": "8px",
+      "$description": "Spacing 8px (85 \"gap:8px\" uses in the HTML). Synthesis: gaps 10-28, Inicio 28.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:666",
+          "crossCheck": [
+            ".plan/source-map/01-handoff-docs.md:124"
+          ]
+        }
+      }
+    },
+    "9": {
+      "$type": "dimension",
+      "$value": "9px",
+      "$description": "Spacing 9px: vertical padding of the wizard option chips (padding 9px 14px).",
+      "$extensions": {
+        "eco": {
+          "source": "V2 _CUAN_ECO_Comparador 2/BencHUD.dc.html:472"
+        }
+      }
+    },
+    "10": {
+      "$type": "dimension",
+      "$value": "10px",
+      "$description": "Spacing 10px (52 \"gap:10px\" uses in the HTML). Synthesis: gaps 10-28, Inicio 28.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:666",
+          "crossCheck": [
+            ".plan/source-map/01-handoff-docs.md:124"
+          ]
+        }
+      }
+    },
+    "11": {
+      "$type": "dimension",
+      "$value": "11px",
+      "$description": "Spacing 11px: horizontal padding of the on/off filter toggles (padding 5px 11px).",
+      "$extensions": {
+        "eco": {
+          "source": "V2 _CUAN_ECO_Comparador 2/BencHUD.dc.html:2953"
+        }
+      }
+    },
+    "12": {
+      "$type": "dimension",
+      "$value": "12px",
+      "$description": "Spacing 12px (63 \"gap:12px\" uses in the HTML). Synthesis: gaps 10-28, Inicio 28.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:666",
+          "crossCheck": [
+            ".plan/source-map/01-handoff-docs.md:124"
+          ]
+        }
+      }
+    },
+    "14": {
+      "$type": "dimension",
+      "$value": "14px",
+      "$description": "Spacing 14px (22 \"gap:14px\" uses in the HTML). Synthesis: gaps 10-28, Inicio 28.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:666",
+          "crossCheck": [
+            ".plan/source-map/01-handoff-docs.md:124"
+          ]
+        }
+      }
+    },
+    "16": {
+      "$type": "dimension",
+      "$value": "16px",
+      "$description": "Spacing 16px (42 \"gap:16px\" uses in the HTML). Synthesis: gaps 10-28, Inicio 28.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:666",
+          "crossCheck": [
+            ".plan/source-map/01-handoff-docs.md:124"
+          ]
+        }
+      }
+    },
+    "18": {
+      "$type": "dimension",
+      "$value": "18px",
+      "$description": "Spacing 18px (6 \"gap:18px\" uses in the HTML). Synthesis: gaps 10-28, Inicio 28.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:666",
+          "crossCheck": [
+            ".plan/source-map/01-handoff-docs.md:124"
+          ]
+        }
+      }
+    },
+    "20": {
+      "$type": "dimension",
+      "$value": "20px",
+      "$description": "Spacing 20px (10 \"gap:20px\" uses in the HTML). Synthesis: gaps 10-28, Inicio 28.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:666",
+          "crossCheck": [
+            ".plan/source-map/01-handoff-docs.md:124"
+          ]
+        }
+      }
+    },
+    "22": {
+      "$type": "dimension",
+      "$value": "22px",
+      "$description": "Spacing 22px (1 \"gap:22px\" uses in the HTML). Synthesis: gaps 10-28, Inicio 28.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:666",
+          "crossCheck": [
+            ".plan/source-map/01-handoff-docs.md:124"
+          ]
+        }
+      }
+    },
+    "24": {
+      "$type": "dimension",
+      "$value": "24px",
+      "$description": "Spacing 24px (3 \"gap:24px\" uses in the HTML). Synthesis: gaps 10-28, Inicio 28.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:666",
+          "crossCheck": [
+            ".plan/source-map/01-handoff-docs.md:124"
+          ]
+        }
+      }
+    },
+    "26": {
+      "$type": "dimension",
+      "$value": "26px",
+      "$description": "Spacing 26px: the SCR-01 login card gap under its subtitle (\"margin-bottom:26px\").",
+      "$extensions": {
+        "eco": {
+          "source": "V2 _CUAN_ECO_Comparador 2/BencHUD.dc.html:79"
+        }
+      }
+    },
+    "28": {
+      "$type": "dimension",
+      "$value": "28px",
+      "$description": "Spacing 28px (1 \"gap:28px\" uses in the HTML). Synthesis: gaps 10-28, Inicio 28.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:666",
+          "crossCheck": [
+            ".plan/source-map/01-handoff-docs.md:124"
+          ]
+        }
+      }
+    },
+    "32": {
+      "$type": "dimension",
+      "$value": "32px",
+      "$description": "Spacing 32px (3 \"gap:32px\" uses in the HTML). Synthesis: gaps 10-28, Inicio 28.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:666",
+          "crossCheck": [
+            ".plan/source-map/01-handoff-docs.md:124"
+          ]
+        }
+      }
+    },
+    "48": {
+      "$type": "dimension",
+      "$value": "48px",
+      "$description": "Spacing 48px (1 \"gap:48px\" uses in the HTML). Synthesis: gaps 10-28, Inicio 28.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:666",
+          "crossCheck": [
+            ".plan/source-map/01-handoff-docs.md:124"
+          ]
+        }
+      }
+    },
+    "64": {
+      "$type": "dimension",
+      "$value": "64px",
+      "$description": "Spacing 64px (1 \"gap:64px\" uses in the HTML). Synthesis: gaps 10-28, Inicio 28.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:666",
+          "crossCheck": [
+            ".plan/source-map/01-handoff-docs.md:124"
+          ]
+        }
+      }
+    },
+    "72": {
+      "$type": "dimension",
+      "$value": "72px",
+      "$description": "Spacing 72px: width of the md NumberInput (component catalogue \"md (width 72–78)\"; src/shared/ui/primitives/inputs/NumberInput.tsx, P5-TK4).",
+      "$extensions": {
+        "eco": {
+          "source": "docs/progress/STATUS.md:108",
+          "crossCheck": [
+            "docs/design/component-catalog.md:158"
+          ]
+        }
+      }
+    },
+    "content": {
+      "top": {
+        "$type": "dimension",
+        "$value": "28px",
+        "$description": "Content area padding top (28px 32px 100px).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:666",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:631"
+            ]
+          }
+        }
+      },
+      "x": {
+        "$type": "dimension",
+        "$value": "32px",
+        "$description": "Content area padding left/right.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:666"
+          }
+        }
+      },
+      "bottom": {
+        "$type": "dimension",
+        "$value": "100px",
+        "$description": "Content area padding bottom (clears the FAB).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:666"
+          }
+        }
+      }
+    },
+    "section": {
+      "$type": "dimension",
+      "$value": "{space.28}",
+      "$description": "Gap between Inicio page sections.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:666",
+          "crossCheck": [
+            ".plan/source-map/01-handoff-docs.md:124"
+          ]
+        }
+      }
+    }
+  },
+  "radius": {
+    "legend": {
+      "$type": "dimension",
+      "$value": "2px",
+      "$description": "Legend squares.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:660"
+        }
+      }
+    },
+    "xs": {
+      "$type": "dimension",
+      "$value": "3px",
+      "$description": "Extra small.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:660"
+        }
+      }
+    },
+    "bar": {
+      "$type": "dimension",
+      "$value": "4px",
+      "$description": "Bars.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:660"
+        }
+      }
+    },
+    "barLg": {
+      "$type": "dimension",
+      "$value": "5px",
+      "$description": "Bars (large).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:660"
+        }
+      }
+    },
+    "sm": {
+      "$type": "dimension",
+      "$value": "6px",
+      "$description": "Small (36 uses).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:660",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:625"
+          ]
+        }
+      }
+    },
+    "control": {
+      "$type": "dimension",
+      "$value": "8px",
+      "$description": "Default control / card-inner radius (185 uses).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:660",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:625"
+          ]
+        }
+      }
+    },
+    "nav": {
+      "$type": "dimension",
+      "$value": "9px",
+      "$description": "Nav items, login inputs.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:660"
+        }
+      }
+    },
+    "md": {
+      "$type": "dimension",
+      "$value": "10px",
+      "$description": "Medium (44 uses).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:660"
+        }
+      }
+    },
+    "card": {
+      "$type": "dimension",
+      "$value": "12px",
+      "$description": "Cards (60 uses). README: cards 10-14.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:660",
+          "crossCheck": [
+            ".plan/source-map/01-handoff-docs.md:121"
+          ]
+        }
+      }
+    },
+    "modal": {
+      "$type": "dimension",
+      "$value": "14px",
+      "$description": "Modals, chat.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:661"
+        }
+      }
+    },
+    "loginCard": {
+      "$type": "dimension",
+      "$value": "16px",
+      "$description": "Login card.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:661"
+        }
+      }
+    },
+    "pill": {
+      "$type": "dimension",
+      "$value": "999px",
+      "$description": "Pills, badges, avatars.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:661",
+          "crossCheck": [
+            ".plan/source-map/01-handoff-docs.md:121"
+          ]
+        }
+      }
+    }
+  },
+  "shadow": {
+    "modal": {
+      "$type": "shadow",
+      "$value": {
+        "color": "#1C25354D",
+        "offsetX": "0px",
+        "offsetY": "20px",
+        "blur": "50px",
+        "spread": "0px"
+      },
+      "$description": "Modals (and \"floating dots\").",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:662",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:626",
+            ".plan/source-map/01-handoff-docs.md:79"
+          ],
+          "css": "0 20px 50px rgba(28,37,53,.3)"
+        }
+      }
+    },
+    "previewSlide": {
+      "$type": "shadow",
+      "$value": {
+        "color": "#00000066",
+        "offsetX": "0px",
+        "offsetY": "30px",
+        "blur": "70px",
+        "spread": "0px"
+      },
+      "$description": "PPT preview slide.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:662",
+          "css": "0 30px 70px rgba(0,0,0,.4)"
+        }
+      }
+    },
+    "loginCard": {
+      "$type": "shadow",
+      "$value": {
+        "color": "#00000059",
+        "offsetX": "0px",
+        "offsetY": "24px",
+        "blur": "60px",
+        "spread": "0px"
+      },
+      "$description": "Login card.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:662",
+          "css": "0 24px 60px rgba(0,0,0,.35)"
+        }
+      }
+    },
+    "chat": {
+      "$type": "shadow",
+      "$value": {
+        "color": "#1C25352E",
+        "offsetX": "0px",
+        "offsetY": "12px",
+        "blur": "32px",
+        "spread": "0px"
+      },
+      "$description": "Yarbis chat panel.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:662",
+          "css": "0 12px 32px rgba(28,37,53,.18)"
+        }
+      }
+    },
+    "toast": {
+      "$type": "shadow",
+      "$value": {
+        "color": "#1C25352E",
+        "offsetX": "0px",
+        "offsetY": "12px",
+        "blur": "30px",
+        "spread": "0px"
+      },
+      "$description": "Toast.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:662",
+          "css": "0 12px 30px rgba(28,37,53,.18)"
+        }
+      }
+    },
+    "toastUndo": {
+      "$type": "shadow",
+      "$value": {
+        "color": "#1C25354D",
+        "offsetX": "0px",
+        "offsetY": "12px",
+        "blur": "30px",
+        "spread": "0px"
+      },
+      "$description": "Undo toast.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:662",
+          "css": "0 12px 30px rgba(28,37,53,.3)"
+        }
+      }
+    },
+    "slideStage": {
+      "$type": "shadow",
+      "$value": {
+        "color": "#1C253526",
+        "offsetX": "0px",
+        "offsetY": "12px",
+        "blur": "30px",
+        "spread": "0px"
+      },
+      "$description": "Slide stage.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:662",
+          "css": "0 12px 30px rgba(28,37,53,.15)"
+        }
+      }
+    },
+    "fab": {
+      "$type": "shadow",
+      "$value": {
+        "color": "#49BCD866",
+        "offsetX": "0px",
+        "offsetY": "8px",
+        "blur": "20px",
+        "spread": "0px"
+      },
+      "$description": "Yarbis FAB.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:662",
+          "css": "0 8px 20px rgba(73,188,216,.4)"
+        }
+      }
+    },
+    "drawer": {
+      "$type": "shadow",
+      "$value": {
+        "color": "#1C25351F",
+        "offsetX": "-8px",
+        "offsetY": "0px",
+        "blur": "24px",
+        "spread": "0px"
+      },
+      "$description": "Right drawer. Cross-check addition from the HTML (not in synthesis §2.10).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/02-prototype-html.md:626",
+          "css": "-8px 0 24px rgba(28,37,53,.12)"
+        }
+      }
+    },
+    "insetRing": {
+      "$type": "shadow",
+      "$value": {
+        "color": "{surface.card}",
+        "offsetX": "0px",
+        "offsetY": "0px",
+        "blur": "0px",
+        "spread": "2px",
+        "inset": true
+      },
+      "$description": "Inset white ring. Cross-check addition from the HTML.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/02-prototype-html.md:626",
+          "css": "0 0 0 2px #fff inset"
+        }
+      }
+    }
+  },
+  "z": {
+    "fab": {
+      "$type": "number",
+      "$value": 20,
+      "$description": "Yarbis FAB.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:663",
+          "crossCheck": [
+            ".plan/source-map/02-prototype-html.md:627"
+          ]
+        }
+      }
+    },
+    "chat": {
+      "$type": "number",
+      "$value": 20,
+      "$description": "Yarbis chat panel.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:663"
+        }
+      }
+    },
+    "drawer": {
+      "$type": "number",
+      "$value": 28,
+      "$description": "Drawer.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:663"
+        }
+      }
+    },
+    "modal": {
+      "$type": "number",
+      "$value": 29,
+      "$description": "Modals.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:663"
+        }
+      }
+    },
+    "pptPreview": {
+      "$type": "number",
+      "$value": 30,
+      "$description": "PPT preview.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:663"
+        }
+      }
+    },
+    "upload": {
+      "$type": "number",
+      "$value": 32,
+      "$description": "Upload / download dialogs.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:663"
+        }
+      }
+    },
+    "toast": {
+      "$type": "number",
+      "$value": 35,
+      "$description": "Toasts.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:663"
+        }
+      }
+    }
+  },
+  "breakpoint": {
+    "desktop": {
+      "$type": "dimension",
+      "$value": "1280px",
+      "$description": "Proposal: full layout supported from 1280px. The prototype has no breakpoints (OQ-16).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:669"
+        }
+      }
+    },
+    "laptop": {
+      "$type": "dimension",
+      "$value": "1024px",
+      "$description": "Proposal: sidebar auto-collapsed at 1024px (OQ-16).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:670"
+        }
+      }
+    },
+    "tablet": {
+      "$type": "dimension",
+      "$value": "768px",
+      "$description": "Proposal: best-effort layout at 768px (OQ-16).",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:670"
+        }
+      }
+    },
+    "canvas": {
+      "$type": "dimension",
+      "$value": "1440px",
+      "$description": "Design canvas / reference screenshot width.",
+      "$extensions": {
+        "eco": {
+          "source": ".plan/source-map/10-synthesis.md:668"
+        }
+      }
+    }
+  },
+  "motion": {
+    "duration": {
+      "screenEnter": {
+        "$type": "duration",
+        "$value": "300ms",
+        "$description": "fadeUp screen entrance.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:664",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:628"
+            ]
+          }
+        }
+      },
+      "aiPulse": {
+        "$type": "duration",
+        "$value": "2400ms",
+        "$description": "aiPulse loop (infinite).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:664"
+          }
+        }
+      },
+      "bar": {
+        "$type": "duration",
+        "$value": "400ms",
+        "$description": "Bar width transition.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:664"
+          }
+        }
+      },
+      "barLong": {
+        "$type": "duration",
+        "$value": "500ms",
+        "$description": "Bar width transition (long variant).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:664"
+          }
+        }
+      },
+      "detailBar": {
+        "$type": "duration",
+        "$value": "900ms",
+        "$description": "Detail bar height transition.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:664"
+          }
+        }
+      },
+      "detailBarStagger": {
+        "$type": "duration",
+        "$value": "80ms",
+        "$description": "Delay of the 2025 detail bars.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:664"
+          }
+        }
+      },
+      "progress": {
+        "$type": "duration",
+        "$value": "300ms",
+        "$description": "Sensitivity progress width transition.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:664"
+          }
+        }
+      },
+      "nav": {
+        "$type": "duration",
+        "$value": "200ms",
+        "$description": "Sidebar width transition.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:664",
+            "crossCheck": [
+              ".plan/source-map/02-prototype-html.md:78"
+            ]
+          }
+        }
+      },
+      "mountDelay": {
+        "$type": "duration",
+        "$value": "60ms",
+        "$description": "Mount delay before bar animations start.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:664"
+          }
+        }
+      }
+    },
+    "easing": {
+      "standard": {
+        "$type": "cubicBezier",
+        "$value": [
+          0.25,
+          0.1,
+          0.25,
+          1
+        ],
+        "$description": "CSS \"ease\" (fadeUp and transitions).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:664"
+          }
+        }
+      }
+    },
+    "distance": {
+      "fadeUp": {
+        "$type": "dimension",
+        "$value": "8px",
+        "$description": "fadeUp translateY start offset (8px → 0).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:664"
+          }
+        }
+      },
+      "aiPulseRing": {
+        "$type": "dimension",
+        "$value": "10px",
+        "$description": "aiPulse ring spread at the end of the pulse.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:664"
+          }
+        }
+      }
+    },
+    "transition": {
+      "screenEnter": {
+        "$type": "transition",
+        "$value": {
+          "duration": "{motion.duration.screenEnter}",
+          "delay": "0ms",
+          "timingFunction": "{motion.easing.standard}"
+        },
+        "$description": "Screen entrance (keyframes fadeUp: opacity 0→1, translateY {motion.distance.fadeUp}→0). Honour prefers-reduced-motion [inference: WCAG 2.2 AA, BR-27].",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:664",
+            "keyframes": "fadeUp"
+          }
+        }
+      },
+      "nav": {
+        "$type": "transition",
+        "$value": {
+          "duration": "{motion.duration.nav}",
+          "delay": "0ms",
+          "timingFunction": "{motion.easing.standard}"
+        },
+        "$description": "Sidebar width.",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:664"
+          }
+        }
+      },
+      "detailBar2025": {
+        "$type": "transition",
+        "$value": {
+          "duration": "{motion.duration.detailBar}",
+          "delay": "{motion.duration.detailBarStagger}",
+          "timingFunction": "{motion.easing.standard}"
+        },
+        "$description": "2025 detail bar height (staggered).",
+        "$extensions": {
+          "eco": {
+            "source": ".plan/source-map/10-synthesis.md:664"
+          }
+        }
+      }
+    }
+  }
+}

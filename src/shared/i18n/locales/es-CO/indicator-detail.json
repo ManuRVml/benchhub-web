@@ -1,0 +1,57 @@
+{
+  "backLink": "‹ Volver a Resultados",
+  "pageTitle": "Detalle de indicador",
+  "sections": {
+    "chart": {
+      "infoText": "El % sobre cada par muestra la variación 2024→2025. La línea punteada marca el promedio de pares en 2025. Clic en el nombre de una compañía abre su perfil.",
+      "peerAverageLabel": "Promedio pares: {{value}}",
+      "companyHeader": "Compañía",
+      "ariaLabel": "{{indicator}}: {{previous}} vs {{current}} por compañía",
+      "variation": "Variación"
+    },
+    "kpi": {
+      "peerAverageGeneral": "Promedio de pares (general)",
+      "geVsPeerAverage": "GE vs. promedio de pares",
+      "ecopetrol": "Ecopetrol"
+    },
+    "insight": {
+      "label": "✦ YARBIS INSIGHT",
+      "suggestion": "Sugerencia de IA"
+    },
+    "traceability": {
+      "source": "FUENTE",
+      "dataUpdate": "ACTUALIZACIÓN DE LA DATA",
+      "history": "HISTORIAL",
+      "changeLink": "Ver cambios ›",
+      "title": "Trazabilidad del dato",
+      "updated": "{{period}} · actualizado {{relative}}",
+      "historyList": "Historial de cambios"
+    },
+    "comments": {
+      "title": "Comentarios",
+      "replyButton": "Responder",
+      "composerPlaceholder": "Escribe un comentario o solicita un ajuste al analista creador...",
+      "sendButton": "Enviar",
+      "empty": "Aún no hay comentarios."
+    },
+    "comment": {
+      "creatorRole": "Analista creador",
+      "viewerRole": "Ejecutivo visualizador",
+      "you": "Tú",
+      "now": "ahora",
+      "roles": {
+        "analystCreator": "Analista creador",
+        "executiveViewer": "Ejecutivo visualizador",
+        "executiveIntegral": "Ejecutivo integral",
+        "explorerViewer": "Explorador visualizador",
+        "explorerIntegral": "Explorador integral"
+      }
+    }
+  },
+  "title": {
+    "aboveContext": "Ecopetrol supera el desempeño promedio de las empresas pares.",
+    "belowContext": "Ecopetrol se ubica por debajo del desempeño promedio de las empresas pares.",
+    "subtitle": "Comparativo {{previous}} vs {{current}} frente a compañías pares seleccionadas.",
+    "deltaVsPeers": "{{value}} frente a pares"
+  }
+}

@@ -1,0 +1,15 @@
+export const weightSimulatorTestIds = {
+  root: 'weight-simulator',
+  preset: (id: string) => `weight-simulator-preset-${id}`,
+  variableSlider: (id: string) => `weight-simulator-variable-${id}`,
+  roaceSimulated: 'weight-simulator-roace-simulated',
+  gapClosedBar: 'weight-simulator-gap-closed-bar',
+  gapClosedPct: 'weight-simulator-gap-closed-pct',
+  tip: 'weight-simulator-tip',
+  scoreSimulated: 'weight-simulator-score-simulated',
+  scoreVariation: 'weight-simulator-score-variation',
+  resetButton: 'weight-simulator-reset',
+  categoryStatus: (categoryId: string) => `weight-simulator-category-${categoryId}-status`,
+  categoryBar: (categoryId: string) => `weight-simulator-category-${categoryId}-bar`,
+  weightRow: (kviId: string) => `weight-simulator-weight-${kviId}`,
+};

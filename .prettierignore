@@ -1,0 +1,19 @@
+pnpm-lock.yaml
+dist
+coverage
+playwright-report
+test-results
+storybook-static
+src/shared/api/generated
+src/test/fixtures/contracts
+# Design docs, screenshots manifests and oracles are generated or hand-curated by the docs tasks; Prettier would
+# rewrite their Markdown lists and JSON layout.
+docs
+*.md
+# Byte-exact vendored prototype scripts (sha384-pinned); never reformat.
+tools/prototype-render/vendor
+# Generated from docs/design/design-tokens.json by tools/tokens/build-theme.mjs (checked by pnpm tokens:check).
+src/app/styles/theme.css
+src/shared/lib/tailwind-theme.generated.ts
+# Unpacked vendored contract (pnpm contract:generate, gitignored).
+vendor/contract/unpacked

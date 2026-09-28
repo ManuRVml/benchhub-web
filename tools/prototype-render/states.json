@@ -1,0 +1,207 @@
+{
+  "$comment": "Prototype state per screen for tools/prototype-render/render.mjs. `state` is merged into the prototype's logic state via stateNode.logic.setState() (initial state: BencHUD.dc.html L3544-3545). `vals` overrides render values returned by logic.renderVals() for states the prototype cannot reach through state alone. Screen ids and flags: BencHUD.dc.html L5177 and L5214-5217. SCR-17 (403/404) has no prototype and is not rendered. Overlays (spec: docs/design/overlays.md) are rendered over their `host` screen: the host's state and vals are applied first, then the overlay's `state` patch; the render fails unless `expectText` is visible inside a position:fixed container (the overlay itself), so a patch that does not open the overlay cannot pass.",
+  "screens": {
+    "SCR-01": {
+      "name": "Login",
+      "state": {}
+    },
+    "SCR-02": {
+      "name": "Access gate",
+      "note": "isGate is hard-coded to false (L5177), so the gate is reachable only by overriding render values.",
+      "state": { "loggedIn": true, "appEntered": false },
+      "vals": { "isLogin": false, "isGate": true, "isApp": false, "isAdmin": false }
+    },
+    "SCR-03": {
+      "name": "Administración · Back office",
+      "state": { "loggedIn": true, "appEntered": true, "adminMode": true }
+    },
+    "SCR-04": {
+      "name": "App shell (collapsed sidebar)",
+      "note": "The expanded shell appears in every SCR-05..16 shot; SCR-04 captures the collapsed 68px sidebar state over Inicio.",
+      "state": { "loggedIn": true, "appEntered": true, "screen": "inicio", "navExpanded": false }
+    },
+    "SCR-05": {
+      "name": "Inicio",
+      "state": { "loggedIn": true, "appEntered": true, "screen": "inicio" }
+    },
+    "SCR-06": {
+      "name": "Análisis",
+      "state": { "loggedIn": true, "appEntered": true, "screen": "analisis" }
+    },
+    "SCR-07": {
+      "name": "Definición del análisis (step 1)",
+      "state": { "loggedIn": true, "appEntered": true, "screen": "definicion", "wizardStep": 1 }
+    },
+    "SCR-08": {
+      "name": "Resultados",
+      "state": { "loggedIn": true, "appEntered": true, "screen": "resultados" }
+    },
+    "SCR-09": {
+      "name": "Visualización",
+      "state": { "loggedIn": true, "appEntered": true, "screen": "visualizacion" }
+    },
+    "SCR-10": {
+      "name": "Detalle de indicador (ROACE)",
+      "state": {
+        "loggedIn": true,
+        "appEntered": true,
+        "screen": "detalle",
+        "detalleIndicator": "roace"
+      }
+    },
+    "SCR-11": {
+      "name": "Monitor de Valor",
+      "state": { "loggedIn": true, "appEntered": true, "screen": "valor" }
+    },
+    "SCR-12": {
+      "name": "Sensibilidades",
+      "state": { "loggedIn": true, "appEntered": true, "screen": "sensibilidades" }
+    },
+    "SCR-13": {
+      "name": "Presentaciones (list)",
+      "state": {
+        "loggedIn": true,
+        "appEntered": true,
+        "screen": "presentaciones",
+        "presDetailId": null,
+        "presCreateOpen": false
+      }
+    },
+    "SCR-14": {
+      "name": "Presentación · detalle (viewer, p1)",
+      "state": {
+        "loggedIn": true,
+        "appEntered": true,
+        "screen": "presentaciones",
+        "presDetailId": "p1",
+        "presDetailSlideIdx": 0
+      }
+    },
+    "SCR-15": {
+      "name": "Notificaciones",
+      "state": { "loggedIn": true, "appEntered": true, "screen": "alertas" }
+    },
+    "SCR-16": {
+      "name": "Configuración",
+      "state": { "loggedIn": true, "appEntered": true, "screen": "config" }
+    }
+  },
+  "overlays": {
+    "OVL-01": {
+      "name": "Recomendaciones de Yarbis (Visualización)",
+      "host": "SCR-09",
+      "state": { "pesoRecoOpen": true },
+      "expectText": "Recomendaciones de Yarbis",
+      "source": "HTML L1308 (sc-if pesoRecoOpen)"
+    },
+    "OVL-02": {
+      "name": "Recomendaciones estratégicas de Yarbis (Monitor)",
+      "host": "SCR-11",
+      "state": { "valorRecoOpen": true },
+      "expectText": "Recomendaciones estratégicas de Yarbis",
+      "source": "HTML L1765 (sc-if valorRecoOpen)"
+    },
+    "OVL-03": {
+      "name": "Plan estratégico sugerido (Sensibilidades)",
+      "host": "SCR-12",
+      "state": { "planEstrategicoOpen": true },
+      "expectText": "Plan estratégico sugerido",
+      "source": "HTML L1651 (sc-if planEstrategicoOpen)"
+    },
+    "OVL-04": {
+      "name": "Comentarios drawer (right, 320px)",
+      "host": "SCR-08",
+      "note": "No live trigger in V2 (only the drawer's own ✕ calls toggleComments), but the template exists and renders by state injection.",
+      "state": { "commentsOpen": true },
+      "expectText": "Comentarios",
+      "source": "HTML L3152 (sc-if commentsOpen)"
+    },
+    "OVL-05": {
+      "name": "Añadir indicador (Monitor configuration)",
+      "host": "SCR-11",
+      "state": { "addIndicatorModalOpen": true },
+      "expectText": "Añadir indicador",
+      "source": "HTML L1880 (sc-if addIndicatorModalOpen)"
+    },
+    "OVL-06": {
+      "name": "Vista previa y orden de diapositivas (builder)",
+      "host": "SCR-13",
+      "state": { "presCreateOpen": true, "pptPreviewOpen": true, "pptSlideIdx": 0 },
+      "expectText": "Orden de diapositivas",
+      "source": "HTML L2597 (sc-if pptPreviewOpen), trigger L2585 in the builder"
+    },
+    "OVL-07a": {
+      "name": "Cargar versión PPT (select step)",
+      "host": "SCR-13",
+      "state": {
+        "presCreateOpen": true,
+        "presUploadModal": true,
+        "presUploadStep": "select",
+        "presUploadFile": null
+      },
+      "expectText": "Cargar versión PPT",
+      "source": "HTML L2865 (sc-if presUploadModal), trigger L2544 in the builder"
+    },
+    "OVL-07b": {
+      "name": "Descargar presentación (config step)",
+      "host": "SCR-13",
+      "state": { "presCreateOpen": true, "presDownloadModal": true, "presDownloadStep": "config" },
+      "expectText": "Descargar presentación",
+      "source": "HTML L2907 (sc-if presDownloadModal), trigger L2587 in the builder"
+    },
+    "OVL-08": {
+      "name": "Narrativa ejecutiva · Resultados (all sections)",
+      "host": "SCR-08",
+      "state": { "resNarrativa": "all" },
+      "expectText": "Narrativa ejecutiva · Resultados",
+      "source": "HTML L3039 (sc-if resNarrativaOpen = !!resNarrativa, L5315)"
+    },
+    "OVL-09": {
+      "name": "Narrativa ejecutiva (Monitor)",
+      "host": "SCR-11",
+      "state": { "narrativaOpen": true },
+      "expectText": "Narrativa ejecutiva",
+      "source": "HTML L3063 (sc-if narrativaOpen)"
+    },
+    "OVL-10": {
+      "name": "Análisis publicado",
+      "host": "SCR-09",
+      "state": { "publishModalOpen": true },
+      "expectText": "Análisis publicado",
+      "source": "HTML L3019 (sc-if publishModalOpen)"
+    },
+    "OVL-11": {
+      "name": "KVI traceability (ROACE)",
+      "host": "SCR-11",
+      "state": { "valorTrazId": "roace" },
+      "expectText": "RESPONSABLE",
+      "source": "HTML L3083 (sc-if hasTraz = !!valorTrazId KVI, L4737)"
+    },
+    "OVL-12": {
+      "name": "Ayuda y documentación",
+      "host": "SCR-05",
+      "state": { "helpOpen": true },
+      "expectText": "Ayuda y documentación",
+      "source": "HTML L3108 (sc-if helpOpen)"
+    },
+    "OVL-13": {
+      "name": "Company profile (Chevron)",
+      "host": "SCR-05",
+      "state": { "profileCompany": "Chevron" },
+      "expectText": "Noticias recientes",
+      "source": "HTML L3129 (sc-if hasProfile = !!profileCompany, L3980)"
+    },
+    "OVL-14": {
+      "name": "Yarbis chat panel (Inicio)",
+      "host": "SCR-05",
+      "state": { "aiOpen": true },
+      "expectText": "Yarbis · Dashboard",
+      "source": "HTML L3180 (sc-if aiOpen), FAB L3176"
+    }
+  },
+  "notRendered": {
+    "SCR-17": "403/404 error pages have no prototype (brief §5.4).",
+    "OVL-15": "Detalle por compañía (TBG e ILP): inference only; the logic has qualDetailModalOpen (HTML L5271-5278) but neither HTML has a template block for it.",
+    "OVL-16": "Seleccionar revisores: proposed per critic M-04; no HTML source."
+  }
+}

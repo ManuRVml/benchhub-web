@@ -1,0 +1,217 @@
+{
+  "header": {
+    "meta": {
+      "analyst": "Analista responsable",
+      "updated": "Actualizado",
+      "status": "Estado",
+      "statusValues": {
+        "in_construction": "En construcción",
+        "in_review": "En revisión",
+        "published": "Publicado"
+      }
+    },
+    "inlineSave": "✓ Vista guardada",
+    "actions": {
+      "generateNarrative": "Generar narrativa ejecutiva",
+      "goToSensitivities": "Ir a Sensibilidades",
+      "saveView": "Guardar vista",
+      "download": "Descargar",
+      "share": "Compartir",
+      "aiRecommendations": "Recomendaciones estratégicas IA"
+    },
+    "snapshot": {
+      "label": "Ver tablero a fecha",
+      "note": {
+        "current": "Corte vigente"
+      }
+    },
+    "savedViews": {
+      "label": "Mis vistas",
+      "current": "Vista actual",
+      "delete": "Eliminar la vista «{{name}}»"
+    }
+  },
+  "kpis": {
+    "globalCompliance": "Cumplimiento global",
+    "retoCompliance": "Cumplimiento Reto",
+    "atRisk": "KVIs en riesgo",
+    "tbd": "KVIs pendientes (TBD)",
+    "info": "Cumplimiento global y Reto se calculan como el promedio ponderado de todos los KVIs de la tabla. \"KVIs en riesgo\" cuenta indicadores <70% de cumplimiento; \"TBD\" son los que aún no tienen fórmula o dato definido."
+  },
+  "dimensionWeights": {
+    "title": "Peso por dimensión · Financiera / Operativa / Transversal",
+    "subtitle": "Composición de peso propia de Ecopetrol · solo lectura",
+    "info": "Este peso corresponde únicamente a Ecopetrol — el Monitor de Valor se sensibiliza sobre datos propios, no sobre los pares. Los pares se comparan en Resultados y Visualización.",
+    "groupEcopetrol": "★ Grupo Ecopetrol",
+    "legend": {
+      "financial": "Financiera",
+      "operational": "Operativa",
+      "transversal": "Transversal"
+    }
+  },
+  "ranking": {
+    "title": "Ranking de pares · ROACE",
+    "subtitle": "Clic en una compañía abre su perfil",
+    "info": "Compara a Ecopetrol (resaltado) contra el top 6 de pares en ROACE del último corte disponible.",
+    "columnRank": "Rank",
+    "columnName": "Nombre",
+    "columnValue": "Valor"
+  },
+  "history": {
+    "title": "Comparación con serie histórica",
+    "range": {
+      "current": "Actual",
+      "fiveYears": "5 años",
+      "eightYears": "8 años",
+      "tenYears": "10 años"
+    },
+    "info": "Muestra la evolución de ROACE en el rango de años seleccionado, para detectar tendencias frente al comportamiento reciente.",
+    "columnValue": "Valor",
+    "columnYear": "Año"
+  },
+  "configuration": {
+    "title": "Configuración del Monitor de Valor",
+    "datesRangeSources": "Fechas, rango y fuentes",
+    "cutOffDate": "Fecha de corte",
+    "rangeFrom": "Rango desde",
+    "rangeTo": "Rango hasta",
+    "sources": "Fuentes (sin periodicidad fija)",
+    "sourceEnabled": "activa",
+    "sourceDisabled": "inactiva",
+    "includedKVIs": "Indicadores y métricas incluidos",
+    "tableNote": "Real, meta y referente de cada indicador se configuran directamente en la tabla — junto con variables y sensibilidades cuando aplique.",
+    "exceptions": "Excepciones, reglas variables y contexto",
+    "exceptionsPlaceholder": "Registra excepciones o reglas variables — ej. palabras clave, sinónimos o nombres que usa cada compañía para un mismo indicador (Ecopetrol: 'Deuda Bruta/EBITDA' = Shell: 'Net Debt/EBITDA')...",
+    "assistantContext": "Contexto abierto para Yarbis (asociaciones, amplitud de datos, prompt)",
+    "assistantContextPlaceholder": "Ej: considera también fuentes en inglés y agrupa por segmento de negocio...",
+    "thresholdAlert": "Umbral de alerta",
+    "thresholdWarning": "Umbral de advertencia",
+    "period": "Periodo de reporte",
+    "periodQuarter": "Trimestral",
+    "periodYear": "Anual",
+    "apply": "Aplicar configuración",
+    "recalculating": {
+      "inProgress": "Recalculando el Monitor de Valor con la nueva configuración...",
+      "done": "✓ Monitor de Valor recalculado.",
+      "failed": "No se pudo recalcular el Monitor de Valor. Intenta de nuevo."
+    }
+  },
+  "kviTable": {
+    "title": "Monitor de Valor Grupo Ecopetrol · KVIs",
+    "note": "Meta y Meta Reto son editables · el % de cumplimiento se recalcula automáticamente",
+    "warningCurrentReview": "⚠ Resultados 2025 en revisión",
+    "warningMetasConstruction": "⚠ Metas y seguimiento resultados 2026 en construcción",
+    "info": "Resultado Monitor y Resultado Reto se calculan como Real/Meta (o Meta/Real cuando menor es mejor, ej. deuda). Verde ≥90%, ámbar 70–89%, rojo <70%. Filtra por categoría o rango de cumplimiento para acotar la consulta.",
+    "filters": {
+      "category": "Categoría",
+      "compliance": "Cumplimiento"
+    },
+    "columnCategory": "Categoría",
+    "columnIndicator": "Indicador",
+    "columnUnit": "Unidad",
+    "columnWeight": "Peso",
+    "columnOwner": "Responsable",
+    "columnMeta": "Meta {{year}}",
+    "columnMetaReto": "Meta Reto",
+    "columnReal": "Real {{year}}",
+    "columnResultMonitor": "Resultado Monitor",
+    "columnResultReto": "Resultado Reto",
+    "addIndicator": "+ Añadir indicador",
+    "helper": "Real, meta y referente de cada indicador se configuran directamente en la tabla — junto con variables y sensibilidades cuando aplique."
+  },
+  "composition": {
+    "title": "Composición del Monitor por categoría",
+    "subtitle": "Peso, número de KVIs y cumplimiento promedio por categoría",
+    "info": "El anillo muestra cómo se reparte el peso del Monitor de Valor entre categorías; el centro es el cumplimiento global. La tabla detalla cuántos KVIs tiene cada categoría y su cumplimiento promedio frente a la meta.",
+    "centerLabel": "Cumplimiento",
+    "columnCategory": "Categoría",
+    "columnCount": "# KVIs",
+    "columnWeight": "% Peso",
+    "columnCompliance": "Cumplimiento"
+  },
+  "benchmark": {
+    "title": "Análisis multidimensional · Benchmark radial",
+    "subtitle": "Cumplimiento normalizado 0–100% por KVI · hasta 5 compañías",
+    "actions": {
+      "analyzeWithAI": "Analizar con IA",
+      "png": "PNG",
+      "pdf": "PDF",
+      "ppt": "PPT"
+    },
+    "year": "AÑO",
+    "comparePreviousYear": "Comparar año anterior",
+    "viewGaps": "Ver brechas vs. líder",
+    "categories": "CATEGORÍA",
+    "all": "Todas",
+    "companiesLabel": "COMPAÑÍAS",
+    "strengthsLabel": "FORTALEZAS · TOP 3",
+    "opportunitiesLabel": "OPORTUNIDADES · BOTTOM 3",
+    "radarAriaLabel": "Cumplimiento normalizado por KVI, comparado entre compañías",
+    "maxCompaniesReached": "Máximo 5 compañías seleccionadas"
+  },
+  "comments": {
+    "title": "Comentarios",
+    "inputPlaceholder": "Escribe un comentario...",
+    "send": "Enviar",
+    "roles": {
+      "analystCreator": "Analista creador",
+      "executiveViewer": "Ejecutivo visualizador",
+      "executiveIntegral": "Ejecutivo integral",
+      "explorerViewer": "Explorador visualizador",
+      "explorerIntegral": "Explorador integral"
+    }
+  },
+  "modal": {
+    "addIndicator": {
+      "title": "Añadir indicador",
+      "subtitle": "Selecciona los indicadores que quieres añadir al monitor",
+      "sourceTabs": "Fuente de los indicadores",
+      "tabs": {
+        "peerReferencing": "Referenciamiento de pares",
+        "tbg": "TBG",
+        "ilp": "ILP"
+      },
+      "footer": "{{count}} seleccionados",
+      "alreadyIncluded": "Ya está en el monitor",
+      "add": "Añadir al monitor"
+    },
+    "narrative": {
+      "title": "Narrativa ejecutiva",
+      "subtitle": "Resumen generado por Yarbis de cada módulo del Monitor de Valor",
+      "sections": {
+        "highlightedKVIs": "KVIs destacados",
+        "dimensionWeights": "Peso por dimensión",
+        "composition": "Composición del Monitor por categoría",
+        "executiveComments": "Comentarios ejecutivos"
+      }
+    },
+    "recommendations": {
+      "title": "Recomendaciones estratégicas de Yarbis",
+      "subtitle": "Basadas en la distribución de pesos de Ecopetrol frente al promedio sectorial y el cumplimiento del Monitor de Valor"
+    },
+    "traceability": {
+      "category": "CATEGORÍA",
+      "source": "FUENTE",
+      "capturedAt": "FECHA DE CAPTURA",
+      "owner": "RESPONSABLE",
+      "unit": "UNIDAD"
+    }
+  },
+  "banners": {
+    "tbd": "TBD",
+    "warningCurrentReview": "⚠ Resultados 2025 en revisión",
+    "warningMetasConstruction": "⚠ Metas y seguimiento resultados 2026 en construcción"
+  },
+  "empty": {
+    "noKVIFilters": "No hay KVIs que coincidan con los filtros",
+    "clearFilters": "Limpiar filtros"
+  },
+  "toast": {
+    "viewSaved": "✓ Vista guardada"
+  },
+  "band": {
+    "ok": "≥90%",
+    "watch": "70–89%",
+    "risk": "<70%"
+  }
+}

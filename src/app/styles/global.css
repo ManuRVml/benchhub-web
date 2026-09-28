@@ -1,0 +1,61 @@
+/* Global stylesheet: Tailwind CSS v4 + the generated token theme (ADR 0002) + self-hosted fonts + base styles. */
+@import 'tailwindcss';
+@import './theme.css';
+/* Self-hosted variable fonts (no Google Fonts CDN): families "Roboto Variable" and "Roboto Mono Variable". */
+@import '@fontsource-variable/roboto';
+@import '@fontsource-variable/roboto-mono';
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-body);
+    background-color: var(--color-surface-page);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--color-text-heading);
+  }
+
+  a {
+    color: var(--color-text-link);
+  }
+
+  a:hover {
+    color: var(--color-text-link-hover);
+  }
+
+  :focus-visible {
+    outline: var(--focus-width) solid var(--color-focus-color);
+    outline-offset: var(--focus-offset);
+  }
+
+  ::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+    height: var(--scrollbar-width);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-scrollbar-thumb);
+    border-radius: var(--scrollbar-radius);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}

@@ -1,0 +1,305 @@
+{
+  "placeholder": {
+    "title": "SCR-08 · Resultados"
+  },
+  "frame": {
+    "horizon": {
+      "tbg": "TBG",
+      "ilp": "ILP",
+      "tbgAndIlp": "TBG + ILP"
+    },
+    "analysisTabs": {
+      "configuration": "Configuración",
+      "results": "Resultados",
+      "presentation": "Presentación"
+    }
+  },
+  "actionRow": {
+    "aiPill": {
+      "generatingExecutiveNarrative": "Generar narrativa ejecutiva",
+      "narrative": "Narrativa"
+    },
+    "createPresentation": "Crear presentación"
+  },
+  "companyCoverage": {
+    "header": {
+      "title": "Detalle y edición de datos por compañía",
+      "subtitle": "El % indica cuántos de los indicadores requeridos tiene reportados cada compañía. Verde ≥90%, ámbar 70–89%, rojo <70%. Clic en una tarjeta la selecciona para editar sus datos debajo."
+    },
+    "kpiBand": {
+      "companies": "Compañías",
+      "complete": "Completas",
+      "incomplete": "Incompletas",
+      "pendingIndicators": "Indicadores pendientes"
+    },
+    "aiInsights": {
+      "companiesWithCompleteInfo": "{{n}} de {{total}} compañías tienen 90% o más de información completa.",
+      "companiesWithCriticalIndicators": "{{n}} compañía(s) presenta(n) indicadores críticos sin información (<70%).",
+      "mostMissingData": "{{company}} concentra el mayor número de datos faltantes ({{count}})."
+    },
+    "companyCard": {
+      "missingCount": "{{count}} indicador(es) faltante(s)",
+      "remove": "Quitar {{company}}"
+    },
+    "status": {
+      "complete": "Completa",
+      "needsReview": "Requiere revisión",
+      "incomplete": "Incompleta"
+    },
+    "addTile": {
+      "title": "+ Añadir compañía",
+      "selectPlaceholder": "Elegir..."
+    },
+    "dimension": {
+      "fin": "Financiera",
+      "op": "Operativa",
+      "trans": "Transversal"
+    },
+    "editArea": {
+      "eyebrow": "Datos reportados · editable",
+      "real": "Real",
+      "estimated": "Estimado",
+      "justificationPlaceholder": "Justificación del estimado (opcional)...",
+      "successBanner": "✓ Sin indicadores faltantes — homologación completa.",
+      "dangerBanner": "Faltan {{count}} indicadores por homologar en {{company}}.",
+      "missingSection": "Datos faltantes",
+      "missingChip": "Faltante",
+      "missingClear": "Limpiar {{indicator}}",
+      "cancelChanges": "Cancelar cambios",
+      "saveChanges": "Guardar cambios",
+      "changesSaved": "✓ Cambios guardados"
+    }
+  },
+  "peerAverageComparison": {
+    "title": "Comparativo GE vs. Promedio Pares",
+    "subtitle": "Valor Grupo Ecopetrol frente al promedio de pares, por indicador",
+    "subtitleInfo": "Compara el valor de Ecopetrol (GE) contra el promedio de pares para cada indicador de la categoría seleccionada. Los valores son editables; \"Ver más\" abre el detalle del indicador.",
+    "categoryLabel": "Categoria",
+    "verMas": "Ver más ›",
+    "ge": "GE",
+    "peers": "Pares"
+  },
+  "companyComparison": {
+    "title": "Comparativo GE vs. compañía · detalle por indicador",
+    "subtitle": "Grupo Ecopetrol frente a cada compañía par, indicador por indicador",
+    "subtitleInfo": "Elige una compañía para ver cada indicador de Grupo Ecopetrol (verde) frente al valor de esa compañía. La diferencia se expresa en puntos (GE − compañía). En indicadores marcados \"Menor es mejor\" (deuda, costos) GE supera cuando su valor es menor. El valor de la compañía es editable; \"Ver más\" abre el detalle del indicador.",
+    "geBeat": "GE supera a {{company}}",
+    "wins": "{{wins}} de {{total}}",
+    "indicators": "indicadores",
+    "narrativeTitle": "GE vs. {{company}}",
+    "legend": {
+      "ge": "Grupo Ecopetrol"
+    },
+    "polarity": {
+      "lowerIsBetter": "Menor es mejor"
+    },
+    "outcome": {
+      "above": "GE supera",
+      "below": "GE por debajo"
+    }
+  },
+  "tbgHorizon": {
+    "titleTbg": "Horizonte TBG",
+    "titleIlp": "Horizonte ILP",
+    "titleUnion": "Horizonte TBG y ILP",
+    "subtitle": "Composición de peso por dimensión e indicador declarados por cada compañía par en su esquema TBG/ILP",
+    "aiPill": "Recomendaciones de Yarbis",
+    "kpis": {
+      "title": "KPIs generales",
+      "analyzedCompanies": "Compañías analizadas",
+      "avgFinWeight": "Peso promedio Financiera",
+      "avgOpWeight": "Peso promedio Operativa",
+      "avgTransWeight": "Peso promedio Transversal"
+    },
+    "comparison": {
+      "title": "Comparativo de composición por compañía",
+      "total": "Total:",
+      "legend": {
+        "financiera": "Financiera",
+        "operativa": "Operativa",
+        "transversal": "Transversal"
+      }
+    },
+    "mainIndicators": {
+      "title": "Principales indicadores por dimensión",
+      "detailButton": "Detalle por compañía (TBG e ILP)",
+      "financiera": "Financiera",
+      "operativa": "Operativa",
+      "transversal": "Transversal"
+    },
+    "viewTabs": {
+      "summary": "Resumen general",
+      "byCompany": "Por compañía"
+    },
+    "companyEditor": {
+      "title": "Editar pesos por compañía"
+    }
+  },
+  "tbgDimensionWeights": {
+    "title": "Peso en TBG por dimensión · GE vs. pares",
+    "subtitle": "Ponderación declarada por cada compañía en su TBG/ILP, comparada con el peso de Ecopetrol y el promedio del grupo",
+    "dimensionTabs": {
+      "financiera": "Financiera",
+      "operativa": "Operativa",
+      "transversal": "Transversal"
+    },
+    "comparison": {
+      "ecopetrol": "Ecopetrol",
+      "peerAverage": "Promedio pares"
+    },
+    "diffMessage": "Ecopetrol está {{diff}} vs. el promedio de pares en {{dimension}}",
+    "detail": {
+      "title": "Detalle por compañía · {{dimension}}"
+    },
+    "aiPill": "Recomendaciones de Yarbis"
+  },
+  "tbgIndicatorComparator": {
+    "title": "Comparador de Indicadores TBG",
+    "subtitle": "Analice la posición de Ecopetrol frente a las compañías líderes del sector para un indicador específico.",
+    "controls": {
+      "companyScope": "Todas las compañías",
+      "indicatorLabel": "Indicador",
+      "scopeLabel": "Alcance de compañías"
+    },
+    "kpiTiles": {
+      "ecopetrol": "{{indicator}} Ecopetrol",
+      "tbgAverage": "Promedio TBG",
+      "gap": "Brecha",
+      "rankingPosition": "Posición ranking",
+      "position": "{{rank}} de {{of}}"
+    },
+    "ranking": {
+      "title": "Ranking TBG",
+      "inTbg": "Pertenencia al TBG",
+      "inTbgNote": "Compañías que integran actualmente el grupo de mejor desempeño para este indicador.",
+      "inTbgLabel": "TOP BENCHMARK GROUP",
+      "outTbgLabel": "FUERA DEL TBG",
+      "tbgMember": "✓{{company}}",
+      "notTbgMember": "○{{company}}",
+      "tbgMemberMarker": "✓",
+      "notTbgMemberMarker": "○"
+    },
+    "gapAnalysis": {
+      "title": "Análisis de brecha",
+      "toLeader": "Distancia al líder",
+      "narrativeButton": "Generar narrativa ejecutiva"
+    }
+  },
+  "futureAspiration": {
+    "title": "Aspiración futura 2040+",
+    "subtitle": "Producción proyectada de barriles equivalentes por día (kbpe/d) por compañía, dividida en 4 segmentos",
+    "unit": "kbpe/d",
+    "segmentChipsLabel": "Seleccionar segmento",
+    "kpiTiles": {
+      "production": "Producción Ecopetrol 2040+",
+      "position": "Posición en producción total",
+      "lowEmissionsShare": "Peso bajas emisiones · Ecopetrol vs. pares"
+    },
+    "segmentChips": {
+      "total": "Total",
+      "conventionalCrude": "Crudo convencional",
+      "naturalGas": "Gas natural",
+      "unconventionalOffshore": "No convencional / offshore",
+      "lowEmissions": "Bajas emisiones (boe eq.)"
+    },
+    "legend": {
+      "ge": "Grupo Ecopetrol"
+    },
+    "footnote": "Cifras ilustrativas en kbpe/d basadas en la aspiración de largo plazo anunciada por cada compañía · Análisis interno de la Gerencia de Estrategia."
+  },
+  "comparisonProfiles": {
+    "title": "Perfiles de comparación",
+    "subtitle": "Compara a Ecopetrol bajo distintos escenarios estratégicos, cada uno con su propio set de pares, ponderación por dimensión TBG y vigencia",
+    "result": {
+      "kpis": {
+        "score": "Puntaje Ecopetrol",
+        "gap": "Brecha vs. pares",
+        "position": "Posición"
+      },
+      "positionValue": "{{position}} de {{of}}",
+      "yarbisNote": {
+        "prefix": "Yarbis:"
+      }
+    },
+    "profileTabs": {
+      "title": "Perfil {{n}} · {{name}}",
+      "add": "+ Nuevo perfil"
+    },
+    "profileConfig": {
+      "title": "Configuración del perfil",
+      "nameInput": "Perfil {{n}} · {{name}}",
+      "businessType": "Tipo de negocio",
+      "allBusinesses": "Todos los negocios",
+      "hydrocarbons": "Hidrocarburos",
+      "upstream": "Upstream",
+      "gasAndLng": "Gas y GNL",
+      "decarbonizationRenewables": "Descarbonización · Renovables"
+    },
+    "indicators": "Indicadores del tipo de negocio · {{businessType}} · {{subType}}",
+    "validityYear": "Vigencia de indicadores",
+    "peers": {
+      "title": "Empresas pares del perfil · {{count}} disponibles en este tipo de negocio"
+    },
+    "weights": {
+      "title": "Ponderación por dimensión TBG",
+      "deleteProfile": "Eliminar este perfil"
+    },
+    "ecopetrolInEachProfile": {
+      "title": "Ecopetrol en cada perfil",
+      "columns": {
+        "profile": "PERFIL",
+        "year": "AÑO",
+        "ecopetrol": "ECOPETROL",
+        "peers": "PARES",
+        "gap": "BRECHA",
+        "position": "POSICIÓN"
+      }
+    },
+    "footnote": "Puntajes por dimensión ilustrativos (0–100) por compañía y vigencia."
+  },
+  "reportSummary": {
+    "title": "Resumen del informe",
+    "info": "Tabla en el formato del informe ejecutivo actual (Categoría, KPI, Valor GE, Promedio pares).",
+    "excelButton": "Excel",
+    "exportFeedback": "Exportando a Excel (.xlsx)…",
+    "filterLabel": "Filtrar por categoría",
+    "tableHeaders": {
+      "category": "Categoría",
+      "kpi": "KPIs",
+      "geValue": "Valor GE",
+      "peerAverage": "Promedio pares"
+    }
+  },
+  "findingsRail": {
+    "eyebrow": "Hallazgos de IA",
+    "info": "Observaciones generadas por Yarbis a partir de los datos homologados: anomalías, atípicos frente al histórico o brechas relevantes con pares."
+  },
+  "footer": {
+    "save": "Guardar",
+    "recalculate": "Actualizar",
+    "generateReportView": "Generar vista de reporte"
+  },
+  "modals": {
+    "narrative": {
+      "title": "Narrativa ejecutiva · {{title}}",
+      "titleResults": "Narrativa ejecutiva · Resultados",
+      "titleHom": "Narrativa ejecutiva · Datos por compañía",
+      "titleComp": "Narrativa ejecutiva · GE vs. pares",
+      "titlePvc": "Narrativa ejecutiva · GE vs. {{company}}",
+      "titleSummary": "Narrativa ejecutiva · Resumen del informe",
+      "copyText": "Copiar texto",
+      "copied": "✓ Copiado",
+      "useInPresentation": "Usar en presentación"
+    },
+    "companyWeightDetail": {
+      "title": "Detalle por compañía (TBG e ILP)"
+    }
+  },
+  "toasts": {
+    "companyRemoved": "Se quitó {{company}} del análisis.",
+    "undo": "Deshacer",
+    "changesSavedAutomatically": "Cambios guardados automáticamente",
+    "recalculating": "Recalculando resultados…",
+    "recalculated": "✓ Resultados recalculados."
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "header": {
+    "title": "Notificaciones"
+  },
+  "search": {
+    "placeholder": "Buscar notificaciones..."
+  },
+  "filters": {
+    "severity": {
+      "label": "Severidad",
+      "all": "Todo",
+      "info": "Info",
+      "success": "OK",
+      "warn": "Atención",
+      "error": "Crítico"
+    }
+  },
+  "tag": {
+    "info": "INFO",
+    "success": "OK",
+    "warn": "ATENCIÓN",
+    "error": "CRÍTICO"
+  },
+  "type": {
+    "dato": "Dato",
+    "comentario": "Comentario",
+    "publicacion": "Publicación",
+    "ia": "Yarbis",
+    "noticia": "Noticia",
+    "colaboracion": "Colaboración",
+    "sistema": "Sistema"
+  },
+  "empty": {
+    "title": "No hay notificaciones que coincidan con la búsqueda o los filtros."
+  },
+  "error": {
+    "title": "Error al cargar notificaciones",
+    "description": "Intenta nuevamente más tarde.",
+    "retry": "Reintentar"
+  },
+  "item": {
+    "unread": "Sin leer"
+  }
+}

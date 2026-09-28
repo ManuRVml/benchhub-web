@@ -1,0 +1,163 @@
+{
+  "list": {
+    "title": "Presentaciones creadas",
+    "info": "Editar reabre el asistente con la configuración guardada; Ver detalle abre la presentación para revisarla, descargarla, compartirla o ver comentarios de otros usuarios.",
+    "headers": {
+      "name": "Nombre",
+      "createdOn": "Fecha de creación",
+      "status": "Estado",
+      "publishedOn": "Fecha de publicación"
+    },
+    "actions": {
+      "edit": "Editar",
+      "viewDetail": "Ver detalle"
+    },
+    "buttons": {
+      "create": "+ Crear presentación",
+      "cancel": "Cancelar"
+    },
+    "status": {
+      "published": "Publicado",
+      "inReview": "En revisión",
+      "draft": "Borrador"
+    }
+  },
+  "builder": {
+    "title": "Título",
+    "date": "Fecha",
+    "language": "Idioma",
+    "languageOptions": {
+      "spanish": "Español",
+      "english": "English"
+    },
+    "template": "Tipo de presentación",
+    "templateInfo": "Define la paleta y estilo visual de las diapositivas generadas — puedes cambiarla luego desde Editar.",
+    "slides": {
+      "title": "Tipos de slides a incluir",
+      "info": "Cada módulo de Resultados puede convertirse en una o varias diapositivas. Activa el módulo y elige qué gráficas o vistas incluir: cada gráfica seleccionada genera su propia diapositiva con los datos actuales del análisis. El orden final se ajusta en Previsualizar.",
+      "badge": "{{count}} diapositivas",
+      "selectAll": "Seleccionar todo",
+      "clear": "Limpiar"
+    },
+    "cover": "Portada",
+    "closing": "Cierre",
+    "module": {
+      "comments": "Comentarios por slide",
+      "charts": "{{on}}/{{total}} gráficas",
+      "addComment": "+ Agregar comentario",
+      "editComment": "Editar",
+      "removeComment": "Quitar",
+      "notePlaceholder": "Escribe el comentario que se mostrará en esta diapositiva...",
+      "toggleGroup": "Incluir {{module}}"
+    },
+    "ppt": {
+      "title": "Versión PPT cargada",
+      "upload": "↑ Cargar versión PPT",
+      "replace": "Reemplazar",
+      "remove": "Quitar",
+      "emptyHint": "Si ya ajustaste la presentación en PowerPoint, cárgala aquí: reemplazará la versión generada por el sistema.",
+      "uploadedLine": "Reemplaza la versión generada · {{size}} · cargada {{date}}",
+      "fileTag": "PPT"
+    },
+    "comments": {
+      "title": "Comentarios",
+      "placeholder": "Deja un comentario sobre esta presentación...",
+      "send": "Enviar"
+    },
+    "footer": {
+      "previewAndOrder": "Previsualizar y ordenar",
+      "download": "↓ Descargar",
+      "share": "Compartir",
+      "publish": "Publicar presentación",
+      "upload": "↑ Cargar PPT"
+    },
+    "heading": {
+      "new": "Nueva presentación",
+      "edit": "Editar presentación"
+    },
+    "titlePlaceholder": "Ej. Directorio Ejecutivo T1 2026"
+  },
+  "preview": {
+    "orderTitle": "Orden de diapositivas",
+    "reset": "Restablecer",
+    "hint": "Usa las flechas para mover cada diapositiva.",
+    "hasComment": "● Con comentario",
+    "stageTitle": "Vista previa · {{module}} · diapositiva {{n}}/{{total}}",
+    "downloadWithOrder": "↓ Descargar con este orden",
+    "moveUp": "Mover \"{{label}}\" arriba",
+    "moveDown": "Mover \"{{label}}\" abajo",
+    "previous": "‹",
+    "next": "›"
+  },
+  "upload": {
+    "title": "Cargar versión PPT",
+    "replaceTitle": "Reemplazar versión PPT",
+    "subtitle": "La versión cargada reemplazará la presentación generada por el sistema para descargas y publicación.",
+    "dropzoneLabel": "Selecciona un archivo .pptx",
+    "maxSize": "Máximo 50 MB",
+    "selectButton": "Seleccionar archivo",
+    "confirmWarning": "⚠ Esta acción reemplaza la versión generada. Los cambios de módulos y orden no se aplicarán al archivo cargado.",
+    "chooseAnother": "Elegir otro",
+    "confirmButton": "Reemplazar versión",
+    "loading": "Cargando y validando {{fileName}}...",
+    "done": "✓ Versión reemplazada. {{fileName}} es ahora la versión oficial de esta presentación.",
+    "close": "Listo",
+    "progressLabel": "Progreso de la carga",
+    "errors": {
+      "invalidType": "El archivo debe ser .ppt o .pptx.",
+      "tooLarge": "El archivo supera el máximo de 50 MB.",
+      "uploadError": "No se pudo cargar el archivo. Intenta de nuevo."
+    }
+  },
+  "download": {
+    "title": "Descargar presentación",
+    "subtitle": "Elige el formato para generar y descargar la presentación.",
+    "sourceGenerated": "Versión generada: {{count}} diapositivas en el orden definido",
+    "sourceUploaded": "Versión cargada: {{fileName}}",
+    "formatPptx": "PowerPoint (.pptx)",
+    "formatPptxDescription": "Editable, con gráficas nativas",
+    "formatPdf": "PDF",
+    "formatPdfDescription": "Solo lectura, ideal para distribuir",
+    "cancel": "Cancelar",
+    "generate": "Generar y descargar",
+    "loading": "Generando {{fileName}}...",
+    "done": "✓ {{fileName}} descargado correctamente.",
+    "close": "Listo",
+    "progressLabel": "Progreso de la descarga",
+    "error": "No se pudo generar el archivo. Intenta de nuevo."
+  },
+  "publish": {
+    "confirmTitle": "¿Publicar esta presentación?",
+    "confirmDescription": "Al publicar, la presentación queda visible para los usuarios con acceso y se les notifica.",
+    "confirmButton": "Publicar presentación",
+    "cancelButton": "Cancelar",
+    "error": "No se pudo publicar la presentación. Intenta de nuevo."
+  },
+  "yarbis": {
+    "draft": {
+      "withYarbis": "✦ Redactar con Yarbis",
+      "suggest": "✦ Sugerir con Yarbis",
+      "drafting": "✦ Yarbis está redactando…",
+      "batch": "Redactar comentarios con Yarbis ({{pending}})",
+      "batchLabel": "Redactar comentarios con Yarbis",
+      "suggestLabel": "Sugerir con Yarbis",
+      "withYarbisLabel": "Redactar con Yarbis"
+    },
+    "note": {
+      "save": "Guardar",
+      "cancel": "Cancelar"
+    }
+  },
+  "banners": {
+    "publishSuccess": "✓ Presentación publicada correctamente.",
+    "yarbisError": "Yarbis no pudo redactar el comentario. Intenta de nuevo en unos segundos."
+  },
+  "empty": {
+    "noPresentations": "Aún no hay presentaciones",
+    "noSlides": "0 diapositivas",
+    "selectModules": "Selecciona al menos un módulo para generar diapositivas."
+  },
+  "toasts": {
+    "copied": "Copiado"
+  }
+}

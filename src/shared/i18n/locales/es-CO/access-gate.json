@@ -1,0 +1,19 @@
+{
+  "heading": {
+    "title": "¿A dónde quieres ir?",
+    "subtitle": "Elige un acceso para continuar"
+  },
+  "cards": {
+    "tool": {
+      "title": "Ingresar a la herramienta",
+      "description": "Análisis, resultados, visualización y presentaciones de referenciamiento competitivo."
+    },
+    "administration": {
+      "title": "Administración",
+      "description": "Back office: usuarios, roles, fuentes de datos y parámetros del sistema."
+    }
+  },
+  "footer": {
+    "link": "Cerrar sesión"
+  }
+}

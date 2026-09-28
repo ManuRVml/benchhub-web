@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.cache/tsbuildinfo/app.tsbuildinfo",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "types": ["vite/client"],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "tools/arch-fixtures/**/*.ts",
+    "tools/arch-fixtures/**/*.tsx",
+    "tools/test/**/*.ts",
+    "tools/test/**/*.tsx",
+    ".storybook/preview.ts"
+  ],
+  "exclude": ["tools/arch-fixtures/planted/**"]
+}

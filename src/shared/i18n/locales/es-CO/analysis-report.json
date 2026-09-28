@@ -1,0 +1,110 @@
+{
+  "header": {
+    "eyebrow": "Posición global · {{periodLabel}}",
+    "contextLine": "promedio de {{indicatorCount}} indicadores vs. {{peerCount}} pares",
+    "tierNames": {
+      "1": "Líder",
+      "2": "Estratégico",
+      "3": "Seguimiento",
+      "4": "Prioritario"
+    },
+    "actions": {
+      "createPresentation": "Crear presentación",
+      "publish": "Publicar"
+    }
+  },
+  "panorama": {
+    "title": "Panorama comparativo de promedios",
+    "subtitle": "KPIs, heatmap, ranking y radar Ecopetrol vs. sector",
+    "aiPill": "Recomendaciones de Yarbis ({{recoActionCount}})",
+    "kpiSection": "KPIs resumen",
+    "kpiSectionInfo": "Promedio de peso asignado por cada compañía del set de pares, comparado con el rango (mín–máx) y con el peso actual de Ecopetrol.",
+    "kpiTiles": {
+      "sectorAvgCaption": "prom. sector",
+      "ecopetrolChip": "Ecopetrol {{value}}%",
+      "range": "Rango {{min}}–{{max}}%"
+    },
+    "rankingSection": "Ranking por categoría",
+    "rankingSectionInfo": "Compañías ordenadas de mayor a menor peso en la línea seleccionada, para identificar quién pondera más esa categoría.",
+    "radarInfo": "Cada eje es una línea de peso (Financiera/Operativa/Transversal). Entre más se separan los dos polígonos en un eje, mayor la diferencia entre cómo Ecopetrol distribuye su peso y cómo lo hace el sector en promedio.",
+    "heatmapInfo": "Entre más oscura la celda, mayor el peso asignado a esa línea de indicador para esa compañía. Clic en el nombre abre su perfil.",
+    "heatmapAriaLabel": "Mapa de calor de peso por compañía y dimensión",
+    "heatmapCompanyHeader": "Compañía",
+    "radarAriaLabel": "Radar de peso por dimensión, Ecopetrol vs. sector",
+    "radarLegend": {
+      "ecopetrol": "Ecopetrol",
+      "sectorAverage": "Promedio sector"
+    },
+    "ranking": {
+      "explanationLeader": "{{name}} lidera en {{dimension}} con {{pct}}%, el peso más alto del set analizado.",
+      "explanationOther": "{{name}} ocupa la posición {{rank}} en {{dimension}} con {{pct}}%."
+    }
+  },
+  "dimensionTabs": {
+    "financial": "Financiera",
+    "operational": "Operativa",
+    "transversal": "Transversal"
+  },
+  "categories": {
+    "title": "Categorías",
+    "info": "El Tier resume la posición de Ecopetrol frente a pares en esa categoría:",
+    "infoSuffix": "Clic en una tarjeta filtra los indicadores debajo."
+  },
+  "indicatorPanel": {
+    "headerInfo": "Cada fila compara el valor de Ecopetrol contra el promedio de pares para ese indicador. Clic en una fila abre el detalle con histórico, fórmula y fuente.",
+    "ecopetrol": "Ecopetrol",
+    "peerAverage": "Prom. pares"
+  },
+  "weightComposition": {
+    "title": "Composición de peso por línea de indicador",
+    "subtitle": "% de peso Financiera / Operativa / Transversal por compañía · solo lectura · Horizonte TBG",
+    "info": "Cómo pondera cada compañía par sus tres líneas de indicador para el análisis (no incluye a Ecopetrol, que no pondera contra sí misma). Para editar estos valores, ve a Resultados · Espacio de trabajo.",
+    "overweightBanner": "⚠ Una o más compañías superan el 100% en la sumatoria de pesos.",
+    "ecopetrolReference": "★ Grupo Ecopetrol · referencia",
+    "diffFinancial": "Financiera vs. pares: {{n}} pts",
+    "diffOperational": "Operativa vs. pares: {{n}} pts",
+    "diffTransversal": "Transversal vs. pares: {{n}} pts",
+    "total": "Total: {{total}}%",
+    "legend": {
+      "financial": "Promedio ponderado de ROACE, Margen EBITDA y Deuda Neta/EBITDA",
+      "operational": "Promedio ponderado de crecimiento de producción y competitividad en OPEX",
+      "transversal": "Promedio ponderado de gobernanza corporativa y factores ESG"
+    },
+    "groupAverage": "Promedio del grupo: {{fin}}% Financiera · {{op}}% Operativa · {{trans}}% Transversal"
+  },
+  "comments": {
+    "title": "Comentarios",
+    "placeholder": "Escribe un comentario...",
+    "send": "Enviar",
+    "authorSeparator": "·",
+    "empty": "Todavía no hay comentarios.",
+    "roles": {
+      "analystCreator": "Analista creador",
+      "executiveViewer": "Ejecutivo visualizador",
+      "executiveIntegral": "Ejecutivo integral",
+      "explorerViewer": "Explorador visualizador",
+      "explorerIntegral": "Explorador integral"
+    }
+  },
+  "recommendationsModal": {
+    "title": "Recomendaciones de Yarbis",
+    "subtitle": "Basadas en la distribución de pesos de Ecopetrol vs. el promedio sectorial",
+    "tones": {
+      "ok": "{{dim}}: alineado con el sector ({{value}}% vs. {{avg}}% promedio). Mantener el peso actual.",
+      "watch": "{{dim}}: Ecopetrol pondera {{diff}} pts más que el sector ({{value}}% vs. {{avg}}%). Validar que ese énfasis sea intencional; si no, redistribuir hacia las líneas rezagadas.",
+      "action": "{{dim}}: Ecopetrol pondera {{diff}} pts menos que el sector ({{value}}% vs. {{avg}}%, líder {{leaderName}} con {{leaderPct}}%). Aumentar el peso de esta línea acercaría a Ecopetrol al estándar del sector."
+    }
+  },
+  "publishModal": {
+    "title": "Análisis publicado",
+    "understood": "Entendido"
+  },
+  "lifecycle": {
+    "preparation": "Preparación",
+    "preview": "Vista previa",
+    "published": "Publicado"
+  },
+  "previewBanner": {
+    "title": "Vista previa · visible solo para los revisores invitados"
+  }
+}
